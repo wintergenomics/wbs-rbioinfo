@@ -1,0 +1,187 @@
+
+# Importación y exportación de datos
+
+## Estableciendo nuestro directorio de trabajo
+
+Establecer nuestro directorio de trabajo nos permite tener una mejor organización mientras trabajamos en R. 
+Para conocer nuestro directorio de trabajo actual, usamos `getwd()`
+```{r, eval=F}
+getwd() 
+```
+
+Asigna a un objeto la ruta de la carpeta de trabajo. Recuerda cambiar */docs/mydir* por los nombres de tus carpetas de trabajo
+```{r}
+directory <- "C:/docs/mydir" #Windows
+directory <- "/home/users/mydir"  #Mac OS o linux
+```
+
+`setwd()` permite ajustar el directorio de trabajo. Vamos a ajustarlo a la ruta de trabajo que guardamos en `directory`
+```{r, eval=F}
+setwd(directory)
+```
+
+## Importación de datos
+### Archivos CSV
+
+Importa archivos de texto plano con formato CSV (*coma-separated values*). Los datos los puedes descargar de [aquí](https://drive.google.com/u/0/uc?id=1aS5-Zf03OeMRtZsCCLYFXAUQpesGy4IK&export=download). Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.
+```{r, eval=F}
+datosRCSV <- read.csv("iris.csv")
+```
+```{r, eval=T, echo=F}
+datosRCSV <- read.csv("~/Downloads/Datos.csv")
+```
+
+```{r}
+head(datosRCSV)
+```
+
+
+### Archivos TXT
+
+Importa archivos de texto plano con formato de tabla (data.frame). Los datos los puedes descargar de [aquí](https://drive.google.com/u/0/uc?id=18Cgt4ret3utAuk4w2_jl8RIbKxteulIO&export=download). Recuerda guardarlos en la carpeta de trabajo.
+```{r, eval=F}
+datosRT <- read.table("iris.txt")
+```
+
+```{r, eval=T, echo=F}
+datosRT <- read.table("~/Downloads/iris.txt")
+```
+```{r}
+head(datosRT)
+```
+
+Notamos que los encabezados no forman parte de la tabla y que R genera sus propios encabezados. Para evitar esto, si el archivo que queremos importar contiene encabezados, el argumento `header` permite incorporar el encabezado del archivo que queremos importar.
+```{r, eval=F}
+datosRT <- read.table("iris.txt", header=TRUE)
+```
+
+```{r, eval=T, echo=F}
+datosRT <- read.table("~/Downloads/iris.txt", header=TRUE)
+```
+```{r}
+head(datosRT)
+```
+
+
+Importemos este [nuevo set de datos](https://drive.google.com/u/0/uc?id=1D88k0cC5TeALDWbvRmLh07g2d65ImLHh&export=download). 
+
+
+```{r, eval=F}
+datosRT <- read.table("iris2.txt", header=TRUE)
+```
+
+```{r, eval=T, echo=F}
+datosRT <- read.table("~/Downloads/iris2.txt", header=TRUE)
+```
+```{r}
+head(datosRT)
+```
+Los datos no se importaron correctamente y están separados por el símbolo **"|"** o *pipe*.
+
+Los archivos *csv* están separados por comas y generalmente, los archivos *txt* están separados por tabulaciones. Para indicarle a R el tipo de separación que tiene nuestro archivo, usamos el argumento `sep`.
+
+En el siguiente comando, el argumento `sep="|"` le indica a R que nuestros datos están separados por el símbolo **"|"** o *pipe*.
+
+```{r, eval=F}
+datosRT <- read.table("iris2.txt", header=TRUE, sep = "|")
+```
+
+```{r, eval=T, echo=F}
+datosRT <- read.table("~/Downloads/iris2.txt", header=TRUE, sep = "|")
+```
+```{r}
+head(datosRT)
+```
+
+## Exportación de datos
+
+Vamos a crear un data.frame para practicar cómo exportar los datos.
+```{r}
+DosisX <- c(46, 20, 80, 100, 63)
+DosisY <- c(6, 50, 70, 70, 63)
+Lcelular <- c("MCF7", "Hela", "IPC-366", "T47D", "ZR75-1")
+tablaDE <- data.frame(DosisX, DosisY, Lcelular)
+tablaDE
+```
+
+### Exportar como TXT
+
+Vamos a guardar el data.frame `tablaDE` como un archivo de texto llamado **"datos.txt"** utilizando el comando `write.table()`. La tabla se guardará en nuestro directorio de trabajo  actual.
+```{r, eval=F}
+write.table(tablaDE, "datos.txt")
+```
+
+
+### Exportar como CSV
+
+Vamos a guardar el data.frame `tablaDE` como un archivo csv llamado **"datos.csv"** utilizando el comando `write.csv()`. La tabla se guardará en nuestro directorio de trabajo  actual.
+```{r, eval=F}
+write.csv(tablaDE, "datos.csv")
+```
+
+### Argumentos al exportar
+
+Así como al importar archivos existen diversos argumentos que podemos utilizar para darles ciertas indicaciones a R, también lo podemos hacer al momento de exportar los datos. Los siguientes argumentos se pueden usar con `write.csv()` y `write.table()`.
+
+`row.names=FALSE` nos permite suprimir los nombres de las filas
+```{r, eval=F}
+write.csv(tablaDE, "datos1.csv", row.names=FALSE)
+```
+
+Para indicar la separación del archivo utilizamos `sep`. Vamos a usar la tabulación como separador poniendo `sep="\t"`.
+```{r, eval=F}
+write.csv(tablaDE, "datos2.csv", row.names=FALSE, sep="\t")
+```
+
+
+Para suprimir los nombres de las columnas, usamos `col.names=FALSE`
+```{r, eval=F}
+write.csv(tablaDE, "datos3.csv", row.names=FALSE, sep="\t", col.names=FALSE)
+```
+
+
+
+## Archivos xlsx o de Excel
+
+Para importar o exportar archivos de Excel, es necesario utilizar la paquetería `"openxlsx"` que nos permite trabajar con documentos de Excel en R. La instalación de paqueterías se realiza sólo una vez. Una vez que la librería o paquetería esté instalada, puedes omitir este paso.
+
+```{r, eval=FALSE}
+install.packages("openxlsx", dependencies = TRUE)
+```
+
+Ahora cargaremos la paquetería. El llamado de librerías deberá hacerse cada que inicies una nueva sesión en R.
+```{r}
+library(openxlsx)
+```
+
+El siguiente comando te permite leer y conocer más sobre las funciones que ofrece esta paquetería.
+```{r}
+?openxlsx
+```
+
+
+### Importación de datos xlsx o de Excel
+
+Importaremos un nuevo set de datos de Excel que puedes descargar de [aquí](https://drive.google.com/u/0/uc?id=1DmLiZZGq_MVkLYCMZ7rdeHydUZAoP-YW&export=download). Recuerda guardarlos en tu carpeta de trabajo.
+
+```{r, eval=FALSE}
+datosXLSX <- read.xlsx("iris.xlsx")
+```
+
+```{r, eval=T, echo=F}
+datosXLSX <- read.xlsx("~/Downloads/iris.xlsx")
+```
+```{r}
+head(datosRT)
+```
+
+
+### Exportación de datos en Excel
+
+Vamos a exportar el data.frame `tablaDE` que creamos anteriormente como un archivo de Excel llamado **"datos.xlsx"** utilizando el comando `write.xlsx()`. El archivo se guardará en nuestro directorio de trabajo  actual.
+
+```{r, eval=F}
+write.xlsx(tablaDE, "datos.xlsx")
+```
+
+

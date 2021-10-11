@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Winter Bioinformatics School</title>
+  <meta name="description" content="Winter Bioinformatics School" />
+  <meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Winter Bioinformatics School" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="wintergenomics/wbs-rbioinfo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Winter Bioinformatics School" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">Winter Bioinformatics School</h1>
+<p class="author multi-author"><em>Winter School</em></p>
+<address class="author_afil">
+<a href="mailto:cursos@wintergenomics.com" class="email">cursos@wintergenomics.com</a><br>
+</address>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#información-del-curso">Información del curso</a>
+<ul>
+<li><a href="#formato-del-curso">Formato del curso</a></li>
+<li><a href="#quién-es-nuestra-audiencia">¿Quién es nuestra audiencia?</a></li>
+<li><a href="#pre-requisitos">Pre-requisitos</a>
+<ul>
+<li><a href="#instalación-de-r-y-rstudio">Instalación de R y RStudio</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#lenguajes-y-principios-de-programación"><span class="toc-section-number">1</span> Lenguajes y principios de programación</a></li>
+<li><a href="#introducción-a-r-y-rstudio-para-bioinformática"><span class="toc-section-number">2</span> Introducción a R y RStudio para bioinformática</a></li>
+<li><a href="#objetos"><span class="toc-section-number">3</span> Objetos</a>
+<ul>
+<li><a href="#creación-de-objetos"><span class="toc-section-number">3.1</span> Creación de objetos</a>
+<ul>
+<li><a href="#ejercicio"><span class="toc-section-number">3.1.1</span> Ejercicio</a></li>
+</ul></li>
+<li><a href="#tipos-de-datos-en-r"><span class="toc-section-number">3.2</span> Tipos de datos en R</a></li>
+<li><a href="#tipos-de-objetos-en-r"><span class="toc-section-number">3.3</span> Tipos de objetos en R</a></li>
+<li><a href="#atributos-de-los-objetos"><span class="toc-section-number">3.4</span> Atributos de los objetos</a></li>
+<li><a href="#operadores"><span class="toc-section-number">3.5</span> Operadores</a>
+<ul>
+<li><a href="#operadores-artiméticos"><span class="toc-section-number">3.5.1</span> Operadores artiméticos</a></li>
+<li><a href="#operadores-relacionales"><span class="toc-section-number">3.5.2</span> Operadores Relacionales</a></li>
+<li><a href="#operadores-lógicos"><span class="toc-section-number">3.5.3</span> Operadores Lógicos</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#vectores"><span class="toc-section-number">4</span> Vectores</a>
+<ul>
+<li><a href="#manejo-de-vectores"><span class="toc-section-number">4.1</span> Manejo de vectores</a></li>
+<li><a href="#operaciones-con-vectores"><span class="toc-section-number">4.2</span> Operaciones con vectores</a></li>
+<li><a href="#funciones-en-vectores"><span class="toc-section-number">4.3</span> Funciones en vectores</a></li>
+</ul></li>
+<li><a href="#matrices"><span class="toc-section-number">5</span> Matrices</a>
+<ul>
+<li><a href="#estructura-de-una-matriz"><span class="toc-section-number">5.1</span> Estructura de una matriz</a></li>
+<li><a href="#creación-de-una-matriz"><span class="toc-section-number">5.2</span> Creación de una matriz</a></li>
+<li><a href="#acceder-a-los-elementos-de-una-matri"><span class="toc-section-number">5.3</span> Acceder a los elementos de una matri</a></li>
+<li><a href="#modificar-elementos-de-una-matriz"><span class="toc-section-number">5.4</span> Modificar elementos de una matriz</a></li>
+</ul></li>
+<li><a href="#data.frames"><span class="toc-section-number">6</span> Data.frames</a>
+<ul>
+<li><a href="#características-de-los-data.frames"><span class="toc-section-number">6.1</span> Características de los data.frames</a></li>
+<li><a href="#creación-de-un-data.frame"><span class="toc-section-number">6.2</span> Creación de un data.frame</a></li>
+<li><a href="#extracción-de-datos-de-un-data.frame"><span class="toc-section-number">6.3</span> Extracción de datos de un data.frame</a>
+<ul>
+<li><a href="#extracción-de-datos-por-columna"><span class="toc-section-number">6.3.1</span> Extracción de datos por columna</a></li>
+<li><a href="#extracción-de-datos-por-filas"><span class="toc-section-number">6.3.2</span> Extracción de datos por filas</a></li>
+</ul></li>
+<li><a href="#combinar-data.frames"><span class="toc-section-number">6.4</span> Combinar data.frames</a></li>
+<li><a href="#subset-de-datos"><span class="toc-section-number">6.5</span> Subset de datos</a></li>
+</ul></li>
+<li><a href="#importación-y-exportación-de-datos"><span class="toc-section-number">7</span> Importación y exportación de datos</a>
+<ul>
+<li><a href="#estableciendo-nuestro-directorio-de-trabajo"><span class="toc-section-number">7.1</span> Estableciendo nuestro directorio de trabajo</a></li>
+<li><a href="#importación-de-datos"><span class="toc-section-number">7.2</span> Importación de datos</a>
+<ul>
+<li><a href="#archivos-csv"><span class="toc-section-number">7.2.1</span> Archivos CSV</a></li>
+<li><a href="#archivos-txt"><span class="toc-section-number">7.2.2</span> Archivos TXT</a></li>
+</ul></li>
+<li><a href="#exportación-de-datos"><span class="toc-section-number">7.3</span> Exportación de datos</a>
+<ul>
+<li><a href="#exportar-como-txt"><span class="toc-section-number">7.3.1</span> Exportar como TXT</a></li>
+<li><a href="#exportar-como-csv"><span class="toc-section-number">7.3.2</span> Exportar como CSV</a></li>
+<li><a href="#argumentos-al-exportar"><span class="toc-section-number">7.3.3</span> Argumentos al exportar</a></li>
+</ul></li>
+<li><a href="#archivos-xlsx-o-de-excel"><span class="toc-section-number">7.4</span> Archivos xlsx o de Excel</a>
+<ul>
+<li><a href="#importación-de-datos-xlsx-o-de-excel"><span class="toc-section-number">7.4.1</span> Importación de datos xlsx o de Excel</a></li>
+<li><a href="#exportación-de-datos-en-excel"><span class="toc-section-number">7.4.2</span> Exportación de datos en Excel</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#instalación-de-paqueterías"><span class="toc-section-number">8</span> Instalación de paqueterías</a>
+<ul>
+<li><a href="#paqueterías-de-cran"><span class="toc-section-number">8.1</span> Paqueterías de CRAN</a>
+<ul>
+<li><a href="#instalación-de-paqueteria-ggplot2"><span class="toc-section-number">8.1.1</span> Instalación de paqueteria ggplot2</a></li>
+</ul></li>
+<li><a href="#paqueterías-de-bioconductor"><span class="toc-section-number">8.2</span> Paqueterías de Bioconductor</a>
+<ul>
+<li><a href="#instalación-de-biocmanager"><span class="toc-section-number">8.2.1</span> Instalación de BiocManager</a></li>
+<li><a href="#instalación-de-paqueterías-de-bioconductor."><span class="toc-section-number">8.2.2</span> Instalación de paqueterías de Bioconductor.</a></li>
+</ul></li>
+<li><a href="#paqueterías-de-github"><span class="toc-section-number">8.3</span> Paqueterías de GitHub</a></li>
+</ul></li>
+<li><a href="#heatmaps"><span class="toc-section-number">9</span> Heatmaps</a>
+<ul>
+<li><a href="#construyendo-un-heatmap-básico"><span class="toc-section-number">9.0.1</span> Construyendo un heatmap básico</a></li>
+<li><a href="#cambiar-el-tamaño-de-letra"><span class="toc-section-number">9.0.2</span> Cambiar el tamaño de letra</a></li>
+<li><a href="#agregar-un-título-a-nuestro-heatmap"><span class="toc-section-number">9.0.3</span> Agregar un título a nuestro heatmap</a></li>
+<li><a href="#cambiar-los-colores-de-nuestro-heatmap."><span class="toc-section-number">9.0.4</span> Cambiar los colores de nuestro heatmap.</a></li>
+</ul></li>
+</ul>
+<!--bookdown:toc2:end-->
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Winter Bioinformatics School</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="información-del-curso" class="section level1 unnumbered">
+<h1 class="unnumbered">Información del curso</h1>
+<p><strong>7 y 8 de octubre de 2021</strong></p>
+<p align="justify">
+<p>¡Bienvenidos al curso de R para bioinformática de <a href="https://www.wintergenomics.com/">Winter Genomics</a> y <a href="https://www.wintergenomics.com/index.php/soluciones/winter-school/">Winter School</a>!</p>
+<p>R es un lenguaje básico de referencia en el mundo de la estadística y una herramienta fundamental para el análisis de datos en el área de las ciencias de la vida. R permite automatizar los cálculos estadísticos y la generación de diversos gráficos para facilitar el análisis de datos.</p>
+<p>R, al ser uno de los lenguajes más utilizados por científicos en numerosas disciplinas, está diseñado para manipular y analizar grandes cantidades de datos.</p>
+<p>Durante este curso aprenderás las herramientas básicas de R para analizar datos. Revisaremos qué son los lenguajes de programación, los tipos de lenguajes de programación que existen. Después veremos los tipos de objetos, datos y atributos más usados en R como vectores, matrices, data.frames. Aprenderás a generar proyectos y realizar gráficos de boxplots, scatter plots y heatmaps usando ggplot2.</p>
+</p>
+<div id="formato-del-curso" class="section level2 unnumbered">
+<h2 class="unnumbered">Formato del curso</h2>
+<p align="justify">
+Este es un curso digital donde las sesiones y el material del curso son en línea. Las sesiones del curso han sido grabadas y se te han compartido al correo que utilizaste al realizar tu registro al curso en la carpeta de Google Drive del curso junto con el material y presentaciones.
+</p>
+</div>
+<div id="quién-es-nuestra-audiencia" class="section level2 unnumbered">
+<h2 class="unnumbered">¿Quién es nuestra audiencia?</h2>
+<p align="justify">
+<p>Este curso está diseñado para todos aquellos interesados en adentrarse a la bioinformática, a la programación y al análisis de datos de las ciencias biológicas. El curso es nivel básico, por lo que no es necesario tener conocimientos previos de programación.</p>
+</p>
+</div>
+<div id="pre-requisitos" class="section level2 unnumbered">
+<h2 class="unnumbered">Pre-requisitos</h2>
+<ul>
+<li>Tener una computadora con al menos 8Gb de memoria y permisos de administrador para instalar paqueterías de R.</li>
+<li>Tener instalado R y RStudio en su última versión.</li>
+</ul>
+<div id="instalación-de-r-y-rstudio" class="section level3 unnumbered">
+<h3 class="unnumbered">Instalación de R y RStudio</h3>
+<p align="justify">
+<p>Para este curso es necesario tener instalada la última versión de R y RStudio. Si no lo tienes, en esta <a href="https://drive.google.com/file/d/1yFlFoG_cjpVyOhGHaB5I76xXASDmp70_/view">guía</a> te enseñamos cómo hacerlo.</p>
+<p>Si tienes problemas durante la instalación, escríbenos a <a href="mailto:cursos@wintergenomics.com" class="email">cursos@wintergenomics.com</a></p>
+</p>
+<!--chapter:end:index.Rmd-->
+</div>
+</div>
+</div>
+<div id="lenguajes-y-principios-de-programación" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Lenguajes y principios de programación</h1>
+<p>Un lenguaje es un vocabulario y un conjunto de reglas gramaticales para
+instruir a una computadora o dispositivo informático para
+realizar tareas específicas.</p>
+<p>Esto se realiza mediante un script. Un script es una lista de comandos que se ejecutan linea a linea.
+Son sólo documentos de texto que contienen instrucciones escritas en un
+determinado lenguaje de secuencias de comandos.</p>
+<p><strong>Descarga y revisa el material completo del contenido de Lenguajes y principios de programación <a href="https://drive.google.com/u/0/uc?id=1I1camM0V_96clNeCMdvo0td1C9P0km7a&amp;export=download">aquí</a></strong></p>
+<p>Si tienes problemas durante la descarga, escríbenos a <a href="mailto:cursos@wintergenomics.com" class="email">cursos@wintergenomics.com</a></p>
+<!--chapter:end:01-intro.Rmd-->
+</div>
+<div id="introducción-a-r-y-rstudio-para-bioinformática" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Introducción a R y RStudio para bioinformática</h1>
+<p>R es un lenguaje básico de referencia en el mundo de la estadística y una herramienta fundamental para el análisis de datos en el área de las ciencias de la vida. R permite automatizar los cálculos estadísticos y la generación de diversos gráficos para facilitar el análisis de datos.</p>
+<p>R es uno de los lenguajes más utilizados por científicos en numerosas disciplinas y está diseñado para manipular y analizar grandes cantidades de datos.</p>
+<p><strong>Descarga y revisa el material completo del contenido <a href="https://drive.google.com/u/0/uc?id=1vd9iHq1gL_43NgpviuzsX7CiUmO25v1M&amp;export=download">aquí</a>.</strong></p>
+<p>Si tienes problemas durante la descarga, escríbenos a <a href="mailto:cursos@wintergenomics.com" class="email">cursos@wintergenomics.com</a></p>
+<!--chapter:end:02-Rbioinfo.Rmd-->
+</div>
+<div id="objetos" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Objetos</h1>
+<p>Todos los elementos que maneja R se llaman objetos</p>
+<p>En términos prácticos:</p>
+<p>Es un nombre que almacena cualquier tipo y cantidad de datos (inputs o outputs) con atributos específicos.</p>
+<div id="creación-de-objetos" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Creación de objetos</h2>
+<p>En R podemos asignar valores a objetos con el siguiente símbolo para la asignación <code>&lt;-</code>
+Ejemplo:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span></code></pre></div>
+<p>Donde x es la variable y 1 es el objeto</p>
+<p><strong>¿Cuál sería otra forma de mostrar el valor de x usando una función?</strong></p>
+<p>Es importante mantener la estructura de la función u operación, y en ocasiones no importa agregar más espacios, por ejemplo:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Al incluir más espacios, sigue produciendo el mismo resultado</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span>      <span class="dv">1</span>       <span class="sc">+</span>      <span class="dv">3</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div id="ejercicio" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Ejercicio</h3>
+<p>Asigna el resultado de multiplicar 2 por 8 a la variable cromosomas</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cromosomas <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span><span class="dv">8</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cromosomas</span></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<p>Ahora asigna el valor 3400 a la variable cromosomas.</p>
+<p>Para R, no es lo mismo: Juan y “Juan”.</p>
+<p>Juan (sin comillas) es el nombre de un objeto</p>
+</div>
+</div>
+<div id="tipos-de-datos-en-r" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Tipos de datos en R</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Tipos</th>
+<th align="left">Dato</th>
+<th align="left">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Caracter</td>
+<td align="left">Id de paciente</td>
+<td align="left">“Alejandra”, “IMSS_311”</td>
+</tr>
+<tr class="even">
+<td align="left">Numérico</td>
+<td align="left">Cigarrillos por día</td>
+<td align="left">9, 4.15, 1000</td>
+</tr>
+<tr class="odd">
+<td align="left">Lógico</td>
+<td align="left">¿Fumador?</td>
+<td align="left">TRUE (T), FALSE (F)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NUMÉRICO</strong></p>
+<p>Agrega un valor numérico a la variable mi_numero</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mi_numero <span class="ot">&lt;-</span> <span class="dv">30</span></span></code></pre></div>
+<p><strong>CARACTER</strong></p>
+<p>Agrega la siguiente palabra a mi_caracter: Mexico</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mi_caracter <span class="ot">&lt;-</span> <span class="st">&quot;Mexico&quot;</span></span></code></pre></div>
+<p><strong>NOTA: Cuando usamos texto debemos escribirlo entre ” ” (comillas)</strong></p>
+<p><strong>LÓGICO</strong></p>
+<p>Agrega el valor lógico</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mi_logico <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span></code></pre></div>
+<p>Podemos conocer la clase a la que corresponde cada uno de nuestros datos con la función <code>class()</code></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_numero)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_caracter)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_logico)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p>Es posible convertir la clase de un objeto usando las siguientes funciones:</p>
+<ul>
+<li><code>as.numeric()</code></li>
+<li><code>as.logical()</code></li>
+<li><code>as.character()</code></li>
+<li><code>as.integer()</code></li>
+</ul>
+<p><strong>Ejemplo</strong>
+Convierte <code>mi_numero</code> a caracter usando la función <code>as.character()</code></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>mi_numero</span></code></pre></div>
+<pre><code>## [1] 30</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_numero)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(mi_numero)</span></code></pre></div>
+<pre><code>## [1] &quot;30&quot;</code></pre>
+</div>
+<div id="tipos-de-objetos-en-r" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Tipos de objetos en R</h2>
+<ul>
+<li><strong>Vectores:</strong> Son secuencias uni-dimensionales de elementos.</li>
+<li><strong>Matrices:</strong> Son objetos de bi-dimensionales. El contenido de este objeto debe de ser de un solo tipo de datos.</li>
+<li><strong>Factores:</strong> Son vectores de tipo categóricos, pueden contener datos numéricos, integrales o caracteres.</li>
+<li><strong>Listas:</strong> Las listas son parecidas a los vectores, pero a diferencia de estas, no tienen que contener el mismo tipo de datos.</li>
+<li><strong>Data frames:</strong> Es una matriz pero puede contener datos de diferentes tipos, ya sea numéricos o tipo carácter.</li>
+</ul>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="33%" />
+<col width="59%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tipos</th>
+<th align="left">Ejemplo</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Vector</td>
+<td align="left">c(“Mary”,”Juan”, … )</td>
+<td align="left">Colección de datos en serie</td>
+</tr>
+<tr class="even">
+<td align="left">Matriz</td>
+<td align="left">matrix(37, 20, 25, 17, … )</td>
+<td align="left">Vector ordenado por filas y columnas</td>
+</tr>
+<tr class="odd">
+<td align="left">Data.frame</td>
+<td align="left">data.frame(ID_Pacientes, cigarrillos por día, Fumador)</td>
+<td align="left">Colección de vectores ordenados por columnas; todos los vectores deben ser de la misma longitud</td>
+</tr>
+<tr class="even">
+<td align="left">Listas</td>
+<td align="left">list(mi_vector, mi_matriz, mi_dataframe, mi gráfico)</td>
+<td align="left">Son contenedores generales de datos. Muy flexibles, pero sin estructura</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="atributos-de-los-objetos" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Atributos de los objetos</h2>
+<p>Los atributos de los objetos pueden ser:</p>
+<ul>
+<li>Nombres</li>
+<li>Dimensiones</li>
+<li>Clases</li>
+<li>Longitud</li>
+<li>Otros atributos definidos por el usuario</li>
+</ul>
+<p>Se pueden acceder a estos atributos usando la función <code>attributes()</code></p>
+</div>
+<div id="operadores" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Operadores</h2>
+<div id="operadores-artiméticos" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Operadores artiméticos</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Aritmético</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">+</td>
+<td align="left">Adición</td>
+</tr>
+<tr class="even">
+<td align="left">-</td>
+<td align="left">Substracción</td>
+</tr>
+<tr class="odd">
+<td align="left">*</td>
+<td align="left">Multiplicación</td>
+</tr>
+<tr class="even">
+<td align="left">/</td>
+<td align="left">División</td>
+</tr>
+<tr class="odd">
+<td align="left">^</td>
+<td align="left">Exponente</td>
+</tr>
+<tr class="even">
+<td align="left">%%</td>
+<td align="left">Residuo de división</td>
+</tr>
+<tr class="odd">
+<td align="left">%/%</td>
+<td align="left">División entera</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="operadores-relacionales" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Operadores Relacionales</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Relacionales</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">&lt;</td>
+<td align="left">Menor que</td>
+</tr>
+<tr class="even">
+<td align="left">&gt;</td>
+<td align="left">Mayor que</td>
+</tr>
+<tr class="odd">
+<td align="left">&lt;=</td>
+<td align="left">Menor o igual que</td>
+</tr>
+<tr class="even">
+<td align="left">&gt;=</td>
+<td align="left">Mayor o igual que</td>
+</tr>
+<tr class="odd">
+<td align="left">==</td>
+<td align="left">Igual que</td>
+</tr>
+<tr class="even">
+<td align="left">!=</td>
+<td align="left">No igual que</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="operadores-lógicos" class="section level3" number="3.5.3">
+<h3><span class="header-section-number">3.5.3</span> Operadores Lógicos</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Lógico</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">!</td>
+<td align="left">No lógico</td>
+</tr>
+<tr class="even">
+<td align="left">&amp;</td>
+<td align="left">Y lógico por elemento</td>
+</tr>
+<tr class="odd">
+<td align="left">&amp;&amp;</td>
+<td align="left">Y lógico</td>
+</tr>
+<tr class="even">
+<td align="left">|</td>
+<td align="left">O lógico por elemento</td>
+</tr>
+<tr class="odd">
+<td align="left">||</td>
+<td align="left">O lógico</td>
+</tr>
+</tbody>
+</table>
+<!--chapter:end:03-obj_atbr.Rmd-->
+</div>
+</div>
+</div>
+<div id="vectores" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Vectores</h1>
+<p>Los vectores son cadenas unidimensionales (es decir una sola columna o fila) de un mismo tipo de valores (numéricos, caracteres, etc.)
+Para crear un vector se usa la función <code>combinar c()</code></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>longitud <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">11</span>,<span class="dv">15</span>,<span class="dv">13</span>,<span class="dv">16</span>,<span class="dv">12</span>,<span class="dv">11</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>colores  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Negro&quot;</span>, <span class="st">&quot;Rosa&quot;</span>, <span class="st">&quot;Amarillo&quot;</span>, <span class="st">&quot;Blanco&quot;</span>, <span class="st">&quot;Azul&quot;</span>, <span class="st">&quot;Marron&quot;</span>, <span class="st">&quot;Guinda&quot;</span>)</span></code></pre></div>
+<p>El objeto más simple que se puede almacenar en R es un vector con 1 elemento.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>simple <span class="ot">&lt;-</span> <span class="st">&quot;Dora&quot;</span></span></code></pre></div>
+<div id="manejo-de-vectores" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Manejo de vectores</h2>
+<p>Creamos el vector <em>PesosPacientes</em> utilizando datos de pesos de diferentes pacientes:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">85</span>, <span class="dv">55</span>, <span class="dv">63</span>, <span class="dv">78</span>, <span class="dv">57</span>) </span></code></pre></div>
+<p>Para acceder a elementos específicos de cada vector usamos los corchetes indicando el elemento al que queremos acceder. En este ejemplo accederemos al peso del paciente 5:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="dv">5</span>]</span></code></pre></div>
+<pre><code>## [1] 63</code></pre>
+<p>La longitud del vector se obtiene con la función <code>length()</code></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<p>Para extraer de nuestro objeto más de un elemento se usa la función para combinar o concatenar <code>c()</code>. En este ejemplo vamos a usar los pesos de los pacientes 3 y 6:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</span></code></pre></div>
+<pre><code>## [1] 85 78</code></pre>
+<p>También podemos usar índices negativos para quitar temporalmente ciertos elementos de un vector. En este ejemplo vamos a quitar los pesos de los pacientes 3 y 6:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</span></code></pre></div>
+<pre><code>## [1] 55 45 55 63 57</code></pre>
+</div>
+<div id="operaciones-con-vectores" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Operaciones con vectores</h2>
+<p>Para hacer una operación utilizando varios números a la vez usamos la función combinar <code>c()</code></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">85</span>, <span class="dv">55</span>, <span class="dv">63</span>, <span class="dv">78</span>, <span class="dv">57</span>)</span></code></pre></div>
+<p>Para ver los valores, tecleamos <strong>PesosPacientes</strong> en la consola. El <em>+ 1</em> sumará uno al peso de cada paciente</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
+<pre><code>## [1] 56 46 86 56 64 79 58</code></pre>
+</div>
+<div id="funciones-en-vectores" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Funciones en vectores</h2>
+<p>Se pueden usar diferentes funciones para aplicarse a los vectores numéricos.</p>
+<p>La función <code>sum()</code>permite realizar la sumas de los datos.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 438</code></pre>
+<p>La función <code>mean()</code> calcula el promedio.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 62.57143</code></pre>
+<p>La función <code>max()</code> indica el valor más alto de nuestros datos.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 85</code></pre>
+<p>La función <code>sort()</code> ordena de menor a mayor los valores.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 45 55 55 57 63 78 85</code></pre>
+<p>La función <code>unique()</code> muestra los datos o valores únicos o que no se repiten de nuestro set.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 55 45 85 63 78 57</code></pre>
+<p>En R también podemos tener valores de texto que siempre van entre comillas.
+Así como guardamos una serie de números en el objeto <strong>“PesosPacientes”</strong>, podemos guardar valores de texto en un nuevo objeto de la siguiente manera:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>nombres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Susana&quot;</span>, <span class="st">&quot;Angela&quot;</span>, <span class="st">&quot;Oscar&quot;</span>, <span class="st">&quot;Joel&quot;</span>, <span class="st">&quot;Blanca&quot;</span>, <span class="st">&quot;Karla&quot;</span>, <span class="st">&quot;Manuel&quot;</span>)</span></code></pre></div>
+<p>El objeto “nombres” nos puede servir para etiquetar los valores numéricos de los pesos de los pacientes, esto con la función <code>names()</code> para asignar nombres de texto.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(PesosPacientes) <span class="ot">&lt;-</span> nombres</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>PesosPacientes</span></code></pre></div>
+<pre><code>## Susana Angela  Oscar   Joel Blanca  Karla Manuel 
+##     55     45     85     55     63     78     57</code></pre>
+<!--chapter:end:04-vectores.Rmd-->
+</div>
+</div>
+<div id="matrices" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Matrices</h1>
+<p>Una matriz es una estructura de datos, ordenados por filas y columnas (matriz de dos dimensiones). Está constituida por elementos del mismo tipo de datos (numéricos, caracteres, o lógicos), organizados por filas y columnas.</p>
+<div id="estructura-de-una-matriz" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Estructura de una matriz</h2>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   NA   NA   NA
+## [2,]   NA   NA   NA</code></pre>
+<p>Donde:
+- <strong>nrow</strong> es el número de filas
+- <strong>ncol</strong> es el número de columnas
+- <strong>NA</strong> significa <em>Not Available</em></p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9</code></pre>
+<ul>
+<li>El argumento <code>1:9</code>es una colección de elementos: <code>1:9 c(1,2,4,5,6,7,8,9)</code></li>
+<li><code>byrow</code> indica que la matriz será rellenada por fila. Si queremos que la matriz sea llenada por columna ajustamos a <code>byrow = FALSE</code></li>
+<li><code>nrow</code> indica que la matriz tendrá 3 filas</li>
+</ul>
+</div>
+<div id="creación-de-una-matriz" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Creación de una matriz</h2>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+## [4,]   10   11   12</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(MatrixEjemplo)</span></code></pre></div>
+<pre><code>## [1] 4 3</code></pre>
+<ul>
+<li><code>byrow=TRUE</code> llena los elementos por fila.</li>
+<li>Con el comando <code>dim()</code>se obtiene las dimensiones de la matriz</li>
+</ul>
+</div>
+<div id="acceder-a-los-elementos-de-una-matri" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Acceder a los elementos de una matri</h2>
+<p>Supongamos que queremos acceder al elemento que se encuentra en la fila 3 y la columna 2 de nuestra <code>MatrixEjemplo</code>. Para esto debemos de indicar entre corchetes la fila y la columna a la que queremos acceder. <strong>Es muy importante indicar primero la fila y después la columna.</strong></p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Ahora guardemos el resultado en la variable elemento:</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>elemento<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>elemento</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Si queremos acceder únicamente a los datos de la fila 3 de nuestra matriz usamos:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,]</span></code></pre></div>
+<pre><code>## [1] 7 8 9</code></pre>
+<p>La coma después del número 3 indica que queremos ver todos los valores de las columnas que pertenezcan a la fila 3.
+Si por el contrario, queremos acceder a los valores de la columna dos, usamos:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[,<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1]  2  5  8 11</code></pre>
+<p>En este caso, la coma está situada antes del número 2 indicando que queremos ver todos los valores de las filas que pertenezcan a la columna 2.
+Guardemos los resultados en diferentes variables:</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>fila<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,]</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>fila</span></code></pre></div>
+<pre><code>## [1] 7 8 9</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>columna<span class="ot">&lt;-</span> MatrixEjemplo[,<span class="dv">2</span>]</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>columna</span></code></pre></div>
+<pre><code>## [1]  2  5  8 11</code></pre>
+</div>
+<div id="modificar-elementos-de-una-matriz" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Modificar elementos de una matriz</h2>
+<p>Para modificar cualquier elemento de una matriz debemos de indicar entre corchetes el número de fila y de columna en donde se encuentra el elemento que queremos modificar: <code>[fila, columna]</code>.
+Vamos a modificar el elemento que se encuentra en la fila 2 de la columna 2.</p>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+## [4,]   10   11   12</code></pre>
+<p>El elemento que queremos cambiar tiene el valor de <em>“5”</em>. Vamos a sustiurlo por el valor de 10. Para esto lo reasignamos a nuestra matriz:</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">2</span>,<span class="dv">2</span>]<span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4   10    6
+## [3,]    7    8    9
+## [4,]   10   11   12</code></pre>
+<ul>
+<li><strong>MatrixEjemplo[2,2]</strong> indica que queremos acceder al elemento que se encuentra en la fila 2 de la columna 2.</li>
+<li><strong>&lt;- 10</strong> estamos asignando el valor 10 a la matriz.
+## Ejercicio
+Construir una matriz con los años de secuenciación de organismos de referencia (G). El primer y el segundo elemento es el año de publicación de al menos dos organismos.</li>
+</ul>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>Gbacterias <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1997</span>, <span class="dv">1993</span>)</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>Ghongos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1999</span>, <span class="dv">2000</span>)</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>Ganimales <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2001</span>)</span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>cronologia <span class="ot">&lt;-</span> <span class="fu">c</span>(Gbacterias, Ghongos, Ganimales)</span></code></pre></div>
+<p>Construir matriz de 3 filas, 2 columnas con los valores de cronologia</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(cronologia, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,] 1997 2000
+## [2,] 1993 2000
+## [3,] 1999 2001</code></pre>
+<p>Para agregar columnas o filas a matrices utilizamos <code>cbind()</code> y <code>rbind()</code> respectivamente.</p>
+<p><strong>NOTA:</strong> El número de elementos en las columnas o filas debe ser el mismo.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
+<pre><code>##      Ganimales Gbacterias Ghongos
+## [1,]      2000       1997    1999
+## [2,]      2001       1993    2000</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
+<pre><code>##            [,1] [,2]
+## Ganimales  2000 2001
+## Gbacterias 1997 1993
+## Ghongos    1999 2000</code></pre>
+<p><strong>NOTA:</strong> Estos resultados los podemos guardar en distintas variables.</p>
+<!--chapter:end:05-matrices.Rmd-->
+</div>
+</div>
+<div id="data.frames" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Data.frames</h1>
+<p>Es una estructura de tipo tabular, que permite el uso de diferentes tipos de datos. Combina listas de vectores de la misma longitud.
+Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respectivas respuestas:</p>
+<ul>
+<li>¿Está vacunado para Influenza? : <strong>sí/no (lógicos)</strong></li>
+<li>¿Año de nacimiento? : <strong>1990, 1981, 2000, 1952 (numérico)</strong></li>
+<li>¿Nacionalidad?: <strong>Chi, Rus, Mex, USA (caracteres)</strong></li>
+</ul>
+<div id="características-de-los-data.frames" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Características de los data.frames</h2>
+<ul>
+<li>Los nombres de columna no deben estar vacíos</li>
+<li>Los nombres de las filas deben ser <strong>únicos</strong></li>
+<li>Los datos almacenados en un dataframe pueden ser de tipo numérico, factor o carácter.</li>
+<li>Cada columna debe contener el mismo número de elementos de datos</li>
+</ul>
+</div>
+<div id="creación-de-un-data.frame" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Creación de un data.frame</h2>
+<p>Crear data.frame <em>“TipoDatos”</em> a partir de los siguientes vectores:</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>origen <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Chi&quot;</span>, <span class="st">&quot;Rus&quot;</span>, <span class="st">&quot;Mex&quot;</span>, <span class="st">&quot;USA&quot;</span>)</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>vacunado <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>fecha <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;1990&quot;</span>, <span class="st">&quot;1981&quot;</span>, <span class="st">&quot;2000&quot;</span>, <span class="st">&quot;1952&quot;</span>)</span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>TipoDatos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(origen, vacunado, fecha)</span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>TipoDatos</span></code></pre></div>
+<pre><code>##   origen vacunado fecha
+## 1    Chi    FALSE  1990
+## 2    Rus     TRUE  1981
+## 3    Mex     TRUE  2000
+## 4    USA     TRUE  1952</code></pre>
+<p><code>str()</code> Brinda información sobre la estructura del data.frame.</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(TipoDatos)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    4 obs. of  3 variables:
+##  $ origen  : chr  &quot;Chi&quot; &quot;Rus&quot; &quot;Mex&quot; &quot;USA&quot;
+##  $ vacunado: logi  FALSE TRUE TRUE TRUE
+##  $ fecha   : chr  &quot;1990&quot; &quot;1981&quot; &quot;2000&quot; &quot;1952&quot;</code></pre>
+<p>Para acceder a una columna de un data.frame, utilizamos el símbolo de pesos:</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>TipoDatos<span class="sc">$</span>fecha</span></code></pre></div>
+<pre><code>## [1] &quot;1990&quot; &quot;1981&quot; &quot;2000&quot; &quot;1952&quot;</code></pre>
+<p>Otra forma de acceder a los elementos de un data.frames es mediante corchetes. Recordemos que esta nomenclatura la estudiamos en el capítulo anterior de Matrices.</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>TipoDatos[,<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;1990&quot; &quot;1981&quot; &quot;2000&quot; &quot;1952&quot;</code></pre>
+<p>De manera similar, para acceder a una fila de un data.frame utilizamos los corchetes, donde <code>[fila, columna]</code>.</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>TipoDatos[<span class="dv">2</span>,]</span></code></pre></div>
+<pre><code>##   origen vacunado fecha
+## 2    Rus     TRUE  1981</code></pre>
+</div>
+<div id="extracción-de-datos-de-un-data.frame" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Extracción de datos de un data.frame</h2>
+<div id="extracción-de-datos-por-columna" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Extracción de datos por columna</h3>
+<p>Crear un nuevo data.frame llamado “result” que contenga todos los datos de las columnas origen y fecha.</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(TipoDatos<span class="sc">$</span>origen,TipoDatos<span class="sc">$</span>fecha)</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div>
+<pre><code>##   TipoDatos.origen TipoDatos.fecha
+## 1              Chi            1990
+## 2              Rus            1981
+## 3              Mex            2000
+## 4              USA            1952</code></pre>
+</div>
+<div id="extracción-de-datos-por-filas" class="section level3" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Extracción de datos por filas</h3>
+<p>Extraer todos los datos de las filas 1 y 2.</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>subsets <span class="ot">&lt;-</span> TipoDatos[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,]</span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>subsets</span></code></pre></div>
+<pre><code>##   origen vacunado fecha
+## 1    Chi    FALSE  1990
+## 2    Rus     TRUE  1981</code></pre>
+</div>
+</div>
+<div id="combinar-data.frames" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Combinar data.frames</h2>
+<p>Creamos un segundo data.frame llamado <em>“TipoDatos2”</em>.</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>cobertura <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;NA&quot;</span>, <span class="st">&quot;Pandemica&quot;</span>, <span class="st">&quot;Estacional&quot;</span>, <span class="st">&quot;NA&quot;</span>)</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>edad <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;60&quot;</span>, <span class="st">&quot;50&quot;</span>, <span class="st">&quot;80&quot;</span>, <span class="st">&quot;20&quot;</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>TipoDatos2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(cobertura, edad)</span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a>TipoDatos2</span></code></pre></div>
+<pre><code>##    cobertura edad
+## 1         NA   60
+## 2  Pandemica   50
+## 3 Estacional   80
+## 4         NA   20</code></pre>
+<p>Con <code>cbind()</code> unimos dos data.frames del mismo tamaño mediante columnas. En este caso uniremos los data.frames <code>TipoDatos</code> y <code>TipoDatos2</code>.</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>datosfinales <span class="ot">&lt;-</span> <span class="fu">cbind</span>(TipoDatos,TipoDatos2)</span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>datosfinales</span></code></pre></div>
+<pre><code>##   origen vacunado fecha  cobertura edad
+## 1    Chi    FALSE  1990         NA   60
+## 2    Rus     TRUE  1981  Pandemica   50
+## 3    Mex     TRUE  2000 Estacional   80
+## 4    USA     TRUE  1952         NA   20</code></pre>
+</div>
+<div id="subset-de-datos" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Subset de datos</h2>
+<p><code>subset()</code> permite filtrar o extraer los datos que cumplen con un parámetro particular.</p>
+<p>Si queremos obtener los datos de los pacientes menores a 60 años usamos:</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>edad <span class="sc">&lt;</span><span class="dv">60</span>)</span></code></pre></div>
+<pre><code>##   origen vacunado fecha cobertura edad
+## 2    Rus     TRUE  1981 Pandemica   50
+## 4    USA     TRUE  1952        NA   20</code></pre>
+<p>Si queremos obtener los datos de los pacientes vacunados usamos:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>vacunado)</span></code></pre></div>
+<pre><code>##   origen vacunado fecha  cobertura edad
+## 2    Rus     TRUE  1981  Pandemica   50
+## 3    Mex     TRUE  2000 Estacional   80
+## 4    USA     TRUE  1952         NA   20</code></pre>
+<p>Estos resultados los podemos guardar en distantas variables</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>pacientes_edad<span class="ot">&lt;-</span> <span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>edad <span class="sc">&lt;</span><span class="dv">60</span>)</span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>pacientes_edad</span></code></pre></div>
+<pre><code>##   origen vacunado fecha cobertura edad
+## 2    Rus     TRUE  1981 Pandemica   50
+## 4    USA     TRUE  1952        NA   20</code></pre>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>pacientes_vacunados<span class="ot">&lt;-</span> <span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>vacunado)</span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a>pacientes_vacunados</span></code></pre></div>
+<pre><code>##   origen vacunado fecha  cobertura edad
+## 2    Rus     TRUE  1981  Pandemica   50
+## 3    Mex     TRUE  2000 Estacional   80
+## 4    USA     TRUE  1952         NA   20</code></pre>
+<!--chapter:end:06-dataframes.Rmd-->
+</div>
+</div>
+<div id="importación-y-exportación-de-datos" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Importación y exportación de datos</h1>
+<div id="estableciendo-nuestro-directorio-de-trabajo" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Estableciendo nuestro directorio de trabajo</h2>
+<p>Establecer nuestro directorio de trabajo nos permite tener una mejor organización mientras trabajamos en R.
+Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() </span></code></pre></div>
+<p>Asigna a un objeto la ruta de la carpeta de trabajo. Recuerda cambiar <em>/docs/mydir</em> por los nombres de tus carpetas de trabajo</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;C:/docs/mydir&quot;</span> <span class="co">#Windows</span></span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;/home/users/mydir&quot;</span>  <span class="co">#Mac OS o linux</span></span></code></pre></div>
+<p><code>setwd()</code> permite ajustar el directorio de trabajo. Vamos a ajustarlo a la ruta de trabajo que guardamos en <code>directory</code></p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(directory)</span></code></pre></div>
+</div>
+<div id="importación-de-datos" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Importación de datos</h2>
+<div id="archivos-csv" class="section level3" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Archivos CSV</h3>
+<p>Importa archivos de texto plano con formato CSV (<em>coma-separated values</em>). Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1aS5-Zf03OeMRtZsCCLYFXAUQpesGy4IK&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a>datosRCSV <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;iris.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRCSV)</span></code></pre></div>
+<pre><code>##   Nombre edad Peso
+## 1      L    6   20
+## 2      M   40   80
+## 3      P   10   30
+## 4      H   50  100
+## 5      Y    1    8</code></pre>
+</div>
+<div id="archivos-txt" class="section level3" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Archivos TXT</h3>
+<p>Importa archivos de texto plano con formato de tabla (data.frame). Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=18Cgt4ret3utAuk4w2_jl8RIbKxteulIO&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo.</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<pre><code>##             V1          V2           V3          V4      V5
+## 1 Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 2          5.1         3.5          1.4         0.2  setosa
+## 3          4.9           3          1.4         0.2  setosa
+## 4          4.7         3.2          1.3         0.2  setosa
+## 5          4.6         3.1          1.5         0.2  setosa
+## 6            5         3.6          1.4         0.2  setosa</code></pre>
+<p>Notamos que los encabezados no forman parte de la tabla y que R genera sus propios encabezados. Para evitar esto, si el archivo que queremos importar contiene encabezados, el argumento <code>header</code> permite incorporar el encabezado del archivo que queremos importar.</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>Importemos este <a href="https://drive.google.com/u/0/uc?id=1D88k0cC5TeALDWbvRmLh07g2d65ImLHh&amp;export=download">nuevo set de datos</a>.</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris2.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<pre><code>##   Sepal.Length.Sepal.Width.Petal.Length.Petal.Width.Species
+## 1                                    5.1|3.5|1.4|0.2|setosa
+## 2                                4.9|3.4|1.4|0.2|versicolor
+## 3                                 4.7|3.2|1.3|0.2|virginica</code></pre>
+<p>Los datos no se importaron correctamente y están separados por el símbolo <strong>“|”</strong> o <em>pipe</em>.</p>
+<p>Los archivos <em>csv</em> están separados por comas y generalmente, los archivos <em>txt</em> están separados por tabulaciones. Para indicarle a R el tipo de separación que tiene nuestro archivo, usamos el argumento <code>sep</code>.</p>
+<p>En el siguiente comando, el argumento <code>sep="|"</code> le indica a R que nuestros datos están separados por el símbolo <strong>“|”</strong> o <em>pipe</em>.</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris2.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;|&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 1          5.1         3.5          1.4         0.2     setosa
+## 2          4.9         3.4          1.4         0.2 versicolor
+## 3          4.7         3.2          1.3         0.2  virginica</code></pre>
+</div>
+</div>
+<div id="exportación-de-datos" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Exportación de datos</h2>
+<p>Vamos a crear un data.frame para practicar cómo exportar los datos.</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a>DosisX <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">46</span>, <span class="dv">20</span>, <span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">63</span>)</span>
+<span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a>DosisY <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">50</span>, <span class="dv">70</span>, <span class="dv">70</span>, <span class="dv">63</span>)</span>
+<span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a>Lcelular <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;MCF7&quot;</span>, <span class="st">&quot;Hela&quot;</span>, <span class="st">&quot;IPC-366&quot;</span>, <span class="st">&quot;T47D&quot;</span>, <span class="st">&quot;ZR75-1&quot;</span>)</span>
+<span id="cb125-4"><a href="#cb125-4" aria-hidden="true" tabindex="-1"></a>tablaDE <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(DosisX, DosisY, Lcelular)</span>
+<span id="cb125-5"><a href="#cb125-5" aria-hidden="true" tabindex="-1"></a>tablaDE</span></code></pre></div>
+<pre><code>##   DosisX DosisY Lcelular
+## 1     46      6     MCF7
+## 2     20     50     Hela
+## 3     80     70  IPC-366
+## 4    100     70     T47D
+## 5     63     63   ZR75-1</code></pre>
+<div id="exportar-como-txt" class="section level3" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Exportar como TXT</h3>
+<p>Vamos a guardar el data.frame <code>tablaDE</code> como un archivo de texto llamado <strong>“datos.txt”</strong> utilizando el comando <code>write.table()</code>. La tabla se guardará en nuestro directorio de trabajo actual.</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(tablaDE, <span class="st">&quot;datos.txt&quot;</span>)</span></code></pre></div>
+</div>
+<div id="exportar-como-csv" class="section level3" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Exportar como CSV</h3>
+<p>Vamos a guardar el data.frame <code>tablaDE</code> como un archivo csv llamado <strong>“datos.csv”</strong> utilizando el comando <code>write.csv()</code>. La tabla se guardará en nuestro directorio de trabajo actual.</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos.csv&quot;</span>)</span></code></pre></div>
+</div>
+<div id="argumentos-al-exportar" class="section level3" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Argumentos al exportar</h3>
+<p>Así como al importar archivos existen diversos argumentos que podemos utilizar para darles ciertas indicaciones a R, también lo podemos hacer al momento de exportar los datos. Los siguientes argumentos se pueden usar con <code>write.csv()</code> y <code>write.table()</code>.</p>
+<p><code>row.names=FALSE</code> nos permite suprimir los nombres de las filas</p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos1.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<p>Para indicar la separación del archivo utilizamos <code>sep</code>. Vamos a usar la tabulación como separador poniendo <code>sep="\t"</code>.</p>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos2.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
+<p>Para suprimir los nombres de las columnas, usamos <code>col.names=FALSE</code></p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos3.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">col.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="archivos-xlsx-o-de-excel" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Archivos xlsx o de Excel</h2>
+<p>Para importar o exportar archivos de Excel, es necesario utilizar la paquetería <code>"openxlsx"</code> que nos permite trabajar con documentos de Excel en R. La instalación de paqueterías se realiza sólo una vez. Una vez que la librería o paquetería esté instalada, puedes omitir este paso.</p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;openxlsx&quot;</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>Ahora cargaremos la paquetería. El llamado de librerías deberá hacerse cada que inicies una nueva sesión en R.</p>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span></code></pre></div>
+<p>El siguiente comando te permite leer y conocer más sobre las funciones que ofrece esta paquetería.</p>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>?openxlsx</span></code></pre></div>
+<div id="importación-de-datos-xlsx-o-de-excel" class="section level3" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Importación de datos xlsx o de Excel</h3>
+<p>Importaremos un nuevo set de datos de Excel que puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1DmLiZZGq_MVkLYCMZ7rdeHydUZAoP-YW&amp;export=download">aquí</a>. Recuerda guardarlos en tu carpeta de trabajo.</p>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a>datosXLSX <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">&quot;iris.xlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 1          5.1         3.5          1.4         0.2     setosa
+## 2          4.9         3.4          1.4         0.2 versicolor
+## 3          4.7         3.2          1.3         0.2  virginica</code></pre>
+</div>
+<div id="exportación-de-datos-en-excel" class="section level3" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Exportación de datos en Excel</h3>
+<p>Vamos a exportar el data.frame <code>tablaDE</code> que creamos anteriormente como un archivo de Excel llamado <strong>“datos.xlsx”</strong> utilizando el comando <code>write.xlsx()</code>. El archivo se guardará en nuestro directorio de trabajo actual.</p>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.xlsx</span>(tablaDE, <span class="st">&quot;datos.xlsx&quot;</span>)</span></code></pre></div>
+<!--chapter:end:07-importacion_datos.Rmd-->
+</div>
+</div>
+</div>
+<div id="instalación-de-paqueterías" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Instalación de paqueterías</h1>
+<p>Las paqueterías o librerías son herramientas que se utilizan en R y facilitan la manipulación de datos y realizar diferentes tipos de análisis y gráficos. Las paqueterías se pueden descargar desde tres repositorios principales:</p>
+<ul>
+<li><a href="https://cran.r-project.org/">CRAN</a></li>
+<li><a href="https://www.bioconductor.org/">Bioconductor</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+</ul>
+<p>Cada paquetería contiene su manual o documentación para conocer las opciones o argumentos que se pueden usar. También contienen datos de prueba para verificar que todo funcione. La instalación de las paqueterías se realiza una sola vez.</p>
+<div id="paqueterías-de-cran" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Paqueterías de CRAN</h2>
+<p><a href="https://cran.r-project.org/">CRAN</a> es el repositorio oficial de R contenido en una red de servidores ftp y web mantenidos por la comunidad R.
+Para que un paquete se publique en CRAN, debe pasar pruebas que garanticen que el paquete cumple con las políticas de la comunidad.</p>
+<p><a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">Aquí</a> puedes consultar todas las paqueterías disponibles en CRAN. A continuación instalaremos la paquetería <code>ggplot2</code>, que se encuentra en el repositorio CRAN.</p>
+<div id="instalación-de-paqueteria-ggplot2" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Instalación de paqueteria ggplot2</h3>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<p>El comando <code>packageDescription()</code> muestra una descripción general sobre la paquetería.</p>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageDescription</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<p>El comando <code>help()</code> muestra la ayuda sobre la paquetería.</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<p>Si quieres eliminar una paquetería, utiliza el comando <code>remove.packages()</code> indicando entre paréntesis el nombre de la paquetería.</p>
+</div>
+</div>
+<div id="paqueterías-de-bioconductor" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Paqueterías de Bioconductor</h2>
+<p><a href="https://www.bioconductor.org/">Bioconductor</a> es un repositorio de temas específicos para software de código abierto en bioinformática. Para instalar cualquier paquetería de Bioconductor, es necesario instalar <strong>BiocManager</strong>, que es el gestor de paqueterías de Bioconductor.</p>
+<div id="instalación-de-biocmanager" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Instalación de BiocManager</h3>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span></code></pre></div>
+<p>Una vez instalado BiocManager, ya podemos instalar las paqueterías que se encuentran en Bioconductor. <a href="https://www.bioconductor.org/packages/release/BiocViews.html#___Software">Aquí</a> puedes revisar todas las paqueterías disponibles en Bioconductor.</p>
+</div>
+<div id="instalación-de-paqueterías-de-bioconductor." class="section level3" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Instalación de paqueterías de Bioconductor.</h3>
+<p>En este caso instalaremos la paquetería <strong>AnnotationDbi</strong></p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;AnnotationDbi&quot;</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="paqueterías-de-github" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Paqueterías de GitHub</h2>
+<p><a href="https://github.com/">GitHub</a> no es específico de R pero es el repositorio más popular para proyectos de código abierto. Su popularidad se debe al espacio ilimitado, la integración con git, control de versiones y su facilidad para compartir y colaborar con otros usuarios.</p>
+<p>La instalación de paqueterías desde GitHub dependerá de instrucciones indicadas por los autores.</p>
+<!--chapter:end:08-paqueterias.Rmd-->
+</div>
+</div>
+<div id="heatmaps" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Heatmaps</h1>
+<p>Los heatmaps son una técnica de visualización de datos que mide la magnitud de un fenómeno en colores en dos dimensiones. La variación del color puede ser por tono o intensidad, haciendo obvia la lectura del fenómeno sobre el espacio que se trata.</p>
+<p>Son el resultado obtenido al representar una matriz de valores en la que, en lugar de números, se muestra un gradiente de color proporcional al valor de cada variable en cada posición.</p>
+<p>Los heatmaps son ampliamente utilizados para visualizar e interpretar datos de expresión génica, principalmente para experimentos con microarrays y RNA-seq. También se puede combinar con métodos de agrupación, que agrupan genes y/o muestras en función de la similitud de su patrón de expresión génica. Esto puede ser útil para identificar genes que están comúnmente regulados o firmas biológicas asociadas con una condición particular (por ejemplo, una enfermedad o una condición ambiental).</p>
+<div id="instalación" class="section level5" number="9.0.0.0.1">
+<h5><span class="header-section-number">9.0.0.0.1</span> Instalación</h5>
+<p>La instalación de paqueterías se realiza sólo una vez. Una vez que la librería o paquetería esté instalada, puedes omitir este paso</p>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;pheatmap&quot;</span>)</span></code></pre></div>
+<p>Ahora cargaremos la paquetería. El llamado de librerías deberá hacerse cada que inicies una nueva sesión en R.</p>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span></code></pre></div>
+</div>
+<div id="directorio-de-trabajo" class="section level5" number="9.0.0.0.2">
+<h5><span class="header-section-number">9.0.0.0.2</span> Directorio de trabajo</h5>
+<p>Imprime el directorio de trabajo actual</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() </span></code></pre></div>
+<p>Asigna a un objeto la ruta de la carpeta de trabajo. Recuerda cambiar <em>/docs/mydir</em> por los nombres de tus carpetas de trabajo</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="#cb147-1" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;C:/docs/mydir&quot;</span> <span class="co">#Windows</span></span>
+<span id="cb147-2"><a href="#cb147-2" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;/home/users/mydir&quot;</span>  <span class="co">#Mac OS o linux</span></span></code></pre></div>
+<p>Ajusta el directorio de trabajo</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(directory)</span></code></pre></div>
+<p>Importación de datos</p>
+<p>Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1aS5-Zf03OeMRtZsCCLYFXAUQpesGy4IK&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;Datos.csv&quot;</span>)</span></code></pre></div>
+<p>Vamos a restructurar los datos</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(data) <span class="ot">&lt;-</span> data[,<span class="dv">1</span>]</span>
+<span id="cb150-2"><a href="#cb150-2" aria-hidden="true" tabindex="-1"></a>samp2 <span class="ot">&lt;-</span> data[,<span class="sc">-</span><span class="dv">1</span>]</span></code></pre></div>
+<p>Transformaremos nuestros datos a una matriz para poder crear nuestro heatmap.</p>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a>mat_data <span class="ot">&lt;-</span> <span class="fu">data.matrix</span>(samp2[,<span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(samp2)])</span>
+<span id="cb151-2"><a href="#cb151-2" aria-hidden="true" tabindex="-1"></a>mat_data</span></code></pre></div>
+<pre><code>##   edad Peso
+## L    6   20
+## M   40   80
+## P   10   30
+## H   50  100
+## Y    1    8</code></pre>
+</div>
+<div id="construyendo-un-heatmap-básico" class="section level3" number="9.0.1">
+<h3><span class="header-section-number">9.0.1</span> Construyendo un heatmap básico</h3>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
+</div>
+<div id="cambiar-el-tamaño-de-letra" class="section level3" number="9.0.2">
+<h3><span class="header-section-number">9.0.2</span> Cambiar el tamaño de letra</h3>
+<p>Con los comandos <code>fontsize_col</code>(columnas) y <code>fontsize_row</code> (filas), puedes cambiar el tamaño de letra y hacerlo más grande o más pequeño.</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb154-2"><a href="#cb154-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">6</span>,</span>
+<span id="cb154-3"><a href="#cb154-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">6</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
+</div>
+<div id="agregar-un-título-a-nuestro-heatmap" class="section level3" number="9.0.3">
+<h3><span class="header-section-number">9.0.3</span> Agregar un título a nuestro heatmap</h3>
+<p><code>main</code> te permite agregar el título al Heatmap. Recuerda que el título que eligas debe estar entre comillas</p>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb155-2"><a href="#cb155-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb155-3"><a href="#cb155-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb155-4"><a href="#cb155-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
+</div>
+<div id="cambiar-los-colores-de-nuestro-heatmap." class="section level3" number="9.0.4">
+<h3><span class="header-section-number">9.0.4</span> Cambiar los colores de nuestro heatmap.</h3>
+<p>La escala de colores fríos generalmente se usa en los heatmaps. <code>color</code> te permite cambiar los colores de la gráfica.</p>
+<p><a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">Aquí</a> y <a href="https://htmlcolorcodes.com/">aquí</a> puedes revisar los colores disponibles en R que puedes usar en tus gráficas.</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb156-2"><a href="#cb156-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb156-3"><a href="#cb156-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb156-4"><a href="#cb156-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer Heatmap&quot;</span>,</span>
+<span id="cb156-5"><a href="#cb156-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-118-1.png" width="672" /></p>
+<p>Agregar o cambiar las líneas de los clusters con <code>cluster_cols</code> y <code>cluster_rows</code></p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb157-2"><a href="#cb157-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb157-3"><a href="#cb157-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb157-4"><a href="#cb157-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>,</span>
+<span id="cb157-5"><a href="#cb157-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>),</span>
+<span id="cb157-6"><a href="#cb157-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span>F,</span>
+<span id="cb157-7"><a href="#cb157-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span>T)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb158-2"><a href="#cb158-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb158-3"><a href="#cb158-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb158-4"><a href="#cb158-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>,</span>
+<span id="cb158-5"><a href="#cb158-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>),</span>
+<span id="cb158-6"><a href="#cb158-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span>F,</span>
+<span id="cb158-7"><a href="#cb158-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span>F)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
+<!--chapter:end:heatmaps.Rmd-->
+</div>
+</div>
+<!--bookdown:body:end-->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+    </div>
+  </div>
+<!--bookdown:config-->
+
+</body>
+
+</html>

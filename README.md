@@ -41,5 +41,7 @@ Este curso está diseñado para todos aquellos interesados en adentrarse a la bi
 Para este curso es necesario tener instalada la última versión de R y RStudio. Si no lo tienes, en esta [guía](https://drive.google.com/file/d/1yFlFoG_cjpVyOhGHaB5I76xXASDmp70_/view) te enseñamos cómo hacerlo.
 
 Si tienes problemas durante la instalación, escríbenos a cursos@wintergenomics.com
+  
+¡Bienvenidos a la revolución genómica!
 
 </p>

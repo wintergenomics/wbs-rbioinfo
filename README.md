@@ -1,4 +1,6 @@
-# Información del curso
+# Winter Bioinformatics School - R para bioinformatica
+
+## Información del curso
 
 <p align="justify">
 

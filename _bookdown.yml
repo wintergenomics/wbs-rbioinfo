@@ -1,8 +1,21 @@
-book_filename: "Winter-School"
+book_filename: "Winter School"
 language:
   ui:
-    chapter_name: "Capitulo "
-output_dir: "docs"
+    chapter_name: "Capítulo "
 delete_merged_file: true
 site: "bookdown::bookdown_site"
 new_session: yes
+rmd_files: ["index.Rmd",
+    # Parte 1: Introduction
+    "01-intro.Rmd",
+    "02-Rbioinfo.Rmd",
+    # Parte 2: Objetos y atributos
+    "03-obj_atbr.Rmd",
+    "04-vectores.Rmd",
+    "05-matrices.Rmd",
+    "06-dataframes.Rmd",
+    # Parte 3: Paqueterias
+    "07-importacion_datos.Rmd",
+    "08-paqueterias.Rmd",
+    # Parte 4: Graficos
+    "heatmaps.Rmd"]

@@ -216,13 +216,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-github"><i class="fa fa-check"></i><b>8.3</b> Paqueterías de GitHub</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="heatmaps.html"><a href="heatmaps.html"><i class="fa fa-check"></i><b>9</b> Heatmaps</a>
+<li class="chapter" data-level="9" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html"><i class="fa fa-check"></i><b>9</b> Gráficos en R</a>
 <ul>
-<li class="chapter" data-level="9.0.1" data-path="heatmaps.html"><a href="heatmaps.html#construyendo-un-heatmap-básico"><i class="fa fa-check"></i><b>9.0.1</b> Construyendo un heatmap básico</a></li>
-<li class="chapter" data-level="9.0.2" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-el-tamaño-de-letra"><i class="fa fa-check"></i><b>9.0.2</b> Cambiar el tamaño de letra</a></li>
-<li class="chapter" data-level="9.0.3" data-path="heatmaps.html"><a href="heatmaps.html#agregar-un-título-a-nuestro-heatmap"><i class="fa fa-check"></i><b>9.0.3</b> Agregar un título a nuestro heatmap</a></li>
-<li class="chapter" data-level="9.0.4" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-los-colores-de-nuestro-heatmap."><i class="fa fa-check"></i><b>9.0.4</b> Cambiar los colores de nuestro heatmap.</a></li>
+<li class="chapter" data-level="9.1" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#tipos-de-gráficos-en-r"><i class="fa fa-check"></i><b>9.1</b> Tipos de gráficos en R</a></li>
+<li class="chapter" data-level="9.2" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#paqueterías-para-graficar-en-r"><i class="fa fa-check"></i><b>9.2</b> Paqueterías para graficar en R</a></li>
+<li class="chapter" data-level="9.3" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#gráficos-de-base-r"><i class="fa fa-check"></i><b>9.3</b> Gráficos de base R</a></li>
+<li class="chapter" data-level="9.4" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#paletas-de-colores-en-r"><i class="fa fa-check"></i><b>9.4</b> Paletas de colores en R</a></li>
+<li class="chapter" data-level="9.5" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#ggplot2"><i class="fa fa-check"></i><b>9.5</b> ggplot2</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#scatterplots"><i class="fa fa-check"></i><b>9.5.1</b> Scatterplots</a></li>
+<li class="chapter" data-level="9.5.2" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#rcolorbrewer"><i class="fa fa-check"></i><b>9.5.2</b> RcolorBrewer</a></li>
+<li class="chapter" data-level="9.5.3" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#boxplots"><i class="fa fa-check"></i><b>9.5.3</b> Boxplots</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="heatmaps.html"><a href="heatmaps.html"><i class="fa fa-check"></i><b>10</b> Heatmaps</a></li>
 </ul>
 
       </nav>
@@ -257,15 +264,16 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 <h2><span class="header-section-number">7.2</span> Importación de datos</h2>
 <div id="archivos-csv" class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Archivos CSV</h3>
-<p>Importa archivos de texto plano con formato CSV (<em>coma-separated values</em>). Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1aS5-Zf03OeMRtZsCCLYFXAUQpesGy4IK&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.</p>
+<p>Importa archivos de texto plano con formato CSV (<em>coma-separated values</em>). Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1TlR9xgKl7Laf8-SNwoq3W2MXkD19AQ9d&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.</p>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="importación-y-exportación-de-datos.html#cb110-1" aria-hidden="true" tabindex="-1"></a>datosRCSV <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;iris.csv&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="importación-y-exportación-de-datos.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRCSV)</span></code></pre></div>
-<pre><code>##   Nombre edad Peso
-## 1      L    6   20
-## 2      M   40   80
-## 3      P   10   30
-## 4      H   50  100
-## 5      Y    1    8</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
 </div>
 <div id="archivos-txt" class="section level3" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> Archivos TXT</h3>

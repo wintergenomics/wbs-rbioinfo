@@ -23,12 +23,12 @@ setwd(directory)
 ## Importación de datos
 ### Archivos CSV
 
-Importa archivos de texto plano con formato CSV (*coma-separated values*). Los datos los puedes descargar de [aquí](https://drive.google.com/u/0/uc?id=1aS5-Zf03OeMRtZsCCLYFXAUQpesGy4IK&export=download). Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.
+Importa archivos de texto plano con formato CSV (*coma-separated values*). Los datos los puedes descargar de [aquí](https://drive.google.com/u/0/uc?id=1TlR9xgKl7Laf8-SNwoq3W2MXkD19AQ9d&export=download). Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.
 ```{r, eval=F}
 datosRCSV <- read.csv("iris.csv")
 ```
 ```{r, eval=T, echo=F}
-datosRCSV <- read.csv("~/Downloads/Datos.csv")
+datosRCSV <- read.csv("~/Downloads/iris.csv")
 ```
 
 ```{r}

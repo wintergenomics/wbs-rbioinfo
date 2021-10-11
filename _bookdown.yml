@@ -19,4 +19,5 @@ rmd_files: ["index.Rmd",
     "07-importacion_datos.Rmd",
     "08-paqueterias.Rmd",
     # Parte 4: Gráficos
-    "heatmaps.Rmd"]
+    "09-graficos.Rmd",
+    "10-heatmaps.Rmd"]

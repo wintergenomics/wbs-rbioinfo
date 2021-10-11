@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 9 Heatmaps | Winter Bioinformatics School</title>
-  <meta name="description" content="Capítulo 9 Heatmaps | Winter Bioinformatics School" />
+  <title>Capítulo 10 Heatmaps | Winter Bioinformatics School</title>
+  <meta name="description" content="Capítulo 10 Heatmaps | Winter Bioinformatics School" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 9 Heatmaps | Winter Bioinformatics School" />
+  <meta property="og:title" content="Capítulo 10 Heatmaps | Winter Bioinformatics School" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="wintergenomics/wbs-rbioinfo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 9 Heatmaps | Winter Bioinformatics School" />
+  <meta name="twitter:title" content="Capítulo 10 Heatmaps | Winter Bioinformatics School" />
   
   
   
@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="instalación-de-paqueterías.html"/>
+<link rel="prev" href="gráficos-en-r.html"/>
 
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -216,13 +216,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-github"><i class="fa fa-check"></i><b>8.3</b> Paqueterías de GitHub</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="heatmaps.html"><a href="heatmaps.html"><i class="fa fa-check"></i><b>9</b> Heatmaps</a>
+<li class="chapter" data-level="9" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html"><i class="fa fa-check"></i><b>9</b> Gráficos en R</a>
 <ul>
-<li class="chapter" data-level="9.0.1" data-path="heatmaps.html"><a href="heatmaps.html#construyendo-un-heatmap-básico"><i class="fa fa-check"></i><b>9.0.1</b> Construyendo un heatmap básico</a></li>
-<li class="chapter" data-level="9.0.2" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-el-tamaño-de-letra"><i class="fa fa-check"></i><b>9.0.2</b> Cambiar el tamaño de letra</a></li>
-<li class="chapter" data-level="9.0.3" data-path="heatmaps.html"><a href="heatmaps.html#agregar-un-título-a-nuestro-heatmap"><i class="fa fa-check"></i><b>9.0.3</b> Agregar un título a nuestro heatmap</a></li>
-<li class="chapter" data-level="9.0.4" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-los-colores-de-nuestro-heatmap."><i class="fa fa-check"></i><b>9.0.4</b> Cambiar los colores de nuestro heatmap.</a></li>
+<li class="chapter" data-level="9.1" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#tipos-de-gráficos-en-r"><i class="fa fa-check"></i><b>9.1</b> Tipos de gráficos en R</a></li>
+<li class="chapter" data-level="9.2" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#paqueterías-para-graficar-en-r"><i class="fa fa-check"></i><b>9.2</b> Paqueterías para graficar en R</a></li>
+<li class="chapter" data-level="9.3" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#gráficos-de-base-r"><i class="fa fa-check"></i><b>9.3</b> Gráficos de base R</a></li>
+<li class="chapter" data-level="9.4" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#paletas-de-colores-en-r"><i class="fa fa-check"></i><b>9.4</b> Paletas de colores en R</a></li>
+<li class="chapter" data-level="9.5" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#ggplot2"><i class="fa fa-check"></i><b>9.5</b> ggplot2</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#scatterplots"><i class="fa fa-check"></i><b>9.5.1</b> Scatterplots</a></li>
+<li class="chapter" data-level="9.5.2" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#rcolorbrewer"><i class="fa fa-check"></i><b>9.5.2</b> RcolorBrewer</a></li>
+<li class="chapter" data-level="9.5.3" data-path="gráficos-en-r.html"><a href="gráficos-en-r.html#boxplots"><i class="fa fa-check"></i><b>9.5.3</b> Boxplots</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="heatmaps.html"><a href="heatmaps.html"><i class="fa fa-check"></i><b>10</b> Heatmaps</a></li>
 </ul>
 
       </nav>
@@ -240,101 +247,75 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="heatmaps" class="section level1" number="9">
-<h1><span class="header-section-number">Capítulo 9</span> Heatmaps</h1>
+<div id="heatmaps" class="section level1" number="10">
+<h1><span class="header-section-number">Capítulo 10</span> Heatmaps</h1>
 <p>Los heatmaps son una técnica de visualización de datos que mide la magnitud de un fenómeno en colores en dos dimensiones. La variación del color puede ser por tono o intensidad, haciendo obvia la lectura del fenómeno sobre el espacio que se trata.</p>
 <p>Son el resultado obtenido al representar una matriz de valores en la que, en lugar de números, se muestra un gradiente de color proporcional al valor de cada variable en cada posición.</p>
 <p>Los heatmaps son ampliamente utilizados para visualizar e interpretar datos de expresión génica, principalmente para experimentos con microarrays y RNA-seq. También se puede combinar con métodos de agrupación, que agrupan genes y/o muestras en función de la similitud de su patrón de expresión génica. Esto puede ser útil para identificar genes que están comúnmente regulados o firmas biológicas asociadas con una condición particular (por ejemplo, una enfermedad o una condición ambiental).</p>
-<div id="instalación" class="section level5" number="9.0.0.0.1">
-<h5><span class="header-section-number">9.0.0.0.1</span> Instalación</h5>
-<p>La instalación de paqueterías se realiza sólo una vez. Una vez que la librería o paquetería esté instalada, puedes omitir este paso</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="heatmaps.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;pheatmap&quot;</span>)</span></code></pre></div>
-<p>Ahora cargaremos la paquetería. El llamado de librerías deberá hacerse cada que inicies una nueva sesión en R.</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="heatmaps.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span></code></pre></div>
-</div>
-<div id="directorio-de-trabajo" class="section level5" number="9.0.0.0.2">
-<h5><span class="header-section-number">9.0.0.0.2</span> Directorio de trabajo</h5>
-<p>Imprime el directorio de trabajo actual</p>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="heatmaps.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() </span></code></pre></div>
-<p>Asigna a un objeto la ruta de la carpeta de trabajo. Recuerda cambiar <em>/docs/mydir</em> por los nombres de tus carpetas de trabajo</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="heatmaps.html#cb147-1" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;C:/docs/mydir&quot;</span> <span class="co">#Windows</span></span>
-<span id="cb147-2"><a href="heatmaps.html#cb147-2" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;/home/users/mydir&quot;</span>  <span class="co">#Mac OS o linux</span></span></code></pre></div>
-<p>Ajusta el directorio de trabajo</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="heatmaps.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(directory)</span></code></pre></div>
-<p>Importación de datos</p>
-<p>Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1aS5-Zf03OeMRtZsCCLYFXAUQpesGy4IK&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="heatmaps.html#cb149-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;Datos.csv&quot;</span>)</span></code></pre></div>
+<p>Para crear los heatmps usaremos <code>pheatmap()</code>. Instalamos la paquetería y después la cargamos.</p>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="heatmaps.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;pheatmap&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="heatmaps.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span></code></pre></div>
+<p>El set de datos que vamos a usar los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1aS5-Zf03OeMRtZsCCLYFXAUQpesGy4IK&amp;export=download">aquí</a>. Recuerda guardarlos en tu carpeta de trabajo actual, como lo vimos en la sección 7.</p>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="heatmaps.html#cb165-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;Datos.csv&quot;</span>)</span></code></pre></div>
 <p>Vamos a restructurar los datos</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="heatmaps.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(data) <span class="ot">&lt;-</span> data[,<span class="dv">1</span>]</span>
-<span id="cb150-2"><a href="heatmaps.html#cb150-2" aria-hidden="true" tabindex="-1"></a>samp2 <span class="ot">&lt;-</span> data[,<span class="sc">-</span><span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="heatmaps.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(data) <span class="ot">&lt;-</span> data[,<span class="dv">1</span>]</span>
+<span id="cb166-2"><a href="heatmaps.html#cb166-2" aria-hidden="true" tabindex="-1"></a>samp2 <span class="ot">&lt;-</span> data[,<span class="sc">-</span><span class="dv">1</span>]</span></code></pre></div>
 <p>Transformaremos nuestros datos a una matriz para poder crear nuestro heatmap.</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="heatmaps.html#cb151-1" aria-hidden="true" tabindex="-1"></a>mat_data <span class="ot">&lt;-</span> <span class="fu">data.matrix</span>(samp2[,<span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(samp2)])</span>
-<span id="cb151-2"><a href="heatmaps.html#cb151-2" aria-hidden="true" tabindex="-1"></a>mat_data</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="heatmaps.html#cb167-1" aria-hidden="true" tabindex="-1"></a>mat_data <span class="ot">&lt;-</span> <span class="fu">data.matrix</span>(samp2[,<span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(samp2)])</span>
+<span id="cb167-2"><a href="heatmaps.html#cb167-2" aria-hidden="true" tabindex="-1"></a>mat_data</span></code></pre></div>
 <pre><code>##   edad Peso
 ## L    6   20
 ## M   40   80
 ## P   10   30
 ## H   50  100
 ## Y    1    8</code></pre>
-</div>
-<div id="construyendo-un-heatmap-básico" class="section level3" number="9.0.1">
-<h3><span class="header-section-number">9.0.1</span> Construyendo un heatmap básico</h3>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="heatmaps.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data)</span></code></pre></div>
-<p><img src="heatmaps_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-</div>
-<div id="cambiar-el-tamaño-de-letra" class="section level3" number="9.0.2">
-<h3><span class="header-section-number">9.0.2</span> Cambiar el tamaño de letra</h3>
+<p>Construyendo un heatmap básico</p>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="heatmaps.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data)</span></code></pre></div>
+<p><img src="10-heatmaps_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>Con los comandos <code>fontsize_col</code>(columnas) y <code>fontsize_row</code> (filas), puedes cambiar el tamaño de letra y hacerlo más grande o más pequeño.</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="heatmaps.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
-<span id="cb154-2"><a href="heatmaps.html#cb154-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">6</span>,</span>
-<span id="cb154-3"><a href="heatmaps.html#cb154-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">6</span>)</span></code></pre></div>
-<p><img src="heatmaps_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-</div>
-<div id="agregar-un-título-a-nuestro-heatmap" class="section level3" number="9.0.3">
-<h3><span class="header-section-number">9.0.3</span> Agregar un título a nuestro heatmap</h3>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="heatmaps.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb170-2"><a href="heatmaps.html#cb170-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">6</span>,</span>
+<span id="cb170-3"><a href="heatmaps.html#cb170-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">6</span>)</span></code></pre></div>
+<p><img src="10-heatmaps_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p><code>main</code> te permite agregar el título al Heatmap. Recuerda que el título que eligas debe estar entre comillas</p>
-<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="heatmaps.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
-<span id="cb155-2"><a href="heatmaps.html#cb155-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
-<span id="cb155-3"><a href="heatmaps.html#cb155-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
-<span id="cb155-4"><a href="heatmaps.html#cb155-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>)</span></code></pre></div>
-<p><img src="heatmaps_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-</div>
-<div id="cambiar-los-colores-de-nuestro-heatmap." class="section level3" number="9.0.4">
-<h3><span class="header-section-number">9.0.4</span> Cambiar los colores de nuestro heatmap.</h3>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="heatmaps.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb171-2"><a href="heatmaps.html#cb171-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb171-3"><a href="heatmaps.html#cb171-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb171-4"><a href="heatmaps.html#cb171-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>)</span></code></pre></div>
+<p><img src="10-heatmaps_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>La escala de colores fríos generalmente se usa en los heatmaps. <code>color</code> te permite cambiar los colores de la gráfica.</p>
 <p><a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">Aquí</a> y <a href="https://htmlcolorcodes.com/">aquí</a> puedes revisar los colores disponibles en R que puedes usar en tus gráficas.</p>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="heatmaps.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
-<span id="cb156-2"><a href="heatmaps.html#cb156-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
-<span id="cb156-3"><a href="heatmaps.html#cb156-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
-<span id="cb156-4"><a href="heatmaps.html#cb156-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer Heatmap&quot;</span>,</span>
-<span id="cb156-5"><a href="heatmaps.html#cb156-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>))</span></code></pre></div>
-<p><img src="heatmaps_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="heatmaps.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb172-2"><a href="heatmaps.html#cb172-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb172-3"><a href="heatmaps.html#cb172-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb172-4"><a href="heatmaps.html#cb172-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer Heatmap&quot;</span>,</span>
+<span id="cb172-5"><a href="heatmaps.html#cb172-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>))</span></code></pre></div>
+<p><img src="10-heatmaps_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Agregar o cambiar las líneas de los clusters con <code>cluster_cols</code> y <code>cluster_rows</code></p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="heatmaps.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
-<span id="cb157-2"><a href="heatmaps.html#cb157-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
-<span id="cb157-3"><a href="heatmaps.html#cb157-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
-<span id="cb157-4"><a href="heatmaps.html#cb157-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>,</span>
-<span id="cb157-5"><a href="heatmaps.html#cb157-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>),</span>
-<span id="cb157-6"><a href="heatmaps.html#cb157-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span>F,</span>
-<span id="cb157-7"><a href="heatmaps.html#cb157-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span>T)</span></code></pre></div>
-<p><img src="heatmaps_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="heatmaps.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
-<span id="cb158-2"><a href="heatmaps.html#cb158-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
-<span id="cb158-3"><a href="heatmaps.html#cb158-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
-<span id="cb158-4"><a href="heatmaps.html#cb158-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>,</span>
-<span id="cb158-5"><a href="heatmaps.html#cb158-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>),</span>
-<span id="cb158-6"><a href="heatmaps.html#cb158-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span>F,</span>
-<span id="cb158-7"><a href="heatmaps.html#cb158-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span>F)</span></code></pre></div>
-<p><img src="heatmaps_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="heatmaps.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb173-2"><a href="heatmaps.html#cb173-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb173-3"><a href="heatmaps.html#cb173-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb173-4"><a href="heatmaps.html#cb173-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>,</span>
+<span id="cb173-5"><a href="heatmaps.html#cb173-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>),</span>
+<span id="cb173-6"><a href="heatmaps.html#cb173-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span>F,</span>
+<span id="cb173-7"><a href="heatmaps.html#cb173-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span>T)</span></code></pre></div>
+<p><img src="10-heatmaps_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="heatmaps.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat_data,</span>
+<span id="cb174-2"><a href="heatmaps.html#cb174-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_col=</span><span class="dv">10</span>,</span>
+<span id="cb174-3"><a href="heatmaps.html#cb174-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">fontsize_row=</span><span class="dv">10</span>,</span>
+<span id="cb174-4"><a href="heatmaps.html#cb174-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Mi primer heatmap&quot;</span>,</span>
+<span id="cb174-5"><a href="heatmaps.html#cb174-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;red&quot;</span>),</span>
+<span id="cb174-6"><a href="heatmaps.html#cb174-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span>F,</span>
+<span id="cb174-7"><a href="heatmaps.html#cb174-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span>F)</span></code></pre></div>
+<p><img src="10-heatmaps_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="instalación-de-paqueterías.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gráficos-en-r.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

@@ -4,6 +4,7 @@ language:
     chapter_name: "Capítulo "
 delete_merged_file: true
 site: "bookdown::bookdown_site"
+output_dir: docs
 new_session: yes
 rmd_files: ["index.Rmd",
     # Parte 1: Introduction
@@ -14,8 +15,8 @@ rmd_files: ["index.Rmd",
     "04-vectores.Rmd",
     "05-matrices.Rmd",
     "06-dataframes.Rmd",
-    # Parte 3: Paqueterias
+    # Parte 3: Paqueterías
     "07-importacion_datos.Rmd",
     "08-paqueterias.Rmd",
-    # Parte 4: Graficos
+    # Parte 4: Gráficos
     "heatmaps.Rmd"]

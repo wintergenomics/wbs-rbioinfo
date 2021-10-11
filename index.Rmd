@@ -31,14 +31,13 @@ R, al ser uno de los lenguajes más utilizados por científicos en numerosas dis
 
 
 Durante este curso aprenderás las herramientas básicas de R para analizar datos. Revisaremos qué son los lenguajes de programación, los tipos de lenguajes de programación que existen. Después veremos los tipos de objetos, datos y atributos más usados en R como vectores, matrices, data.frames. Aprenderás a generar proyectos y realizar gráficos de boxplots, scatter plots y heatmaps usando ggplot2.
-
 </p>
 
 ## Formato del curso {-}
 
 <p align="justify">
 
-Este es un curso digital donde las sesiones y el material del curso son en línea. Las sesiones del curso han sido grabadas y se te han compartido al correo que utilizaste al realizar tu registro al curso en la carpeta de Google Drive del curso junto con el material y presentaciones. 
+Este es un curso digital donde las sesiones y el material del curso serán en línea. Las sesiones del curso han sido grabadas y se te han compartido en la carpeta de Google Drive, junt con el material y presentaciones del curso al correo que utilizaste al realizar tu registro al curso. 
 </p>
 
 ## ¿Quién es nuestra audiencia? {-}

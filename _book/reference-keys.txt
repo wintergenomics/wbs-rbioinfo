@@ -19,6 +19,7 @@ estructura-de-una-matriz
 creación-de-una-matriz
 acceder-a-los-elementos-de-una-matri
 modificar-elementos-de-una-matriz
+ejercicio-1
 data.frames
 características-de-los-data.frames
 creación-de-un-data.frame

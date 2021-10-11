@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capitulo 3 Objetos | Winter Bioinformatics School</title>
+  <meta name="description" content="Capitulo 3 Objetos | Winter Bioinformatics School" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capitulo 3 Objetos | Winter Bioinformatics School" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="wintergenomics/wbs-rbioinfo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capitulo 3 Objetos | Winter Bioinformatics School" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introducción-a-r-y-rstudio-para-bioinformática.html"/>
+<link rel="next" href="vectores.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Información del curso</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#formato-del-curso"><i class="fa fa-check"></i>Formato del curso</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#quién-es-nuestra-audiencia"><i class="fa fa-check"></i>¿Quién es nuestra audiencia?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisitos"><i class="fa fa-check"></i>Pre-requisitos</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#instalación-de-r-y-rstudio"><i class="fa fa-check"></i>Instalación de R y RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lenguajes-y-principios-de-programación.html"><a href="lenguajes-y-principios-de-programación.html"><i class="fa fa-check"></i><b>1</b> Lenguajes y principios de programación</a></li>
+<li class="chapter" data-level="2" data-path="introducción-a-r-y-rstudio-para-bioinformática.html"><a href="introducción-a-r-y-rstudio-para-bioinformática.html"><i class="fa fa-check"></i><b>2</b> Introducción a R y RStudio para bioinformática</a></li>
+<li class="chapter" data-level="3" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>3</b> Objetos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="objetos.html"><a href="objetos.html#creación-de-objetos"><i class="fa fa-check"></i><b>3.1</b> Creación de objetos</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="objetos.html"><a href="objetos.html#ejercicio"><i class="fa fa-check"></i><b>3.1.1</b> Ejercicio</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="objetos.html"><a href="objetos.html#tipos-de-datos-en-r"><i class="fa fa-check"></i><b>3.2</b> Tipos de datos en R</a></li>
+<li class="chapter" data-level="3.3" data-path="objetos.html"><a href="objetos.html#tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>3.3</b> Tipos de objetos en R</a></li>
+<li class="chapter" data-level="3.4" data-path="objetos.html"><a href="objetos.html#atributos-de-los-objetos"><i class="fa fa-check"></i><b>3.4</b> Atributos de los objetos</a></li>
+<li class="chapter" data-level="3.5" data-path="objetos.html"><a href="objetos.html#operadores"><i class="fa fa-check"></i><b>3.5</b> Operadores</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="objetos.html"><a href="objetos.html#operadores-artiméticos"><i class="fa fa-check"></i><b>3.5.1</b> Operadores artiméticos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="objetos.html"><a href="objetos.html#operadores-relacionales"><i class="fa fa-check"></i><b>3.5.2</b> Operadores Relacionales</a></li>
+<li class="chapter" data-level="3.5.3" data-path="objetos.html"><a href="objetos.html#operadores-lógicos"><i class="fa fa-check"></i><b>3.5.3</b> Operadores Lógicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.1</b> Manejo de vectores</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.2</b> Operaciones con vectores</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.3</b> Funciones en vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#estructura-de-una-matriz"><i class="fa fa-check"></i><b>5.1</b> Estructura de una matriz</a></li>
+<li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#creación-de-una-matriz"><i class="fa fa-check"></i><b>5.2</b> Creación de una matriz</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matri"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matri</a></li>
+<li class="chapter" data-level="5.4" data-path="matrices.html"><a href="matrices.html#modificar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.4</b> Modificar elementos de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data.frames</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data.html"><a href="data.html#características-de-los-data.frames"><i class="fa fa-check"></i><b>6.1</b> Características de los data.frames</a></li>
+<li class="chapter" data-level="6.2" data-path="data.html"><a href="data.html#creación-de-un-data.frame"><i class="fa fa-check"></i><b>6.2</b> Creación de un data.frame</a></li>
+<li class="chapter" data-level="6.3" data-path="data.html"><a href="data.html#extracción-de-datos-de-un-data.frame"><i class="fa fa-check"></i><b>6.3</b> Extracción de datos de un data.frame</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="data.html"><a href="data.html#extracción-de-datos-por-columna"><i class="fa fa-check"></i><b>6.3.1</b> Extracción de datos por columna</a></li>
+<li class="chapter" data-level="6.3.2" data-path="data.html"><a href="data.html#extracción-de-datos-por-filas"><i class="fa fa-check"></i><b>6.3.2</b> Extracción de datos por filas</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#combinar-data.frames"><i class="fa fa-check"></i><b>6.4</b> Combinar data.frames</a></li>
+<li class="chapter" data-level="6.5" data-path="data.html"><a href="data.html#subset-de-datos"><i class="fa fa-check"></i><b>6.5</b> Subset de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html"><i class="fa fa-check"></i><b>7</b> Importación y exportación de datos</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#estableciendo-nuestro-directorio-de-trabajo"><i class="fa fa-check"></i><b>7.1</b> Estableciendo nuestro directorio de trabajo</a></li>
+<li class="chapter" data-level="7.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#importación-de-datos"><i class="fa fa-check"></i><b>7.2</b> Importación de datos</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#archivos-csv"><i class="fa fa-check"></i><b>7.2.1</b> Archivos CSV</a></li>
+<li class="chapter" data-level="7.2.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#archivos-txt"><i class="fa fa-check"></i><b>7.2.2</b> Archivos TXT</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportación-de-datos"><i class="fa fa-check"></i><b>7.3</b> Exportación de datos</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportar-como-txt"><i class="fa fa-check"></i><b>7.3.1</b> Exportar como TXT</a></li>
+<li class="chapter" data-level="7.3.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportar-como-csv"><i class="fa fa-check"></i><b>7.3.2</b> Exportar como CSV</a></li>
+<li class="chapter" data-level="7.3.3" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#argumentos-al-exportar"><i class="fa fa-check"></i><b>7.3.3</b> Argumentos al exportar</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#archivos-xlsx-o-de-excel"><i class="fa fa-check"></i><b>7.4</b> Archivos xlsx o de Excel</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#importación-de-datos-xlsx-o-de-excel"><i class="fa fa-check"></i><b>7.4.1</b> Importación de datos xlsx o de Excel</a></li>
+<li class="chapter" data-level="7.4.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportación-de-datos-en-excel"><i class="fa fa-check"></i><b>7.4.2</b> Exportación de datos en Excel</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html"><i class="fa fa-check"></i><b>8</b> Instalación de paqueterías</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-cran"><i class="fa fa-check"></i><b>8.1</b> Paqueterías de CRAN</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#instalación-de-paqueteria-ggplot2"><i class="fa fa-check"></i><b>8.1.1</b> Instalación de paqueteria ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-bioconductor"><i class="fa fa-check"></i><b>8.2</b> Paqueterías de Bioconductor</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#instalación-de-biocmanager"><i class="fa fa-check"></i><b>8.2.1</b> Instalación de BiocManager</a></li>
+<li class="chapter" data-level="8.2.2" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#instalación-de-paqueterías-de-bioconductor."><i class="fa fa-check"></i><b>8.2.2</b> Instalación de paqueterías de Bioconductor.</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-github"><i class="fa fa-check"></i><b>8.3</b> Paqueterías de GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="heatmaps.html"><a href="heatmaps.html"><i class="fa fa-check"></i><b>9</b> Heatmaps</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="heatmaps.html"><a href="heatmaps.html#construyendo-un-heatmap-básico"><i class="fa fa-check"></i><b>9.0.1</b> Construyendo un heatmap básico</a></li>
+<li class="chapter" data-level="9.0.2" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-el-tamaño-de-letra"><i class="fa fa-check"></i><b>9.0.2</b> Cambiar el tamaño de letra</a></li>
+<li class="chapter" data-level="9.0.3" data-path="heatmaps.html"><a href="heatmaps.html#agregar-un-título-a-nuestro-heatmap"><i class="fa fa-check"></i><b>9.0.3</b> Agregar un título a nuestro heatmap</a></li>
+<li class="chapter" data-level="9.0.4" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-los-colores-de-nuestro-heatmap."><i class="fa fa-check"></i><b>9.0.4</b> Cambiar los colores de nuestro heatmap.</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Winter Bioinformatics School</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="objetos" class="section level1" number="3">
+<h1><span class="header-section-number">Capitulo 3</span> Objetos</h1>
+<p>Todos los elementos que maneja R se llaman objetos</p>
+<p>En términos prácticos:</p>
+<p>Es un nombre que almacena cualquier tipo y cantidad de datos (inputs o outputs) con atributos específicos.</p>
+<div id="creación-de-objetos" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Creación de objetos</h2>
+<p>En R podemos asignar valores a objetos con el siguiente símbolo para la asignación <code>&lt;-</code>
+Ejemplo:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="objetos.html#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span></code></pre></div>
+<p>Donde x es la variable y 1 es el objeto</p>
+<p><strong>¿Cuál sería otra forma de mostrar el valor de x usando una función?</strong></p>
+<p>Es importante mantener la estructura de la función u operación, y en ocasiones no importa agregar más espacios, por ejemplo:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="objetos.html#cb2-1" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a href="objetos.html#cb2-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Al incluir más espacios, sigue produciendo el mismo resultado</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="objetos.html#cb4-1" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span>      <span class="dv">1</span>       <span class="sc">+</span>      <span class="dv">3</span></span>
+<span id="cb4-2"><a href="objetos.html#cb4-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div id="ejercicio" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Ejercicio</h3>
+<p>Asigna el resultado de multiplicar 2 por 8 a la variable cromosomas</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="objetos.html#cb6-1" aria-hidden="true" tabindex="-1"></a>cromosomas <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span><span class="dv">8</span></span>
+<span id="cb6-2"><a href="objetos.html#cb6-2" aria-hidden="true" tabindex="-1"></a>cromosomas</span></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<p>Ahora asigna el valor 3400 a la variable cromosomas.</p>
+<p>Para R, no es lo mismo: Juan y “Juan”.</p>
+<p>Juan (sin comillas) es el nombre de un objeto</p>
+</div>
+</div>
+<div id="tipos-de-datos-en-r" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Tipos de datos en R</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Tipos</th>
+<th align="left">Dato</th>
+<th align="left">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Caracter</td>
+<td align="left">Id de paciente</td>
+<td align="left">“Alejandra”, “IMSS_311”</td>
+</tr>
+<tr class="even">
+<td align="left">Numérico</td>
+<td align="left">Cigarrillos por día</td>
+<td align="left">9, 4.15, 1000</td>
+</tr>
+<tr class="odd">
+<td align="left">Lógico</td>
+<td align="left">¿Fumador?</td>
+<td align="left">TRUE (T), FALSE (F)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NUMÉRICO</strong></p>
+<p>Agrega un valor numérico a la variable mi_numero</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="objetos.html#cb8-1" aria-hidden="true" tabindex="-1"></a>mi_numero <span class="ot">&lt;-</span> <span class="dv">30</span></span></code></pre></div>
+<p><strong>CARACTER</strong></p>
+<p>Agrega la siguiente palabra a mi_caracter: Mexico</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="objetos.html#cb9-1" aria-hidden="true" tabindex="-1"></a>mi_caracter <span class="ot">&lt;-</span> <span class="st">&quot;Mexico&quot;</span></span></code></pre></div>
+<p><strong>NOTA: Cuando usamos texto debemos escribirlo entre ” ” (comillas)</strong></p>
+<p><strong>LÓGICO</strong></p>
+<p>Agrega el valor lógico</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="objetos.html#cb10-1" aria-hidden="true" tabindex="-1"></a>mi_logico <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span></code></pre></div>
+<p>Podemos conocer la clase a la que corresponde cada uno de nuestros datos con la función <code>class()</code></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="objetos.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_numero)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="objetos.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_caracter)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="objetos.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_logico)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p>Es posible convertir la clase de un objeto usando las siguientes funciones:</p>
+<ul>
+<li><code>as.numeric()</code></li>
+<li><code>as.logical()</code></li>
+<li><code>as.character()</code></li>
+<li><code>as.integer()</code></li>
+</ul>
+<p><strong>Ejemplo</strong>
+Convierte <code>mi_numero</code> a caracter usando la función <code>as.character()</code></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="objetos.html#cb17-1" aria-hidden="true" tabindex="-1"></a>mi_numero</span></code></pre></div>
+<pre><code>## [1] 30</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="objetos.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mi_numero)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="objetos.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(mi_numero)</span></code></pre></div>
+<pre><code>## [1] &quot;30&quot;</code></pre>
+</div>
+<div id="tipos-de-objetos-en-r" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Tipos de objetos en R</h2>
+<ul>
+<li><strong>Vectores:</strong> Son secuencias uni-dimensionales de elementos.</li>
+<li><strong>Matrices:</strong> Son objetos de bi-dimensionales. El contenido de este objeto debe de ser de un solo tipo de datos.</li>
+<li><strong>Factores:</strong> Son vectores de tipo categóricos, pueden contener datos numéricos, integrales o caracteres.</li>
+<li><strong>Listas:</strong> Las listas son parecidas a los vectores, pero a diferencia de estas, no tienen que contener el mismo tipo de datos.</li>
+<li><strong>Data frames:</strong> Es una matriz pero puede contener datos de diferentes tipos, ya sea numéricos o tipo carácter.</li>
+</ul>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="33%" />
+<col width="59%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tipos</th>
+<th align="left">Ejemplo</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Vector</td>
+<td align="left">c(“Mary”,”Juan”, … )</td>
+<td align="left">Colección de datos en serie</td>
+</tr>
+<tr class="even">
+<td align="left">Matriz</td>
+<td align="left">matrix(37, 20, 25, 17, … )</td>
+<td align="left">Vector ordenado por filas y columnas</td>
+</tr>
+<tr class="odd">
+<td align="left">Data.frame</td>
+<td align="left">data.frame(ID_Pacientes, cigarrillos por día, Fumador)</td>
+<td align="left">Colección de vectores ordenados por columnas; todos los vectores deben ser de la misma longitud</td>
+</tr>
+<tr class="even">
+<td align="left">Listas</td>
+<td align="left">list(mi_vector, mi_matriz, mi_dataframe, mi gráfico)</td>
+<td align="left">Son contenedores generales de datos. Muy flexibles, pero sin estructura</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="atributos-de-los-objetos" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Atributos de los objetos</h2>
+<p>Los atributos de los objetos pueden ser:</p>
+<ul>
+<li>Nombres</li>
+<li>Dimensiones</li>
+<li>Clases</li>
+<li>Longitud</li>
+<li>Otros atributos definidos por el usuario</li>
+</ul>
+<p>Se pueden acceder a estos atributos usando la función <code>attributes()</code></p>
+</div>
+<div id="operadores" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Operadores</h2>
+<div id="operadores-artiméticos" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Operadores artiméticos</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Aritmético</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">+</td>
+<td align="left">Adición</td>
+</tr>
+<tr class="even">
+<td align="left">-</td>
+<td align="left">Substracción</td>
+</tr>
+<tr class="odd">
+<td align="left">*</td>
+<td align="left">Multiplicación</td>
+</tr>
+<tr class="even">
+<td align="left">/</td>
+<td align="left">División</td>
+</tr>
+<tr class="odd">
+<td align="left">^</td>
+<td align="left">Exponente</td>
+</tr>
+<tr class="even">
+<td align="left">%%</td>
+<td align="left">Residuo de división</td>
+</tr>
+<tr class="odd">
+<td align="left">%/%</td>
+<td align="left">División entera</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="operadores-relacionales" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Operadores Relacionales</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Relacionales</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">&lt;</td>
+<td align="left">Menor que</td>
+</tr>
+<tr class="even">
+<td align="left">&gt;</td>
+<td align="left">Mayor que</td>
+</tr>
+<tr class="odd">
+<td align="left">&lt;=</td>
+<td align="left">Menor o igual que</td>
+</tr>
+<tr class="even">
+<td align="left">&gt;=</td>
+<td align="left">Mayor o igual que</td>
+</tr>
+<tr class="odd">
+<td align="left">==</td>
+<td align="left">Igual que</td>
+</tr>
+<tr class="even">
+<td align="left">!=</td>
+<td align="left">No igual que</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="operadores-lógicos" class="section level3" number="3.5.3">
+<h3><span class="header-section-number">3.5.3</span> Operadores Lógicos</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Lógico</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">!</td>
+<td align="left">No lógico</td>
+</tr>
+<tr class="even">
+<td align="left">&amp;</td>
+<td align="left">Y lógico por elemento</td>
+</tr>
+<tr class="odd">
+<td align="left">&amp;&amp;</td>
+<td align="left">Y lógico</td>
+</tr>
+<tr class="even">
+<td align="left">|</td>
+<td align="left">O lógico por elemento</td>
+</tr>
+<tr class="odd">
+<td align="left">||</td>
+<td align="left">O lógico</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introducción-a-r-y-rstudio-para-bioinformática.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vectores.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": null,
+"position": "fixed"
+});
+});
+</script>
+
+</body>
+
+</html>

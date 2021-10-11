@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capitulo 5 Matrices | Winter Bioinformatics School</title>
+  <meta name="description" content="Capitulo 5 Matrices | Winter Bioinformatics School" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capitulo 5 Matrices | Winter Bioinformatics School" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="wintergenomics/wbs-rbioinfo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capitulo 5 Matrices | Winter Bioinformatics School" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vectores.html"/>
+<link rel="next" href="data.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Información del curso</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#formato-del-curso"><i class="fa fa-check"></i>Formato del curso</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#quién-es-nuestra-audiencia"><i class="fa fa-check"></i>¿Quién es nuestra audiencia?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisitos"><i class="fa fa-check"></i>Pre-requisitos</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#instalación-de-r-y-rstudio"><i class="fa fa-check"></i>Instalación de R y RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lenguajes-y-principios-de-programación.html"><a href="lenguajes-y-principios-de-programación.html"><i class="fa fa-check"></i><b>1</b> Lenguajes y principios de programación</a></li>
+<li class="chapter" data-level="2" data-path="introducción-a-r-y-rstudio-para-bioinformática.html"><a href="introducción-a-r-y-rstudio-para-bioinformática.html"><i class="fa fa-check"></i><b>2</b> Introducción a R y RStudio para bioinformática</a></li>
+<li class="chapter" data-level="3" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>3</b> Objetos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="objetos.html"><a href="objetos.html#creación-de-objetos"><i class="fa fa-check"></i><b>3.1</b> Creación de objetos</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="objetos.html"><a href="objetos.html#ejercicio"><i class="fa fa-check"></i><b>3.1.1</b> Ejercicio</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="objetos.html"><a href="objetos.html#tipos-de-datos-en-r"><i class="fa fa-check"></i><b>3.2</b> Tipos de datos en R</a></li>
+<li class="chapter" data-level="3.3" data-path="objetos.html"><a href="objetos.html#tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>3.3</b> Tipos de objetos en R</a></li>
+<li class="chapter" data-level="3.4" data-path="objetos.html"><a href="objetos.html#atributos-de-los-objetos"><i class="fa fa-check"></i><b>3.4</b> Atributos de los objetos</a></li>
+<li class="chapter" data-level="3.5" data-path="objetos.html"><a href="objetos.html#operadores"><i class="fa fa-check"></i><b>3.5</b> Operadores</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="objetos.html"><a href="objetos.html#operadores-artiméticos"><i class="fa fa-check"></i><b>3.5.1</b> Operadores artiméticos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="objetos.html"><a href="objetos.html#operadores-relacionales"><i class="fa fa-check"></i><b>3.5.2</b> Operadores Relacionales</a></li>
+<li class="chapter" data-level="3.5.3" data-path="objetos.html"><a href="objetos.html#operadores-lógicos"><i class="fa fa-check"></i><b>3.5.3</b> Operadores Lógicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.1</b> Manejo de vectores</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.2</b> Operaciones con vectores</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.3</b> Funciones en vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#estructura-de-una-matriz"><i class="fa fa-check"></i><b>5.1</b> Estructura de una matriz</a></li>
+<li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#creación-de-una-matriz"><i class="fa fa-check"></i><b>5.2</b> Creación de una matriz</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matri"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matri</a></li>
+<li class="chapter" data-level="5.4" data-path="matrices.html"><a href="matrices.html#modificar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.4</b> Modificar elementos de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data.frames</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data.html"><a href="data.html#características-de-los-data.frames"><i class="fa fa-check"></i><b>6.1</b> Características de los data.frames</a></li>
+<li class="chapter" data-level="6.2" data-path="data.html"><a href="data.html#creación-de-un-data.frame"><i class="fa fa-check"></i><b>6.2</b> Creación de un data.frame</a></li>
+<li class="chapter" data-level="6.3" data-path="data.html"><a href="data.html#extracción-de-datos-de-un-data.frame"><i class="fa fa-check"></i><b>6.3</b> Extracción de datos de un data.frame</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="data.html"><a href="data.html#extracción-de-datos-por-columna"><i class="fa fa-check"></i><b>6.3.1</b> Extracción de datos por columna</a></li>
+<li class="chapter" data-level="6.3.2" data-path="data.html"><a href="data.html#extracción-de-datos-por-filas"><i class="fa fa-check"></i><b>6.3.2</b> Extracción de datos por filas</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#combinar-data.frames"><i class="fa fa-check"></i><b>6.4</b> Combinar data.frames</a></li>
+<li class="chapter" data-level="6.5" data-path="data.html"><a href="data.html#subset-de-datos"><i class="fa fa-check"></i><b>6.5</b> Subset de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html"><i class="fa fa-check"></i><b>7</b> Importación y exportación de datos</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#estableciendo-nuestro-directorio-de-trabajo"><i class="fa fa-check"></i><b>7.1</b> Estableciendo nuestro directorio de trabajo</a></li>
+<li class="chapter" data-level="7.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#importación-de-datos"><i class="fa fa-check"></i><b>7.2</b> Importación de datos</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#archivos-csv"><i class="fa fa-check"></i><b>7.2.1</b> Archivos CSV</a></li>
+<li class="chapter" data-level="7.2.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#archivos-txt"><i class="fa fa-check"></i><b>7.2.2</b> Archivos TXT</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportación-de-datos"><i class="fa fa-check"></i><b>7.3</b> Exportación de datos</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportar-como-txt"><i class="fa fa-check"></i><b>7.3.1</b> Exportar como TXT</a></li>
+<li class="chapter" data-level="7.3.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportar-como-csv"><i class="fa fa-check"></i><b>7.3.2</b> Exportar como CSV</a></li>
+<li class="chapter" data-level="7.3.3" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#argumentos-al-exportar"><i class="fa fa-check"></i><b>7.3.3</b> Argumentos al exportar</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#archivos-xlsx-o-de-excel"><i class="fa fa-check"></i><b>7.4</b> Archivos xlsx o de Excel</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#importación-de-datos-xlsx-o-de-excel"><i class="fa fa-check"></i><b>7.4.1</b> Importación de datos xlsx o de Excel</a></li>
+<li class="chapter" data-level="7.4.2" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html#exportación-de-datos-en-excel"><i class="fa fa-check"></i><b>7.4.2</b> Exportación de datos en Excel</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html"><i class="fa fa-check"></i><b>8</b> Instalación de paqueterías</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-cran"><i class="fa fa-check"></i><b>8.1</b> Paqueterías de CRAN</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#instalación-de-paqueteria-ggplot2"><i class="fa fa-check"></i><b>8.1.1</b> Instalación de paqueteria ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-bioconductor"><i class="fa fa-check"></i><b>8.2</b> Paqueterías de Bioconductor</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#instalación-de-biocmanager"><i class="fa fa-check"></i><b>8.2.1</b> Instalación de BiocManager</a></li>
+<li class="chapter" data-level="8.2.2" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#instalación-de-paqueterías-de-bioconductor."><i class="fa fa-check"></i><b>8.2.2</b> Instalación de paqueterías de Bioconductor.</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="instalación-de-paqueterías.html"><a href="instalación-de-paqueterías.html#paqueterías-de-github"><i class="fa fa-check"></i><b>8.3</b> Paqueterías de GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="heatmaps.html"><a href="heatmaps.html"><i class="fa fa-check"></i><b>9</b> Heatmaps</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="heatmaps.html"><a href="heatmaps.html#construyendo-un-heatmap-básico"><i class="fa fa-check"></i><b>9.0.1</b> Construyendo un heatmap básico</a></li>
+<li class="chapter" data-level="9.0.2" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-el-tamaño-de-letra"><i class="fa fa-check"></i><b>9.0.2</b> Cambiar el tamaño de letra</a></li>
+<li class="chapter" data-level="9.0.3" data-path="heatmaps.html"><a href="heatmaps.html#agregar-un-título-a-nuestro-heatmap"><i class="fa fa-check"></i><b>9.0.3</b> Agregar un título a nuestro heatmap</a></li>
+<li class="chapter" data-level="9.0.4" data-path="heatmaps.html"><a href="heatmaps.html#cambiar-los-colores-de-nuestro-heatmap."><i class="fa fa-check"></i><b>9.0.4</b> Cambiar los colores de nuestro heatmap.</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Winter Bioinformatics School</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="matrices" class="section level1" number="5">
+<h1><span class="header-section-number">Capitulo 5</span> Matrices</h1>
+<p>Una matriz es una estructura de datos, ordenados por filas y columnas (matriz de dos dimensiones). Está constituida por elementos del mismo tipo de datos (numéricos, caracteres, o lógicos), organizados por filas y columnas.</p>
+<div id="estructura-de-una-matriz" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Estructura de una matriz</h2>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="matrices.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   NA   NA   NA
+## [2,]   NA   NA   NA</code></pre>
+<p>Donde:
+- <strong>nrow</strong> es el número de filas
+- <strong>ncol</strong> es el número de columnas
+- <strong>NA</strong> significa <em>Not Available</em></p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="matrices.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9</code></pre>
+<ul>
+<li>El argumento <code>1:9</code>es una colección de elementos: <code>1:9 c(1,2,4,5,6,7,8,9)</code></li>
+<li><code>byrow</code> indica que la matriz será rellenada por fila. Si queremos que la matriz sea llenada por columna ajustamos a <code>byrow = FALSE</code></li>
+<li><code>nrow</code> indica que la matriz tendrá 3 filas</li>
+</ul>
+</div>
+<div id="creación-de-una-matriz" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Creación de una matriz</h2>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="matrices.html#cb55-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb55-2"><a href="matrices.html#cb55-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+## [4,]   10   11   12</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="matrices.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(MatrixEjemplo)</span></code></pre></div>
+<pre><code>## [1] 4 3</code></pre>
+<ul>
+<li><code>byrow=TRUE</code> llena los elementos por fila.</li>
+<li>Con el comando <code>dim()</code>se obtiene las dimensiones de la matriz</li>
+</ul>
+</div>
+<div id="acceder-a-los-elementos-de-una-matri" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Acceder a los elementos de una matri</h2>
+<p>Supongamos que queremos acceder al elemento que se encuentra en la fila 3 y la columna 2 de nuestra <code>MatrixEjemplo</code>. Para esto debemos de indicar entre corchetes la fila y la columna a la que queremos acceder. <strong>Es muy importante indicar primero la fila y después la columna.</strong></p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="matrices.html#cb59-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Ahora guardemos el resultado en la variable elemento:</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="matrices.html#cb61-1" aria-hidden="true" tabindex="-1"></a>elemento<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span>
+<span id="cb61-2"><a href="matrices.html#cb61-2" aria-hidden="true" tabindex="-1"></a>elemento</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Si queremos acceder únicamente a los datos de la fila 3 de nuestra matriz usamos:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="matrices.html#cb63-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,]</span></code></pre></div>
+<pre><code>## [1] 7 8 9</code></pre>
+<p>La coma después del número 3 indica que queremos ver todos los valores de las columnas que pertenezcan a la fila 3.
+Si por el contrario, queremos acceder a los valores de la columna dos, usamos:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="matrices.html#cb65-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[,<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1]  2  5  8 11</code></pre>
+<p>En este caso, la coma está situada antes del número 2 indicando que queremos ver todos los valores de las filas que pertenezcan a la columna 2.
+Guardemos los resultados en diferentes variables:</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="matrices.html#cb67-1" aria-hidden="true" tabindex="-1"></a>fila<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,]</span>
+<span id="cb67-2"><a href="matrices.html#cb67-2" aria-hidden="true" tabindex="-1"></a>fila</span></code></pre></div>
+<pre><code>## [1] 7 8 9</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="matrices.html#cb69-1" aria-hidden="true" tabindex="-1"></a>columna<span class="ot">&lt;-</span> MatrixEjemplo[,<span class="dv">2</span>]</span>
+<span id="cb69-2"><a href="matrices.html#cb69-2" aria-hidden="true" tabindex="-1"></a>columna</span></code></pre></div>
+<pre><code>## [1]  2  5  8 11</code></pre>
+</div>
+<div id="modificar-elementos-de-una-matriz" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Modificar elementos de una matriz</h2>
+<p>Para modificar cualquier elemento de una matriz debemos de indicar entre corchetes el número de fila y de columna en donde se encuentra el elemento que queremos modificar: <code>[fila, columna]</code>.
+Vamos a modificar el elemento que se encuentra en la fila 2 de la columna 2.</p>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+## [4,]   10   11   12</code></pre>
+<p>El elemento que queremos cambiar tiene el valor de <em>“5”</em>. Vamos a sustiurlo por el valor de 10. Para esto lo reasignamos a nuestra matriz:</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="matrices.html#cb72-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">2</span>,<span class="dv">2</span>]<span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb72-2"><a href="matrices.html#cb72-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4   10    6
+## [3,]    7    8    9
+## [4,]   10   11   12</code></pre>
+<ul>
+<li><strong>MatrixEjemplo[2,2]</strong> indica que queremos acceder al elemento que se encuentra en la fila 2 de la columna 2.</li>
+<li><strong>&lt;- 10</strong> estamos asignando el valor 10 a la matriz.
+## Ejercicio
+Construir una matriz con los años de secuenciación de organismos de referencia (G). El primer y el segundo elemento es el año de publicación de al menos dos organismos.</li>
+</ul>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="matrices.html#cb74-1" aria-hidden="true" tabindex="-1"></a>Gbacterias <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1997</span>, <span class="dv">1993</span>)</span>
+<span id="cb74-2"><a href="matrices.html#cb74-2" aria-hidden="true" tabindex="-1"></a>Ghongos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1999</span>, <span class="dv">2000</span>)</span>
+<span id="cb74-3"><a href="matrices.html#cb74-3" aria-hidden="true" tabindex="-1"></a>Ganimales <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2001</span>)</span>
+<span id="cb74-4"><a href="matrices.html#cb74-4" aria-hidden="true" tabindex="-1"></a>cronologia <span class="ot">&lt;-</span> <span class="fu">c</span>(Gbacterias, Ghongos, Ganimales)</span></code></pre></div>
+<p>Construir matriz de 3 filas, 2 columnas con los valores de cronologia</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="matrices.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(cronologia, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,] 1997 2000
+## [2,] 1993 2000
+## [3,] 1999 2001</code></pre>
+<p>Para agregar columnas o filas a matrices utilizamos <code>cbind()</code> y <code>rbind()</code> respectivamente.</p>
+<p><strong>NOTA:</strong> El número de elementos en las columnas o filas debe ser el mismo.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="matrices.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
+<pre><code>##      Ganimales Gbacterias Ghongos
+## [1,]      2000       1997    1999
+## [2,]      2001       1993    2000</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="matrices.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
+<pre><code>##            [,1] [,2]
+## Ganimales  2000 2001
+## Gbacterias 1997 1993
+## Ghongos    1999 2000</code></pre>
+<p><strong>NOTA:</strong> Estos resultados los podemos guardar en distintas variables.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vectores.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": null,
+"position": "fixed"
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+book_filename: "Winter-School"
+language:
+  ui:
+    chapter_name: "Capitulo "
+output_dir: "docs"
+delete_merged_file: true
+site: "bookdown::bookdown_site"
+new_session: yes

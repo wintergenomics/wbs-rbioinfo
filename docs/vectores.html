@@ -160,16 +160,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.1</b> Manejo de vectores</a></li>
-<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.2</b> Operaciones con vectores</a></li>
-<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.3</b> Funciones en vectores</a></li>
+<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#tipo-de-datos-de-los-vectores"><i class="fa fa-check"></i><b>4.1</b> Tipo de datos de los vectores</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#construcción-de-vectores-secuenciales"><i class="fa fa-check"></i><b>4.2</b> Construcción de vectores secuenciales</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.3</b> Manejo de vectores</a></li>
+<li class="chapter" data-level="4.4" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.4</b> Operaciones con vectores</a></li>
+<li class="chapter" data-level="4.5" data-path="vectores.html"><a href="vectores.html#combinación-de-vectores"><i class="fa fa-check"></i><b>4.5</b> Combinación de vectores</a></li>
+<li class="chapter" data-level="4.6" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.6</b> Funciones en vectores</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#estructura-de-una-matriz"><i class="fa fa-check"></i><b>5.1</b> Estructura de una matriz</a></li>
 <li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#creación-de-una-matriz"><i class="fa fa-check"></i><b>5.2</b> Creación de una matriz</a></li>
-<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matri"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matri</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matriz</a></li>
 <li class="chapter" data-level="5.4" data-path="matrices.html"><a href="matrices.html#modificar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.4</b> Modificar elementos de una matriz</a></li>
+<li class="chapter" data-level="5.5" data-path="matrices.html"><a href="matrices.html#ejercicio-1"><i class="fa fa-check"></i><b>5.5</b> Ejercicio</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data.frames</a>
 <ul>
@@ -182,6 +186,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#combinar-data.frames"><i class="fa fa-check"></i><b>6.4</b> Combinar data.frames</a></li>
 <li class="chapter" data-level="6.5" data-path="data.html"><a href="data.html#subset-de-datos"><i class="fa fa-check"></i><b>6.5</b> Subset de datos</a></li>
+<li class="chapter" data-level="6.6" data-path="data.html"><a href="data.html#ejercicio-2"><i class="fa fa-check"></i><b>6.6</b> Ejercicio</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="data.html"><a href="data.html#selección-de-elementos"><i class="fa fa-check"></i><b>6.6.1</b> Selección de Elementos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html"><i class="fa fa-check"></i><b>7</b> Importación y exportación de datos</a>
 <ul>
@@ -249,61 +257,126 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="vectores" class="section level1" number="4">
 <h1><span class="header-section-number">Capítulo 4</span> Vectores</h1>
-<p>Los vectores son cadenas unidimensionales (es decir una sola columna o fila) de un mismo tipo de valores (numéricos, caracteres, etc.)
-Para crear un vector se usa la función <code>combinar c()</code></p>
+<p>Los vectores son cadenas unidimensionales (es decir una sola columna o fila) de un mismo tipo de valores (numéricos, caracteres, etc.)</p>
+<p>Para crear un vector se usa la función <code>combinar c()</code>.</p>
+<p>Creación de un vector numérico</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="vectores.html#cb23-1" aria-hidden="true" tabindex="-1"></a>longitud <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">11</span>,<span class="dv">15</span>,<span class="dv">13</span>,<span class="dv">16</span>,<span class="dv">12</span>,<span class="dv">11</span>)</span></code></pre></div>
+<p>Creación de un vector de caracter. Los vectores de caracter se ocupan para guardar texto, por lo que deben de ir entre comillas.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="vectores.html#cb24-1" aria-hidden="true" tabindex="-1"></a>colores  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Negro&quot;</span>, <span class="st">&quot;Rosa&quot;</span>, <span class="st">&quot;Amarillo&quot;</span>, <span class="st">&quot;Blanco&quot;</span>, <span class="st">&quot;Azul&quot;</span>, <span class="st">&quot;Marron&quot;</span>, <span class="st">&quot;Guinda&quot;</span>)</span></code></pre></div>
+<p>Creación de vector lógico (Verdadero o Falso)</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="vectores.html#cb25-1" aria-hidden="true" tabindex="-1"></a>logico <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>El objeto más simple que se puede almacenar en R es un vector con 1 elemento.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="vectores.html#cb25-1" aria-hidden="true" tabindex="-1"></a>simple <span class="ot">&lt;-</span> <span class="st">&quot;Dora&quot;</span></span></code></pre></div>
-<div id="manejo-de-vectores" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Manejo de vectores</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="vectores.html#cb26-1" aria-hidden="true" tabindex="-1"></a>simple <span class="ot">&lt;-</span> <span class="st">&quot;Dora&quot;</span></span></code></pre></div>
+<div id="tipo-de-datos-de-los-vectores" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Tipo de datos de los vectores</h2>
+<p>Revisar el tipo de datos que contienen los vectores usamos <code>class()</code>.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="vectores.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(longitud)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="vectores.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(colores)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="vectores.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(logico)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+</div>
+<div id="construcción-de-vectores-secuenciales" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Construcción de vectores secuenciales</h2>
+<p>Para construir un vector numérico secuencial, podemos usar <code>seq</code>. Vamos a construir un vector del 1 al 6.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="vectores.html#cb33-1" aria-hidden="true" tabindex="-1"></a>myseq<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">6</span>)</span>
+<span id="cb33-2"><a href="vectores.html#cb33-2" aria-hidden="true" tabindex="-1"></a>myseq</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<p>Creando la secuencia utilizando decimales</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="vectores.html#cb35-1" aria-hidden="true" tabindex="-1"></a>myseq2<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">6</span>,<span class="at">by=</span><span class="fl">0.5</span>)</span>
+<span id="cb35-2"><a href="vectores.html#cb35-2" aria-hidden="true" tabindex="-1"></a>myseq2</span></code></pre></div>
+<pre><code>##  [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0</code></pre>
+</div>
+<div id="manejo-de-vectores" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Manejo de vectores</h2>
 <p>Creamos el vector <em>PesosPacientes</em> utilizando datos de pesos de diferentes pacientes:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="vectores.html#cb26-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">85</span>, <span class="dv">55</span>, <span class="dv">63</span>, <span class="dv">78</span>, <span class="dv">57</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="vectores.html#cb37-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">85</span>, <span class="dv">55</span>, <span class="dv">63</span>, <span class="dv">78</span>, <span class="dv">57</span>) </span>
+<span id="cb37-2"><a href="vectores.html#cb37-2" aria-hidden="true" tabindex="-1"></a>PesosPacientes</span></code></pre></div>
+<pre><code>## [1] 55 45 85 55 63 78 57</code></pre>
 <p>Para acceder a elementos específicos de cada vector usamos los corchetes indicando el elemento al que queremos acceder. En este ejemplo accederemos al peso del paciente 5:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="vectores.html#cb27-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="vectores.html#cb39-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="dv">5</span>]</span></code></pre></div>
 <pre><code>## [1] 63</code></pre>
-<p>La longitud del vector se obtiene con la función <code>length()</code></p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="vectores.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(PesosPacientes)</span></code></pre></div>
-<pre><code>## [1] 7</code></pre>
-<p>Para extraer de nuestro objeto más de un elemento se usa la función para combinar o concatenar <code>c()</code>. En este ejemplo vamos a usar los pesos de los pacientes 3 y 6:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="vectores.html#cb31-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</span></code></pre></div>
+<p>Para acceder al peso de los pacientes del 3 al 5 usamos</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="vectores.html#cb41-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
+<pre><code>## [1] 85 55 63</code></pre>
+<p>Otra opción para extraer de nuestro objeto más de un elemento es con la función de combinar o concatenar <code>c()</code>. En este ejemplo vamos a usar los pesos de los pacientes 3 y 6:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="vectores.html#cb43-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</span></code></pre></div>
 <pre><code>## [1] 85 78</code></pre>
 <p>También podemos usar índices negativos para quitar temporalmente ciertos elementos de un vector. En este ejemplo vamos a quitar los pesos de los pacientes 3 y 6:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="vectores.html#cb33-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="vectores.html#cb45-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</span></code></pre></div>
 <pre><code>## [1] 55 45 55 63 57</code></pre>
+<p>La longitud del vector se obtiene con la función <code>length()</code>.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="vectores.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
 </div>
-<div id="operaciones-con-vectores" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Operaciones con vectores</h2>
-<p>Para hacer una operación utilizando varios números a la vez usamos la función combinar <code>c()</code></p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="vectores.html#cb35-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">85</span>, <span class="dv">55</span>, <span class="dv">63</span>, <span class="dv">78</span>, <span class="dv">57</span>)</span></code></pre></div>
-<p>Para ver los valores, tecleamos <strong>PesosPacientes</strong> en la consola. El <em>+ 1</em> sumará uno al peso de cada paciente</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="vectores.html#cb36-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
+<div id="operaciones-con-vectores" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Operaciones con vectores</h2>
+<p>Para hacer una operación utilizando varios números a la vez usamos la función combinar <code>c()</code>. Empezamos generando los vectores “a” y “b”.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="vectores.html#cb49-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">12</span>,<span class="dv">3</span>)</span>
+<span id="cb49-2"><a href="vectores.html#cb49-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">18</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="vectores.html#cb50-1" aria-hidden="true" tabindex="-1"></a>suma_vect   <span class="ot">&lt;-</span> a <span class="sc">+</span> b <span class="co"># suma de los dos vectores</span></span>
+<span id="cb50-2"><a href="vectores.html#cb50-2" aria-hidden="true" tabindex="-1"></a>suma_vect</span></code></pre></div>
+<pre><code>## [1] 23 11 16 10</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="vectores.html#cb52-1" aria-hidden="true" tabindex="-1"></a>resta_vect  <span class="ot">&lt;-</span> a <span class="sc">-</span> b <span class="co"># resta de los dos vectores</span></span>
+<span id="cb52-2"><a href="vectores.html#cb52-2" aria-hidden="true" tabindex="-1"></a>resta_vect</span></code></pre></div>
+<pre><code>## [1] -13   9   8  -4</code></pre>
+</div>
+<div id="combinación-de-vectores" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Combinación de vectores</h2>
+<p>Generamos los vectores “pares” y “impares”.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="vectores.html#cb54-1" aria-hidden="true" tabindex="-1"></a>pares<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>) <span class="co">#vector con datos impares</span></span>
+<span id="cb54-2"><a href="vectores.html#cb54-2" aria-hidden="true" tabindex="-1"></a>pares</span></code></pre></div>
+<pre><code>## [1] 1 3 5</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="vectores.html#cb56-1" aria-hidden="true" tabindex="-1"></a>impares<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="co">#vector con catos pares</span></span>
+<span id="cb56-2"><a href="vectores.html#cb56-2" aria-hidden="true" tabindex="-1"></a>impares</span></code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<p>Con <code>c()</code>combinamos ambos vectores y lo guardamos en el nuevo vector “z”.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="vectores.html#cb58-1" aria-hidden="true" tabindex="-1"></a>z<span class="ot">&lt;-</span> <span class="fu">c</span>(pares,impares)</span></code></pre></div>
+<p>Revisamos la clase del vector.</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="vectores.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(z)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+</div>
+<div id="funciones-en-vectores" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Funciones en vectores</h2>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="vectores.html#cb61-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">85</span>, <span class="dv">55</span>, <span class="dv">63</span>, <span class="dv">78</span>, <span class="dv">57</span>)</span>
+<span id="cb61-2"><a href="vectores.html#cb61-2" aria-hidden="true" tabindex="-1"></a>PesosPacientes</span></code></pre></div>
+<pre><code>## [1] 55 45 85 55 63 78 57</code></pre>
+<p>Para ver los valores, tecleamos <strong>PesosPacientes</strong> en la consola. El <em>+ 1</em> sumará uno al peso de cada paciente.</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="vectores.html#cb63-1" aria-hidden="true" tabindex="-1"></a>PesosPacientes <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
 <pre><code>## [1] 56 46 86 56 64 79 58</code></pre>
-</div>
-<div id="funciones-en-vectores" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Funciones en vectores</h2>
 <p>Se pueden usar diferentes funciones para aplicarse a los vectores numéricos.</p>
 <p>La función <code>sum()</code>permite realizar la sumas de los datos.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="vectores.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(PesosPacientes)</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="vectores.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(PesosPacientes)</span></code></pre></div>
 <pre><code>## [1] 438</code></pre>
 <p>La función <code>mean()</code> calcula el promedio.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="vectores.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(PesosPacientes)</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="vectores.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(PesosPacientes)</span></code></pre></div>
 <pre><code>## [1] 62.57143</code></pre>
 <p>La función <code>max()</code> indica el valor más alto de nuestros datos.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="vectores.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(PesosPacientes)</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="vectores.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(PesosPacientes)</span></code></pre></div>
 <pre><code>## [1] 85</code></pre>
-<p>La función <code>sort()</code> ordena de menor a mayor los valores.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="vectores.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(PesosPacientes)</span></code></pre></div>
+<p>La función <code>min()</code> indica el valor más bajo de nuestros datos.</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="vectores.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(PesosPacientes)</span></code></pre></div>
+<pre><code>## [1] 45</code></pre>
+<p>La función <code>sort()</code> permite ordenar los valores.</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="vectores.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(PesosPacientes) <span class="co">#ordena de menor a mayor</span></span></code></pre></div>
 <pre><code>## [1] 45 55 55 57 63 78 85</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="vectores.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(PesosPacientes, <span class="at">decreasing =</span> T) <span class="co">#ordena de mayor a menor</span></span></code></pre></div>
+<pre><code>## [1] 85 78 63 57 55 55 45</code></pre>
 <p>La función <code>unique()</code> muestra los datos o valores únicos o que no se repiten de nuestro set.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="vectores.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(PesosPacientes)</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="vectores.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(PesosPacientes)</span></code></pre></div>
 <pre><code>## [1] 55 45 85 63 78 57</code></pre>
 <p>En R también podemos tener valores de texto que siempre van entre comillas.
 Así como guardamos una serie de números en el objeto <strong>“PesosPacientes”</strong>, podemos guardar valores de texto en un nuevo objeto de la siguiente manera:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="vectores.html#cb48-1" aria-hidden="true" tabindex="-1"></a>nombres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Susana&quot;</span>, <span class="st">&quot;Angela&quot;</span>, <span class="st">&quot;Oscar&quot;</span>, <span class="st">&quot;Joel&quot;</span>, <span class="st">&quot;Blanca&quot;</span>, <span class="st">&quot;Karla&quot;</span>, <span class="st">&quot;Manuel&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="vectores.html#cb79-1" aria-hidden="true" tabindex="-1"></a>nombres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Susana&quot;</span>, <span class="st">&quot;Angela&quot;</span>, <span class="st">&quot;Oscar&quot;</span>, <span class="st">&quot;Joel&quot;</span>, <span class="st">&quot;Blanca&quot;</span>, <span class="st">&quot;Karla&quot;</span>, <span class="st">&quot;Manuel&quot;</span>)</span>
+<span id="cb79-2"><a href="vectores.html#cb79-2" aria-hidden="true" tabindex="-1"></a>nombres</span></code></pre></div>
+<pre><code>## [1] &quot;Susana&quot; &quot;Angela&quot; &quot;Oscar&quot;  &quot;Joel&quot;   &quot;Blanca&quot; &quot;Karla&quot;  &quot;Manuel&quot;</code></pre>
+<p>Revisamos el tipo de vector de <code>nombres</code>.</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="vectores.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(nombres)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
 <p>El objeto “nombres” nos puede servir para etiquetar los valores numéricos de los pesos de los pacientes, esto con la función <code>names()</code> para asignar nombres de texto.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="vectores.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(PesosPacientes) <span class="ot">&lt;-</span> nombres</span>
-<span id="cb49-2"><a href="vectores.html#cb49-2" aria-hidden="true" tabindex="-1"></a>PesosPacientes</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="vectores.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(PesosPacientes) <span class="ot">&lt;-</span> nombres</span>
+<span id="cb83-2"><a href="vectores.html#cb83-2" aria-hidden="true" tabindex="-1"></a>PesosPacientes</span></code></pre></div>
 <pre><code>## Susana Angela  Oscar   Joel Blanca  Karla Manuel 
 ##     55     45     85     55     63     78     57</code></pre>
 

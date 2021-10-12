@@ -1,7 +1,7 @@
 
 # Data.frames
 
-Es una estructura de tipo tabular, que permite el uso de diferentes tipos de datos. Combina listas de vectores de la misma longitud. 
+Es una estructura de tipo tabular, que permite el uso de diferentes tipos de datos. Combina listas de vectores de la misma longitud. Para crear un data.frame usamos la función `data.frame`.
 Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respectivas respuestas:
 
 - ¿Está vacunado para Influenza? : **sí/no (lógicos)**
@@ -99,7 +99,6 @@ Si queremos obtener los datos de los pacientes vacunados usamos:
 subset(datosfinales, subset=vacunado)
 ```
 
-
 Estos resultados los podemos guardar en distantas variables
 
 ```{r}
@@ -112,3 +111,94 @@ pacientes_vacunados<- subset(datosfinales, subset=vacunado)
 pacientes_vacunados
 ```
 
+
+## Ejercicio
+
+Creamos vectores con los valores para el nuevo data.frame
+
+```{r}
+nombre <- c("Juan", "Margarita", "Ruben", "Daniel")
+apellido <- c("Sanchez", "Garcia", "Sancho", "Alfara")
+edad <- c(32, 25, 49, 52)
+sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
+hijos <- c(1, 0, 3, 4)
+
+```
+
+
+Creamos un data.frame con la ayuda de `data.frame()`
+
+```{r}
+censo <- data.frame(nombre, apellido, edad, sexo, hijos)
+censo
+```
+
+Para ver el encabezado del data.frame, usamos `head()`
+```{r}
+head(censo)
+```
+
+Revisamos la estrucutra del data.frame 
+
+```{r}
+str(censo)
+```
+
+```{r}
+is.data.frame(censo)
+```
+
+
+Conocer el número de filas y columnas con `dim()`
+```{r}
+dim(censo)
+```
+
+
+Usamos `nrow()` para obtener el número de filas
+```{r}
+nrow(censo)
+```
+
+Usamos `ncol()` para obtener el número de columnas
+```{r}
+ncol(censo)
+```
+
+Conocer los nombres de las variables (del encabezado)
+```{r}
+names(censo)
+```
+
+
+Cambiar el nombre de las columnas en la tabla usando `names()`.
+```{r}
+names(censo) <- c("Nombre", "Apellido", "Edad", "Sexo", "Hijos")
+names(censo)
+```
+
+Para asignar diferentes nombres a las columnas y filas de `censo` también podemos usar `colnames` y `rownames`.
+```{r}
+colnames(censo) <- c("Nombre", "Apellido", "Edad", "Sexo", "Número_Hijos")
+rownames(censo) <- c("ID1", "ID2", "ID3", "ID4")
+censo
+
+```
+
+### Selección de Elementos
+El acceso a los elementos que se encuentran en un data.frame es muy similar al de los datos de una matriz. 
+
+Acceder a los datos de las filas 2 a la 4:
+```{r}
+censo[2:4, ]
+```
+
+Acceder a los datos de la columna 3.
+```{r}
+censo[, 3]
+```
+
+También podemos referirnos a la columna por su nombre:
+```{r}
+censo$Nombre
+```

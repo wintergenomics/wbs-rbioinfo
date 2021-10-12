@@ -160,16 +160,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.1</b> Manejo de vectores</a></li>
-<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.2</b> Operaciones con vectores</a></li>
-<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.3</b> Funciones en vectores</a></li>
+<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#tipo-de-datos-de-los-vectores"><i class="fa fa-check"></i><b>4.1</b> Tipo de datos de los vectores</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#construcción-de-vectores-secuenciales"><i class="fa fa-check"></i><b>4.2</b> Construcción de vectores secuenciales</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.3</b> Manejo de vectores</a></li>
+<li class="chapter" data-level="4.4" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.4</b> Operaciones con vectores</a></li>
+<li class="chapter" data-level="4.5" data-path="vectores.html"><a href="vectores.html#combinación-de-vectores"><i class="fa fa-check"></i><b>4.5</b> Combinación de vectores</a></li>
+<li class="chapter" data-level="4.6" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.6</b> Funciones en vectores</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#estructura-de-una-matriz"><i class="fa fa-check"></i><b>5.1</b> Estructura de una matriz</a></li>
 <li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#creación-de-una-matriz"><i class="fa fa-check"></i><b>5.2</b> Creación de una matriz</a></li>
-<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matri"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matri</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matriz</a></li>
 <li class="chapter" data-level="5.4" data-path="matrices.html"><a href="matrices.html#modificar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.4</b> Modificar elementos de una matriz</a></li>
+<li class="chapter" data-level="5.5" data-path="matrices.html"><a href="matrices.html#ejercicio-1"><i class="fa fa-check"></i><b>5.5</b> Ejercicio</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data.frames</a>
 <ul>
@@ -182,6 +186,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#combinar-data.frames"><i class="fa fa-check"></i><b>6.4</b> Combinar data.frames</a></li>
 <li class="chapter" data-level="6.5" data-path="data.html"><a href="data.html#subset-de-datos"><i class="fa fa-check"></i><b>6.5</b> Subset de datos</a></li>
+<li class="chapter" data-level="6.6" data-path="data.html"><a href="data.html#ejercicio-2"><i class="fa fa-check"></i><b>6.6</b> Ejercicio</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="data.html"><a href="data.html#selección-de-elementos"><i class="fa fa-check"></i><b>6.6.1</b> Selección de Elementos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html"><i class="fa fa-check"></i><b>7</b> Importación y exportación de datos</a>
 <ul>
@@ -291,13 +299,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="https://cran.r-project.org/package=ggplot2">ggplot2</a> es una de las paqueterías más populares en R para crear una gran variedad de gráficos. <code>ggplot2</code> es un sistema para la creación declarativa de gráficos basado en la gramática de gráficos. En esta gramática, se separan los elementos o las partes de un gráfico en diferentes capas o layers, y así es más fácil modificarlos.</p>
 <p><code>ggplot2</code> funciona a través de la grámatica de gráficos donde se dan los datos, las variables que queremos a graficar y la geometría deseada.</p>
 <p>Instalación de ggplot2</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="gráficos-en-r.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb144-2"><a href="gráficos-en-r.html#cb144-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="gráficos-en-r.html#cb205-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb205-2"><a href="gráficos-en-r.html#cb205-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
 <p>Cargar la librería de trabajo</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="gráficos-en-r.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="gráficos-en-r.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 <p>Importamos el set de datos que puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1TlR9xgKl7Laf8-SNwoq3W2MXkD19AQ9d&amp;export=download">aquí</a></p>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="gráficos-en-r.html#cb146-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;iris.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="gráficos-en-r.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datos)</span></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="gráficos-en-r.html#cb207-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;iris.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="gráficos-en-r.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datos)</span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
 ## 2          4.9         3.0          1.4         0.2  setosa
@@ -308,59 +316,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="scatterplots" class="section level3" number="9.5.1">
 <h3><span class="header-section-number">9.5.1</span> Scatterplots</h3>
 <p>Vamos a crear un gráfico ddel tipo scatterplot muy básico con ggplot2.</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="gráficos-en-r.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
-<span id="cb149-2"><a href="gráficos-en-r.html#cb149-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="gráficos-en-r.html#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
+<span id="cb210-2"><a href="gráficos-en-r.html#cb210-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>Ahora vamos a colorear todos los puntos utilizando <code>geom_point(color)</code>. Para agregar las etiquetas de los ejes usamos <code>labs()</code> como se muestra a continuación.</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="gráficos-en-r.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
-<span id="cb150-2"><a href="gráficos-en-r.html#cb150-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>)<span class="sc">+</span></span>
-<span id="cb150-3"><a href="gráficos-en-r.html#cb150-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="gráficos-en-r.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
+<span id="cb211-2"><a href="gráficos-en-r.html#cb211-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>)<span class="sc">+</span></span>
+<span id="cb211-3"><a href="gráficos-en-r.html#cb211-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>)</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>Con el argumento <code>color</code> coloreamos por especie de flor.</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="gráficos-en-r.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span> </span>
-<span id="cb151-2"><a href="gráficos-en-r.html#cb151-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb151-3"><a href="gráficos-en-r.html#cb151-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="gráficos-en-r.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span> </span>
+<span id="cb212-2"><a href="gráficos-en-r.html#cb212-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb212-3"><a href="gráficos-en-r.html#cb212-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>)</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p><code>shape</code> permite modificar la forma del punto. En este caso vamos a poner diferentes puntos según la especie de flor . Con <code>ggtitle</code> agregamos un título a nuestro gráfico.</p>
-<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="gráficos-en-r.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species, <span class="at">shape=</span>Species)) <span class="sc">+</span> </span>
-<span id="cb152-2"><a href="gráficos-en-r.html#cb152-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb152-3"><a href="gráficos-en-r.html#cb152-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
-<span id="cb152-4"><a href="gráficos-en-r.html#cb152-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>)<span class="sc">+</span></span>
-<span id="cb152-5"><a href="gráficos-en-r.html#cb152-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Set de datos iris&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="gráficos-en-r.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species, <span class="at">shape=</span>Species)) <span class="sc">+</span> </span>
+<span id="cb213-2"><a href="gráficos-en-r.html#cb213-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb213-3"><a href="gráficos-en-r.html#cb213-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb213-4"><a href="gráficos-en-r.html#cb213-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>)<span class="sc">+</span></span>
+<span id="cb213-5"><a href="gráficos-en-r.html#cb213-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Set de datos iris&quot;</span>)</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>Otra opción para modificar los colores es utilizando <code>scale_colour_manual()</code>. Con este argumento indicamos los colores que queremos usar para nuestro gráfico basados en la paleta de colores.</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="gráficos-en-r.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span> </span>
-<span id="cb153-2"><a href="gráficos-en-r.html#cb153-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb153-3"><a href="gráficos-en-r.html#cb153-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>, </span>
-<span id="cb153-4"><a href="gráficos-en-r.html#cb153-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Set de datos iris&quot;</span>, <span class="at">subtitle =</span> <span class="st">&quot;Scatterplot&quot;</span>)<span class="sc">+</span></span>
-<span id="cb153-5"><a href="gráficos-en-r.html#cb153-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()<span class="sc">+</span></span>
-<span id="cb153-6"><a href="gráficos-en-r.html#cb153-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)<span class="sc">+</span></span>
-<span id="cb153-7"><a href="gráficos-en-r.html#cb153-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="gráficos-en-r.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span> </span>
+<span id="cb214-2"><a href="gráficos-en-r.html#cb214-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb214-3"><a href="gráficos-en-r.html#cb214-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>, </span>
+<span id="cb214-4"><a href="gráficos-en-r.html#cb214-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Set de datos iris&quot;</span>, <span class="at">subtitle =</span> <span class="st">&quot;Scatterplot&quot;</span>)<span class="sc">+</span></span>
+<span id="cb214-5"><a href="gráficos-en-r.html#cb214-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()<span class="sc">+</span></span>
+<span id="cb214-6"><a href="gráficos-en-r.html#cb214-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)<span class="sc">+</span></span>
+<span id="cb214-7"><a href="gráficos-en-r.html#cb214-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>))</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 <div id="rcolorbrewer" class="section level3" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> RcolorBrewer</h3>
 <p>RcolorBrewer es una paquetería exclusiva de colores que podemos usar en nuestros gráficos.</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="gráficos-en-r.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;RColorBrewer&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="gráficos-en-r.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="gráficos-en-r.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;RColorBrewer&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="gráficos-en-r.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span></code></pre></div>
 <p>Conocer todas las paletas de colores disponibles en RColorBrewer.</p>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="gráficos-en-r.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">display.brewer.all</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="gráficos-en-r.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">display.brewer.all</span>()</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>Vamos a elegir la paleta “Dark2” para personalizar nuestro gráfico. Usamos el argumento <code>scale_colour_brewer()</code> como se muestra a continuación</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="gráficos-en-r.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span> </span>
-<span id="cb157-2"><a href="gráficos-en-r.html#cb157-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb157-3"><a href="gráficos-en-r.html#cb157-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>, </span>
-<span id="cb157-4"><a href="gráficos-en-r.html#cb157-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Set de datos iris&quot;</span>)<span class="sc">+</span></span>
-<span id="cb157-5"><a href="gráficos-en-r.html#cb157-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()<span class="sc">+</span></span>
-<span id="cb157-6"><a href="gráficos-en-r.html#cb157-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)<span class="sc">+</span></span>
-<span id="cb157-7"><a href="gráficos-en-r.html#cb157-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="gráficos-en-r.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span> </span>
+<span id="cb218-2"><a href="gráficos-en-r.html#cb218-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb218-3"><a href="gráficos-en-r.html#cb218-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Ancho del petálo&quot;</span> ,<span class="at">y =</span> <span class="st">&quot;Longitud del petálo&quot;</span>, </span>
+<span id="cb218-4"><a href="gráficos-en-r.html#cb218-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Set de datos iris&quot;</span>)<span class="sc">+</span></span>
+<span id="cb218-5"><a href="gráficos-en-r.html#cb218-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()<span class="sc">+</span></span>
+<span id="cb218-6"><a href="gráficos-en-r.html#cb218-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)<span class="sc">+</span></span>
+<span id="cb218-7"><a href="gráficos-en-r.html#cb218-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>)</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
 <div id="boxplots" class="section level3" number="9.5.3">
 <h3><span class="header-section-number">9.5.3</span> Boxplots</h3>
 <p>R contiene varios sets de datos ya pre-cargados con los que podemos trabajar. Para conocer los sets disponibles usamos:</p>
 <p>Para este ejercicio vamos a elegir el set de datos <strong>chickwts</strong>. La información de este set de datos se uso para medir y comparar la efectividad de varios suplementos alimenticios en la tasa de crecimiento de los pollos.</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="gráficos-en-r.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(chickwts)</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="gráficos-en-r.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(chickwts)</span></code></pre></div>
 <pre><code>##   weight      feed
 ## 1    179 horsebean
 ## 2    160 horsebean
@@ -369,22 +377,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5    217 horsebean
 ## 6    168 horsebean</code></pre>
 <p>Vamos a crear un boxplot básico.</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="gráficos-en-r.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">y =</span> weight, <span class="at">x=</span> feed)) <span class="sc">+</span> </span>
-<span id="cb160-2"><a href="gráficos-en-r.html#cb160-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">&quot;Box Plot of Weight&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="gráficos-en-r.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">y =</span> weight, <span class="at">x=</span> feed)) <span class="sc">+</span> </span>
+<span id="cb221-2"><a href="gráficos-en-r.html#cb221-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">&quot;Box Plot of Weight&quot;</span>)</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p><code>theme()</code> permite modificar varios elementos del gráfico. En esta ocasión lo usaremos para rotar las etiquetas del eje x.</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="gráficos-en-r.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">y =</span> weight, <span class="at">x=</span> feed)) <span class="sc">+</span> </span>
-<span id="cb161-2"><a href="gráficos-en-r.html#cb161-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">&quot;Box Plot of Weight&quot;</span>)<span class="sc">+</span></span>
-<span id="cb161-3"><a href="gráficos-en-r.html#cb161-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>),</span>
-<span id="cb161-4"><a href="gráficos-en-r.html#cb161-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="gráficos-en-r.html#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">y =</span> weight, <span class="at">x=</span> feed)) <span class="sc">+</span> </span>
+<span id="cb222-2"><a href="gráficos-en-r.html#cb222-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">&quot;Box Plot of Weight&quot;</span>)<span class="sc">+</span></span>
+<span id="cb222-3"><a href="gráficos-en-r.html#cb222-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>),</span>
+<span id="cb222-4"><a href="gráficos-en-r.html#cb222-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <p>Coloreamos el gráfico por tipo de alimentación que se le dio a los pollos.</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="gráficos-en-r.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">y =</span> weight, <span class="at">x=</span> feed, <span class="at">fill=</span>feed)) <span class="sc">+</span> </span>
-<span id="cb162-2"><a href="gráficos-en-r.html#cb162-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
-<span id="cb162-3"><a href="gráficos-en-r.html#cb162-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Dataset chickwts&quot;</span>)<span class="sc">+</span></span>
-<span id="cb162-4"><a href="gráficos-en-r.html#cb162-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>),</span>
-<span id="cb162-5"><a href="gráficos-en-r.html#cb162-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>, <span class="at">hjust=</span><span class="dv">1</span>))<span class="sc">+</span></span>
-<span id="cb162-6"><a href="gráficos-en-r.html#cb162-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">&quot;Boxplot&quot;</span>, <span class="at">y=</span> <span class="st">&quot;peso&quot;</span>, <span class="at">x=</span><span class="st">&quot;alimento&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="gráficos-en-r.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">y =</span> weight, <span class="at">x=</span> feed, <span class="at">fill=</span>feed)) <span class="sc">+</span> </span>
+<span id="cb223-2"><a href="gráficos-en-r.html#cb223-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
+<span id="cb223-3"><a href="gráficos-en-r.html#cb223-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Dataset chickwts&quot;</span>)<span class="sc">+</span></span>
+<span id="cb223-4"><a href="gráficos-en-r.html#cb223-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>),</span>
+<span id="cb223-5"><a href="gráficos-en-r.html#cb223-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>, <span class="at">hjust=</span><span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb223-6"><a href="gráficos-en-r.html#cb223-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">&quot;Boxplot&quot;</span>, <span class="at">y=</span> <span class="st">&quot;peso&quot;</span>, <span class="at">x=</span><span class="st">&quot;alimento&quot;</span>)</span></code></pre></div>
 <p><img src="09-graficos_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 
 </div>

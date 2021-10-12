@@ -160,16 +160,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.1</b> Manejo de vectores</a></li>
-<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.2</b> Operaciones con vectores</a></li>
-<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.3</b> Funciones en vectores</a></li>
+<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#tipo-de-datos-de-los-vectores"><i class="fa fa-check"></i><b>4.1</b> Tipo de datos de los vectores</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#construcción-de-vectores-secuenciales"><i class="fa fa-check"></i><b>4.2</b> Construcción de vectores secuenciales</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.3</b> Manejo de vectores</a></li>
+<li class="chapter" data-level="4.4" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.4</b> Operaciones con vectores</a></li>
+<li class="chapter" data-level="4.5" data-path="vectores.html"><a href="vectores.html#combinación-de-vectores"><i class="fa fa-check"></i><b>4.5</b> Combinación de vectores</a></li>
+<li class="chapter" data-level="4.6" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.6</b> Funciones en vectores</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#estructura-de-una-matriz"><i class="fa fa-check"></i><b>5.1</b> Estructura de una matriz</a></li>
 <li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#creación-de-una-matriz"><i class="fa fa-check"></i><b>5.2</b> Creación de una matriz</a></li>
-<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matri"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matri</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matriz</a></li>
 <li class="chapter" data-level="5.4" data-path="matrices.html"><a href="matrices.html#modificar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.4</b> Modificar elementos de una matriz</a></li>
+<li class="chapter" data-level="5.5" data-path="matrices.html"><a href="matrices.html#ejercicio-1"><i class="fa fa-check"></i><b>5.5</b> Ejercicio</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data.frames</a>
 <ul>
@@ -182,6 +186,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#combinar-data.frames"><i class="fa fa-check"></i><b>6.4</b> Combinar data.frames</a></li>
 <li class="chapter" data-level="6.5" data-path="data.html"><a href="data.html#subset-de-datos"><i class="fa fa-check"></i><b>6.5</b> Subset de datos</a></li>
+<li class="chapter" data-level="6.6" data-path="data.html"><a href="data.html#ejercicio-2"><i class="fa fa-check"></i><b>6.6</b> Ejercicio</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="data.html"><a href="data.html#selección-de-elementos"><i class="fa fa-check"></i><b>6.6.1</b> Selección de Elementos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html"><i class="fa fa-check"></i><b>7</b> Importación y exportación de datos</a>
 <ul>
@@ -249,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data.frames" class="section level1" number="6">
 <h1><span class="header-section-number">Capítulo 6</span> Data.frames</h1>
-<p>Es una estructura de tipo tabular, que permite el uso de diferentes tipos de datos. Combina listas de vectores de la misma longitud.
+<p>Es una estructura de tipo tabular, que permite el uso de diferentes tipos de datos. Combina listas de vectores de la misma longitud. Para crear un data.frame usamos la función <code>data.frame</code>.
 Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respectivas respuestas:</p>
 <ul>
 <li>¿Está vacunado para Influenza? : <strong>sí/no (lógicos)</strong></li>
@@ -268,30 +276,30 @@ Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respect
 <div id="creación-de-un-data.frame" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Creación de un data.frame</h2>
 <p>Crear data.frame <em>“TipoDatos”</em> a partir de los siguientes vectores:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="data.html#cb81-1" aria-hidden="true" tabindex="-1"></a>origen <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Chi&quot;</span>, <span class="st">&quot;Rus&quot;</span>, <span class="st">&quot;Mex&quot;</span>, <span class="st">&quot;USA&quot;</span>)</span>
-<span id="cb81-2"><a href="data.html#cb81-2" aria-hidden="true" tabindex="-1"></a>vacunado <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb81-3"><a href="data.html#cb81-3" aria-hidden="true" tabindex="-1"></a>fecha <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;1990&quot;</span>, <span class="st">&quot;1981&quot;</span>, <span class="st">&quot;2000&quot;</span>, <span class="st">&quot;1952&quot;</span>)</span>
-<span id="cb81-4"><a href="data.html#cb81-4" aria-hidden="true" tabindex="-1"></a>TipoDatos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(origen, vacunado, fecha)</span>
-<span id="cb81-5"><a href="data.html#cb81-5" aria-hidden="true" tabindex="-1"></a>TipoDatos</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="data.html#cb115-1" aria-hidden="true" tabindex="-1"></a>origen <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Chi&quot;</span>, <span class="st">&quot;Rus&quot;</span>, <span class="st">&quot;Mex&quot;</span>, <span class="st">&quot;USA&quot;</span>)</span>
+<span id="cb115-2"><a href="data.html#cb115-2" aria-hidden="true" tabindex="-1"></a>vacunado <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb115-3"><a href="data.html#cb115-3" aria-hidden="true" tabindex="-1"></a>fecha <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;1990&quot;</span>, <span class="st">&quot;1981&quot;</span>, <span class="st">&quot;2000&quot;</span>, <span class="st">&quot;1952&quot;</span>)</span>
+<span id="cb115-4"><a href="data.html#cb115-4" aria-hidden="true" tabindex="-1"></a>TipoDatos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(origen, vacunado, fecha)</span>
+<span id="cb115-5"><a href="data.html#cb115-5" aria-hidden="true" tabindex="-1"></a>TipoDatos</span></code></pre></div>
 <pre><code>##   origen vacunado fecha
 ## 1    Chi    FALSE  1990
 ## 2    Rus     TRUE  1981
 ## 3    Mex     TRUE  2000
 ## 4    USA     TRUE  1952</code></pre>
 <p><code>str()</code> Brinda información sobre la estructura del data.frame.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="data.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(TipoDatos)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="data.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(TipoDatos)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    4 obs. of  3 variables:
 ##  $ origen  : chr  &quot;Chi&quot; &quot;Rus&quot; &quot;Mex&quot; &quot;USA&quot;
 ##  $ vacunado: logi  FALSE TRUE TRUE TRUE
 ##  $ fecha   : chr  &quot;1990&quot; &quot;1981&quot; &quot;2000&quot; &quot;1952&quot;</code></pre>
 <p>Para acceder a una columna de un data.frame, utilizamos el símbolo de pesos:</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="data.html#cb85-1" aria-hidden="true" tabindex="-1"></a>TipoDatos<span class="sc">$</span>fecha</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="data.html#cb119-1" aria-hidden="true" tabindex="-1"></a>TipoDatos<span class="sc">$</span>fecha</span></code></pre></div>
 <pre><code>## [1] &quot;1990&quot; &quot;1981&quot; &quot;2000&quot; &quot;1952&quot;</code></pre>
 <p>Otra forma de acceder a los elementos de un data.frames es mediante corchetes. Recordemos que esta nomenclatura la estudiamos en el capítulo anterior de Matrices.</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="data.html#cb87-1" aria-hidden="true" tabindex="-1"></a>TipoDatos[,<span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="data.html#cb121-1" aria-hidden="true" tabindex="-1"></a>TipoDatos[,<span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;1990&quot; &quot;1981&quot; &quot;2000&quot; &quot;1952&quot;</code></pre>
 <p>De manera similar, para acceder a una fila de un data.frame utilizamos los corchetes, donde <code>[fila, columna]</code>.</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="data.html#cb89-1" aria-hidden="true" tabindex="-1"></a>TipoDatos[<span class="dv">2</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="data.html#cb123-1" aria-hidden="true" tabindex="-1"></a>TipoDatos[<span class="dv">2</span>,]</span></code></pre></div>
 <pre><code>##   origen vacunado fecha
 ## 2    Rus     TRUE  1981</code></pre>
 </div>
@@ -300,8 +308,8 @@ Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respect
 <div id="extracción-de-datos-por-columna" class="section level3" number="6.3.1">
 <h3><span class="header-section-number">6.3.1</span> Extracción de datos por columna</h3>
 <p>Crear un nuevo data.frame llamado “result” que contenga todos los datos de las columnas origen y fecha.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="data.html#cb91-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(TipoDatos<span class="sc">$</span>origen,TipoDatos<span class="sc">$</span>fecha)</span>
-<span id="cb91-2"><a href="data.html#cb91-2" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="data.html#cb125-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(TipoDatos<span class="sc">$</span>origen,TipoDatos<span class="sc">$</span>fecha)</span>
+<span id="cb125-2"><a href="data.html#cb125-2" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div>
 <pre><code>##   TipoDatos.origen TipoDatos.fecha
 ## 1              Chi            1990
 ## 2              Rus            1981
@@ -311,8 +319,8 @@ Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respect
 <div id="extracción-de-datos-por-filas" class="section level3" number="6.3.2">
 <h3><span class="header-section-number">6.3.2</span> Extracción de datos por filas</h3>
 <p>Extraer todos los datos de las filas 1 y 2.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="data.html#cb93-1" aria-hidden="true" tabindex="-1"></a>subsets <span class="ot">&lt;-</span> TipoDatos[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,]</span>
-<span id="cb93-2"><a href="data.html#cb93-2" aria-hidden="true" tabindex="-1"></a>subsets</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="data.html#cb127-1" aria-hidden="true" tabindex="-1"></a>subsets <span class="ot">&lt;-</span> TipoDatos[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,]</span>
+<span id="cb127-2"><a href="data.html#cb127-2" aria-hidden="true" tabindex="-1"></a>subsets</span></code></pre></div>
 <pre><code>##   origen vacunado fecha
 ## 1    Chi    FALSE  1990
 ## 2    Rus     TRUE  1981</code></pre>
@@ -321,18 +329,18 @@ Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respect
 <div id="combinar-data.frames" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Combinar data.frames</h2>
 <p>Creamos un segundo data.frame llamado <em>“TipoDatos2”</em>.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="data.html#cb95-1" aria-hidden="true" tabindex="-1"></a>cobertura <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;NA&quot;</span>, <span class="st">&quot;Pandemica&quot;</span>, <span class="st">&quot;Estacional&quot;</span>, <span class="st">&quot;NA&quot;</span>)</span>
-<span id="cb95-2"><a href="data.html#cb95-2" aria-hidden="true" tabindex="-1"></a>edad <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;60&quot;</span>, <span class="st">&quot;50&quot;</span>, <span class="st">&quot;80&quot;</span>, <span class="st">&quot;20&quot;</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb95-3"><a href="data.html#cb95-3" aria-hidden="true" tabindex="-1"></a>TipoDatos2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(cobertura, edad)</span>
-<span id="cb95-4"><a href="data.html#cb95-4" aria-hidden="true" tabindex="-1"></a>TipoDatos2</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="data.html#cb129-1" aria-hidden="true" tabindex="-1"></a>cobertura <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;NA&quot;</span>, <span class="st">&quot;Pandemica&quot;</span>, <span class="st">&quot;Estacional&quot;</span>, <span class="st">&quot;NA&quot;</span>)</span>
+<span id="cb129-2"><a href="data.html#cb129-2" aria-hidden="true" tabindex="-1"></a>edad <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;60&quot;</span>, <span class="st">&quot;50&quot;</span>, <span class="st">&quot;80&quot;</span>, <span class="st">&quot;20&quot;</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb129-3"><a href="data.html#cb129-3" aria-hidden="true" tabindex="-1"></a>TipoDatos2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(cobertura, edad)</span>
+<span id="cb129-4"><a href="data.html#cb129-4" aria-hidden="true" tabindex="-1"></a>TipoDatos2</span></code></pre></div>
 <pre><code>##    cobertura edad
 ## 1         NA   60
 ## 2  Pandemica   50
 ## 3 Estacional   80
 ## 4         NA   20</code></pre>
 <p>Con <code>cbind()</code> unimos dos data.frames del mismo tamaño mediante columnas. En este caso uniremos los data.frames <code>TipoDatos</code> y <code>TipoDatos2</code>.</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="data.html#cb97-1" aria-hidden="true" tabindex="-1"></a>datosfinales <span class="ot">&lt;-</span> <span class="fu">cbind</span>(TipoDatos,TipoDatos2)</span>
-<span id="cb97-2"><a href="data.html#cb97-2" aria-hidden="true" tabindex="-1"></a>datosfinales</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="data.html#cb131-1" aria-hidden="true" tabindex="-1"></a>datosfinales <span class="ot">&lt;-</span> <span class="fu">cbind</span>(TipoDatos,TipoDatos2)</span>
+<span id="cb131-2"><a href="data.html#cb131-2" aria-hidden="true" tabindex="-1"></a>datosfinales</span></code></pre></div>
 <pre><code>##   origen vacunado fecha  cobertura edad
 ## 1    Chi    FALSE  1990         NA   60
 ## 2    Rus     TRUE  1981  Pandemica   50
@@ -343,29 +351,104 @@ Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respect
 <h2><span class="header-section-number">6.5</span> Subset de datos</h2>
 <p><code>subset()</code> permite filtrar o extraer los datos que cumplen con un parámetro particular.</p>
 <p>Si queremos obtener los datos de los pacientes menores a 60 años usamos:</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="data.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>edad <span class="sc">&lt;</span><span class="dv">60</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="data.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>edad <span class="sc">&lt;</span><span class="dv">60</span>)</span></code></pre></div>
 <pre><code>##   origen vacunado fecha cobertura edad
 ## 2    Rus     TRUE  1981 Pandemica   50
 ## 4    USA     TRUE  1952        NA   20</code></pre>
 <p>Si queremos obtener los datos de los pacientes vacunados usamos:</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="data.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>vacunado)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="data.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>vacunado)</span></code></pre></div>
 <pre><code>##   origen vacunado fecha  cobertura edad
 ## 2    Rus     TRUE  1981  Pandemica   50
 ## 3    Mex     TRUE  2000 Estacional   80
 ## 4    USA     TRUE  1952         NA   20</code></pre>
 <p>Estos resultados los podemos guardar en distantas variables</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="data.html#cb103-1" aria-hidden="true" tabindex="-1"></a>pacientes_edad<span class="ot">&lt;-</span> <span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>edad <span class="sc">&lt;</span><span class="dv">60</span>)</span>
-<span id="cb103-2"><a href="data.html#cb103-2" aria-hidden="true" tabindex="-1"></a>pacientes_edad</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="data.html#cb137-1" aria-hidden="true" tabindex="-1"></a>pacientes_edad<span class="ot">&lt;-</span> <span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>edad <span class="sc">&lt;</span><span class="dv">60</span>)</span>
+<span id="cb137-2"><a href="data.html#cb137-2" aria-hidden="true" tabindex="-1"></a>pacientes_edad</span></code></pre></div>
 <pre><code>##   origen vacunado fecha cobertura edad
 ## 2    Rus     TRUE  1981 Pandemica   50
 ## 4    USA     TRUE  1952        NA   20</code></pre>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="data.html#cb105-1" aria-hidden="true" tabindex="-1"></a>pacientes_vacunados<span class="ot">&lt;-</span> <span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>vacunado)</span>
-<span id="cb105-2"><a href="data.html#cb105-2" aria-hidden="true" tabindex="-1"></a>pacientes_vacunados</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="data.html#cb139-1" aria-hidden="true" tabindex="-1"></a>pacientes_vacunados<span class="ot">&lt;-</span> <span class="fu">subset</span>(datosfinales, <span class="at">subset=</span>vacunado)</span>
+<span id="cb139-2"><a href="data.html#cb139-2" aria-hidden="true" tabindex="-1"></a>pacientes_vacunados</span></code></pre></div>
 <pre><code>##   origen vacunado fecha  cobertura edad
 ## 2    Rus     TRUE  1981  Pandemica   50
 ## 3    Mex     TRUE  2000 Estacional   80
 ## 4    USA     TRUE  1952         NA   20</code></pre>
+</div>
+<div id="ejercicio-2" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Ejercicio</h2>
+<p>Creamos vectores con los valores para el nuevo data.frame</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="data.html#cb141-1" aria-hidden="true" tabindex="-1"></a>nombre <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Margarita&quot;</span>, <span class="st">&quot;Ruben&quot;</span>, <span class="st">&quot;Daniel&quot;</span>)</span>
+<span id="cb141-2"><a href="data.html#cb141-2" aria-hidden="true" tabindex="-1"></a>apellido <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Sanchez&quot;</span>, <span class="st">&quot;Garcia&quot;</span>, <span class="st">&quot;Sancho&quot;</span>, <span class="st">&quot;Alfara&quot;</span>)</span>
+<span id="cb141-3"><a href="data.html#cb141-3" aria-hidden="true" tabindex="-1"></a>edad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">32</span>, <span class="dv">25</span>, <span class="dv">49</span>, <span class="dv">52</span>)</span>
+<span id="cb141-4"><a href="data.html#cb141-4" aria-hidden="true" tabindex="-1"></a>sexo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;HOMBRE&quot;</span>, <span class="st">&quot;MUJER&quot;</span>, <span class="st">&quot;HOMBRE&quot;</span>, <span class="st">&quot;HOMBRE&quot;</span>)</span>
+<span id="cb141-5"><a href="data.html#cb141-5" aria-hidden="true" tabindex="-1"></a>hijos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span></code></pre></div>
+<p>Creamos un data.frame con la ayuda de <code>data.frame()</code></p>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="data.html#cb142-1" aria-hidden="true" tabindex="-1"></a>censo <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(nombre, apellido, edad, sexo, hijos)</span>
+<span id="cb142-2"><a href="data.html#cb142-2" aria-hidden="true" tabindex="-1"></a>censo</span></code></pre></div>
+<pre><code>##      nombre apellido edad   sexo hijos
+## 1      Juan  Sanchez   32 HOMBRE     1
+## 2 Margarita   Garcia   25  MUJER     0
+## 3     Ruben   Sancho   49 HOMBRE     3
+## 4    Daniel   Alfara   52 HOMBRE     4</code></pre>
+<p>Para ver el encabezado del data.frame, usamos <code>head()</code></p>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="data.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(censo)</span></code></pre></div>
+<pre><code>##      nombre apellido edad   sexo hijos
+## 1      Juan  Sanchez   32 HOMBRE     1
+## 2 Margarita   Garcia   25  MUJER     0
+## 3     Ruben   Sancho   49 HOMBRE     3
+## 4    Daniel   Alfara   52 HOMBRE     4</code></pre>
+<p>Revisamos la estrucutra del data.frame</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="data.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(censo)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    4 obs. of  5 variables:
+##  $ nombre  : chr  &quot;Juan&quot; &quot;Margarita&quot; &quot;Ruben&quot; &quot;Daniel&quot;
+##  $ apellido: chr  &quot;Sanchez&quot; &quot;Garcia&quot; &quot;Sancho&quot; &quot;Alfara&quot;
+##  $ edad    : num  32 25 49 52
+##  $ sexo    : chr  &quot;HOMBRE&quot; &quot;MUJER&quot; &quot;HOMBRE&quot; &quot;HOMBRE&quot;
+##  $ hijos   : num  1 0 3 4</code></pre>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="data.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.data.frame</span>(censo)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Conocer el número de filas y columnas con <code>dim()</code></p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="data.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(censo)</span></code></pre></div>
+<pre><code>## [1] 4 5</code></pre>
+<p>Usamos <code>nrow()</code> para obtener el número de filas</p>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="data.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(censo)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>Usamos <code>ncol()</code> para obtener el número de columnas</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="data.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(censo)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<p>Conocer los nombres de las variables (del encabezado)</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="data.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(censo)</span></code></pre></div>
+<pre><code>## [1] &quot;nombre&quot;   &quot;apellido&quot; &quot;edad&quot;     &quot;sexo&quot;     &quot;hijos&quot;</code></pre>
+<p>Cambiar el nombre de las columnas en la tabla usando <code>names()</code>.</p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="data.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(censo) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Nombre&quot;</span>, <span class="st">&quot;Apellido&quot;</span>, <span class="st">&quot;Edad&quot;</span>, <span class="st">&quot;Sexo&quot;</span>, <span class="st">&quot;Hijos&quot;</span>)</span>
+<span id="cb158-2"><a href="data.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(censo)</span></code></pre></div>
+<pre><code>## [1] &quot;Nombre&quot;   &quot;Apellido&quot; &quot;Edad&quot;     &quot;Sexo&quot;     &quot;Hijos&quot;</code></pre>
+<p>Para asignar diferentes nombres a las columnas y filas de <code>censo</code> también podemos usar <code>colnames</code> y <code>rownames</code>.</p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="data.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(censo) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Nombre&quot;</span>, <span class="st">&quot;Apellido&quot;</span>, <span class="st">&quot;Edad&quot;</span>, <span class="st">&quot;Sexo&quot;</span>, <span class="st">&quot;Número_Hijos&quot;</span>)</span>
+<span id="cb160-2"><a href="data.html#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(censo) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ID1&quot;</span>, <span class="st">&quot;ID2&quot;</span>, <span class="st">&quot;ID3&quot;</span>, <span class="st">&quot;ID4&quot;</span>)</span>
+<span id="cb160-3"><a href="data.html#cb160-3" aria-hidden="true" tabindex="-1"></a>censo</span></code></pre></div>
+<pre><code>##        Nombre Apellido Edad   Sexo Número_Hijos
+## ID1      Juan  Sanchez   32 HOMBRE            1
+## ID2 Margarita   Garcia   25  MUJER            0
+## ID3     Ruben   Sancho   49 HOMBRE            3
+## ID4    Daniel   Alfara   52 HOMBRE            4</code></pre>
+<div id="selección-de-elementos" class="section level3" number="6.6.1">
+<h3><span class="header-section-number">6.6.1</span> Selección de Elementos</h3>
+<p>El acceso a los elementos que se encuentran en un data.frame es muy similar al de los datos de una matriz.</p>
+<p>Acceder a los datos de las filas 2 a la 4:</p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="data.html#cb162-1" aria-hidden="true" tabindex="-1"></a>censo[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>, ]</span></code></pre></div>
+<pre><code>##        Nombre Apellido Edad   Sexo Número_Hijos
+## ID2 Margarita   Garcia   25  MUJER            0
+## ID3     Ruben   Sancho   49 HOMBRE            3
+## ID4    Daniel   Alfara   52 HOMBRE            4</code></pre>
+<p>Acceder a los datos de la columna 3.</p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="data.html#cb164-1" aria-hidden="true" tabindex="-1"></a>censo[, <span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## [1] 32 25 49 52</code></pre>
+<p>También podemos referirnos a la columna por su nombre:</p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="data.html#cb166-1" aria-hidden="true" tabindex="-1"></a>censo<span class="sc">$</span>Nombre</span></code></pre></div>
+<pre><code>## [1] &quot;Juan&quot;      &quot;Margarita&quot; &quot;Ruben&quot;     &quot;Daniel&quot;</code></pre>
 
+</div>
 </div>
 </div>
             </section>

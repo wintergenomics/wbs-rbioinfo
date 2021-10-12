@@ -160,16 +160,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.1</b> Manejo de vectores</a></li>
-<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.2</b> Operaciones con vectores</a></li>
-<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.3</b> Funciones en vectores</a></li>
+<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#tipo-de-datos-de-los-vectores"><i class="fa fa-check"></i><b>4.1</b> Tipo de datos de los vectores</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#construcción-de-vectores-secuenciales"><i class="fa fa-check"></i><b>4.2</b> Construcción de vectores secuenciales</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.3</b> Manejo de vectores</a></li>
+<li class="chapter" data-level="4.4" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.4</b> Operaciones con vectores</a></li>
+<li class="chapter" data-level="4.5" data-path="vectores.html"><a href="vectores.html#combinación-de-vectores"><i class="fa fa-check"></i><b>4.5</b> Combinación de vectores</a></li>
+<li class="chapter" data-level="4.6" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.6</b> Funciones en vectores</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#estructura-de-una-matriz"><i class="fa fa-check"></i><b>5.1</b> Estructura de una matriz</a></li>
 <li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#creación-de-una-matriz"><i class="fa fa-check"></i><b>5.2</b> Creación de una matriz</a></li>
-<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matri"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matri</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matriz</a></li>
 <li class="chapter" data-level="5.4" data-path="matrices.html"><a href="matrices.html#modificar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.4</b> Modificar elementos de una matriz</a></li>
+<li class="chapter" data-level="5.5" data-path="matrices.html"><a href="matrices.html#ejercicio-1"><i class="fa fa-check"></i><b>5.5</b> Ejercicio</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data.frames</a>
 <ul>
@@ -182,6 +186,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#combinar-data.frames"><i class="fa fa-check"></i><b>6.4</b> Combinar data.frames</a></li>
 <li class="chapter" data-level="6.5" data-path="data.html"><a href="data.html#subset-de-datos"><i class="fa fa-check"></i><b>6.5</b> Subset de datos</a></li>
+<li class="chapter" data-level="6.6" data-path="data.html"><a href="data.html#ejercicio-2"><i class="fa fa-check"></i><b>6.6</b> Ejercicio</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="data.html"><a href="data.html#selección-de-elementos"><i class="fa fa-check"></i><b>6.6.1</b> Selección de Elementos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html"><i class="fa fa-check"></i><b>7</b> Importación y exportación de datos</a>
 <ul>
@@ -253,20 +261,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.1</span> Estableciendo nuestro directorio de trabajo</h2>
 <p>Establecer nuestro directorio de trabajo nos permite tener una mejor organización mientras trabajamos en R.
 Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="importación-y-exportación-de-datos.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() </span></code></pre></div>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="importación-y-exportación-de-datos.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() </span></code></pre></div>
 <p>Asigna a un objeto la ruta de la carpeta de trabajo. Recuerda cambiar <em>/docs/mydir</em> por los nombres de tus carpetas de trabajo</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="importación-y-exportación-de-datos.html#cb108-1" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;C:/docs/mydir&quot;</span> <span class="co">#Windows</span></span>
-<span id="cb108-2"><a href="importación-y-exportación-de-datos.html#cb108-2" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;/home/users/mydir&quot;</span>  <span class="co">#Mac OS o linux</span></span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="importación-y-exportación-de-datos.html#cb169-1" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;C:/docs/mydir&quot;</span> <span class="co">#Windows</span></span>
+<span id="cb169-2"><a href="importación-y-exportación-de-datos.html#cb169-2" aria-hidden="true" tabindex="-1"></a>directory <span class="ot">&lt;-</span> <span class="st">&quot;/home/users/mydir&quot;</span>  <span class="co">#Mac OS o linux</span></span></code></pre></div>
 <p><code>setwd()</code> permite ajustar el directorio de trabajo. Vamos a ajustarlo a la ruta de trabajo que guardamos en <code>directory</code></p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="importación-y-exportación-de-datos.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(directory)</span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="importación-y-exportación-de-datos.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(directory)</span></code></pre></div>
 </div>
 <div id="importación-de-datos" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Importación de datos</h2>
 <div id="archivos-csv" class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Archivos CSV</h3>
 <p>Importa archivos de texto plano con formato CSV (<em>coma-separated values</em>). Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1TlR9xgKl7Laf8-SNwoq3W2MXkD19AQ9d&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo que asignaste en el paso anterior.</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="importación-y-exportación-de-datos.html#cb110-1" aria-hidden="true" tabindex="-1"></a>datosRCSV <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;iris.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="importación-y-exportación-de-datos.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRCSV)</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="importación-y-exportación-de-datos.html#cb171-1" aria-hidden="true" tabindex="-1"></a>datosRCSV <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;iris.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="importación-y-exportación-de-datos.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRCSV)</span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
 ## 2          4.9         3.0          1.4         0.2  setosa
@@ -278,8 +286,8 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 <div id="archivos-txt" class="section level3" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> Archivos TXT</h3>
 <p>Importa archivos de texto plano con formato de tabla (data.frame). Los datos los puedes descargar de <a href="https://drive.google.com/u/0/uc?id=18Cgt4ret3utAuk4w2_jl8RIbKxteulIO&amp;export=download">aquí</a>. Recuerda guardarlos en la carpeta de trabajo.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="importación-y-exportación-de-datos.html#cb113-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris.txt&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="importación-y-exportación-de-datos.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="importación-y-exportación-de-datos.html#cb174-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="importación-y-exportación-de-datos.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
 <pre><code>##             V1          V2           V3          V4      V5
 ## 1 Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 2          5.1         3.5          1.4         0.2  setosa
@@ -288,8 +296,8 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 ## 5          4.6         3.1          1.5         0.2  setosa
 ## 6            5         3.6          1.4         0.2  setosa</code></pre>
 <p>Notamos que los encabezados no forman parte de la tabla y que R genera sus propios encabezados. Para evitar esto, si el archivo que queremos importar contiene encabezados, el argumento <code>header</code> permite incorporar el encabezado del archivo que queremos importar.</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="importación-y-exportación-de-datos.html#cb116-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="importación-y-exportación-de-datos.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="importación-y-exportación-de-datos.html#cb177-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="importación-y-exportación-de-datos.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
 ## 2          4.9         3.0          1.4         0.2  setosa
@@ -298,8 +306,8 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 ## 5          5.0         3.6          1.4         0.2  setosa
 ## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
 <p>Importemos este <a href="https://drive.google.com/u/0/uc?id=1D88k0cC5TeALDWbvRmLh07g2d65ImLHh&amp;export=download">nuevo set de datos</a>.</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="importación-y-exportación-de-datos.html#cb119-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris2.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="importación-y-exportación-de-datos.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="importación-y-exportación-de-datos.html#cb180-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris2.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="importación-y-exportación-de-datos.html#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
 <pre><code>##   Sepal.Length.Sepal.Width.Petal.Length.Petal.Width.Species
 ## 1                                    5.1|3.5|1.4|0.2|setosa
 ## 2                                4.9|3.4|1.4|0.2|versicolor
@@ -307,8 +315,8 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 <p>Los datos no se importaron correctamente y están separados por el símbolo <strong>“|”</strong> o <em>pipe</em>.</p>
 <p>Los archivos <em>csv</em> están separados por comas y generalmente, los archivos <em>txt</em> están separados por tabulaciones. Para indicarle a R el tipo de separación que tiene nuestro archivo, usamos el argumento <code>sep</code>.</p>
 <p>En el siguiente comando, el argumento <code>sep="|"</code> le indica a R que nuestros datos están separados por el símbolo <strong>“|”</strong> o <em>pipe</em>.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="importación-y-exportación-de-datos.html#cb122-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris2.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;|&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="importación-y-exportación-de-datos.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="importación-y-exportación-de-datos.html#cb183-1" aria-hidden="true" tabindex="-1"></a>datosRT <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;iris2.txt&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;|&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="importación-y-exportación-de-datos.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
 ## 1          5.1         3.5          1.4         0.2     setosa
 ## 2          4.9         3.4          1.4         0.2 versicolor
@@ -318,11 +326,11 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 <div id="exportación-de-datos" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Exportación de datos</h2>
 <p>Vamos a crear un data.frame para practicar cómo exportar los datos.</p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="importación-y-exportación-de-datos.html#cb125-1" aria-hidden="true" tabindex="-1"></a>DosisX <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">46</span>, <span class="dv">20</span>, <span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">63</span>)</span>
-<span id="cb125-2"><a href="importación-y-exportación-de-datos.html#cb125-2" aria-hidden="true" tabindex="-1"></a>DosisY <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">50</span>, <span class="dv">70</span>, <span class="dv">70</span>, <span class="dv">63</span>)</span>
-<span id="cb125-3"><a href="importación-y-exportación-de-datos.html#cb125-3" aria-hidden="true" tabindex="-1"></a>Lcelular <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;MCF7&quot;</span>, <span class="st">&quot;Hela&quot;</span>, <span class="st">&quot;IPC-366&quot;</span>, <span class="st">&quot;T47D&quot;</span>, <span class="st">&quot;ZR75-1&quot;</span>)</span>
-<span id="cb125-4"><a href="importación-y-exportación-de-datos.html#cb125-4" aria-hidden="true" tabindex="-1"></a>tablaDE <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(DosisX, DosisY, Lcelular)</span>
-<span id="cb125-5"><a href="importación-y-exportación-de-datos.html#cb125-5" aria-hidden="true" tabindex="-1"></a>tablaDE</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="importación-y-exportación-de-datos.html#cb186-1" aria-hidden="true" tabindex="-1"></a>DosisX <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">46</span>, <span class="dv">20</span>, <span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">63</span>)</span>
+<span id="cb186-2"><a href="importación-y-exportación-de-datos.html#cb186-2" aria-hidden="true" tabindex="-1"></a>DosisY <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">50</span>, <span class="dv">70</span>, <span class="dv">70</span>, <span class="dv">63</span>)</span>
+<span id="cb186-3"><a href="importación-y-exportación-de-datos.html#cb186-3" aria-hidden="true" tabindex="-1"></a>Lcelular <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;MCF7&quot;</span>, <span class="st">&quot;Hela&quot;</span>, <span class="st">&quot;IPC-366&quot;</span>, <span class="st">&quot;T47D&quot;</span>, <span class="st">&quot;ZR75-1&quot;</span>)</span>
+<span id="cb186-4"><a href="importación-y-exportación-de-datos.html#cb186-4" aria-hidden="true" tabindex="-1"></a>tablaDE <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(DosisX, DosisY, Lcelular)</span>
+<span id="cb186-5"><a href="importación-y-exportación-de-datos.html#cb186-5" aria-hidden="true" tabindex="-1"></a>tablaDE</span></code></pre></div>
 <pre><code>##   DosisX DosisY Lcelular
 ## 1     46      6     MCF7
 ## 2     20     50     Hela
@@ -332,37 +340,37 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 <div id="exportar-como-txt" class="section level3" number="7.3.1">
 <h3><span class="header-section-number">7.3.1</span> Exportar como TXT</h3>
 <p>Vamos a guardar el data.frame <code>tablaDE</code> como un archivo de texto llamado <strong>“datos.txt”</strong> utilizando el comando <code>write.table()</code>. La tabla se guardará en nuestro directorio de trabajo actual.</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="importación-y-exportación-de-datos.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(tablaDE, <span class="st">&quot;datos.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="importación-y-exportación-de-datos.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(tablaDE, <span class="st">&quot;datos.txt&quot;</span>)</span></code></pre></div>
 </div>
 <div id="exportar-como-csv" class="section level3" number="7.3.2">
 <h3><span class="header-section-number">7.3.2</span> Exportar como CSV</h3>
 <p>Vamos a guardar el data.frame <code>tablaDE</code> como un archivo csv llamado <strong>“datos.csv”</strong> utilizando el comando <code>write.csv()</code>. La tabla se guardará en nuestro directorio de trabajo actual.</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="importación-y-exportación-de-datos.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="importación-y-exportación-de-datos.html#cb189-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="argumentos-al-exportar" class="section level3" number="7.3.3">
 <h3><span class="header-section-number">7.3.3</span> Argumentos al exportar</h3>
 <p>Así como al importar archivos existen diversos argumentos que podemos utilizar para darles ciertas indicaciones a R, también lo podemos hacer al momento de exportar los datos. Los siguientes argumentos se pueden usar con <code>write.csv()</code> y <code>write.table()</code>.</p>
 <p><code>row.names=FALSE</code> nos permite suprimir los nombres de las filas</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="importación-y-exportación-de-datos.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos1.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="importación-y-exportación-de-datos.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos1.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <p>Para indicar la separación del archivo utilizamos <code>sep</code>. Vamos a usar la tabulación como separador poniendo <code>sep="\t"</code>.</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="importación-y-exportación-de-datos.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos2.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="importación-y-exportación-de-datos.html#cb191-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos2.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
 <p>Para suprimir los nombres de las columnas, usamos <code>col.names=FALSE</code></p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="importación-y-exportación-de-datos.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos3.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">col.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="importación-y-exportación-de-datos.html#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tablaDE, <span class="st">&quot;datos3.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">col.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="archivos-xlsx-o-de-excel" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Archivos xlsx o de Excel</h2>
 <p>Para importar o exportar archivos de Excel, es necesario utilizar la paquetería <code>"openxlsx"</code> que nos permite trabajar con documentos de Excel en R. La instalación de paqueterías se realiza sólo una vez. Una vez que la librería o paquetería esté instalada, puedes omitir este paso.</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="importación-y-exportación-de-datos.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;openxlsx&quot;</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="importación-y-exportación-de-datos.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;openxlsx&quot;</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>Ahora cargaremos la paquetería. El llamado de librerías deberá hacerse cada que inicies una nueva sesión en R.</p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="importación-y-exportación-de-datos.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="importación-y-exportación-de-datos.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span></code></pre></div>
 <p>El siguiente comando te permite leer y conocer más sobre las funciones que ofrece esta paquetería.</p>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="importación-y-exportación-de-datos.html#cb134-1" aria-hidden="true" tabindex="-1"></a>?openxlsx</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="importación-y-exportación-de-datos.html#cb195-1" aria-hidden="true" tabindex="-1"></a>?openxlsx</span></code></pre></div>
 <div id="importación-de-datos-xlsx-o-de-excel" class="section level3" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Importación de datos xlsx o de Excel</h3>
 <p>Importaremos un nuevo set de datos de Excel que puedes descargar de <a href="https://drive.google.com/u/0/uc?id=1DmLiZZGq_MVkLYCMZ7rdeHydUZAoP-YW&amp;export=download">aquí</a>. Recuerda guardarlos en tu carpeta de trabajo.</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="importación-y-exportación-de-datos.html#cb135-1" aria-hidden="true" tabindex="-1"></a>datosXLSX <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">&quot;iris.xlsx&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="importación-y-exportación-de-datos.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="importación-y-exportación-de-datos.html#cb196-1" aria-hidden="true" tabindex="-1"></a>datosXLSX <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">&quot;iris.xlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="importación-y-exportación-de-datos.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(datosRT)</span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
 ## 1          5.1         3.5          1.4         0.2     setosa
 ## 2          4.9         3.4          1.4         0.2 versicolor
@@ -371,7 +379,7 @@ Para conocer nuestro directorio de trabajo actual, usamos <code>getwd()</code></
 <div id="exportación-de-datos-en-excel" class="section level3" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> Exportación de datos en Excel</h3>
 <p>Vamos a exportar el data.frame <code>tablaDE</code> que creamos anteriormente como un archivo de Excel llamado <strong>“datos.xlsx”</strong> utilizando el comando <code>write.xlsx()</code>. El archivo se guardará en nuestro directorio de trabajo actual.</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="importación-y-exportación-de-datos.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.xlsx</span>(tablaDE, <span class="st">&quot;datos.xlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="importación-y-exportación-de-datos.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.xlsx</span>(tablaDE, <span class="st">&quot;datos.xlsx&quot;</span>)</span></code></pre></div>
 
 </div>
 </div>

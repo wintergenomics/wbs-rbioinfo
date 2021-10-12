@@ -1,7 +1,7 @@
 
 # Data.frames
 
-Es una estructura de tipo tabular, que permite el uso de diferentes tipos de datos. Combina listas de vectores de la misma longitud. 
+Es una estructura de tipo tabular, que permite el uso de diferentes tipos de datos. Combina listas de vectores de la misma longitud. Para crear un data.frame usamos la función `data.frame`.
 Ejemplo, en una encuesta se tienen preguntas como las siguientes con sus respectivas respuestas:
 
 - ¿Está vacunado para Influenza? : **sí/no (lógicos)**
@@ -181,7 +181,6 @@ subset(datosfinales, subset=vacunado)
 ## 4    USA     TRUE  1952         NA   20
 ```
 
-
 Estos resultados los podemos guardar en distantas variables
 
 
@@ -209,3 +208,178 @@ pacientes_vacunados
 ## 4    USA     TRUE  1952         NA   20
 ```
 
+
+## Ejercicio
+
+Creamos vectores con los valores para el nuevo data.frame
+
+
+```r
+nombre <- c("Juan", "Margarita", "Ruben", "Daniel")
+apellido <- c("Sanchez", "Garcia", "Sancho", "Alfara")
+edad <- c(32, 25, 49, 52)
+sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
+hijos <- c(1, 0, 3, 4)
+```
+
+
+Creamos un data.frame con la ayuda de `data.frame()`
+
+
+```r
+censo <- data.frame(nombre, apellido, edad, sexo, hijos)
+censo
+```
+
+```
+##      nombre apellido edad   sexo hijos
+## 1      Juan  Sanchez   32 HOMBRE     1
+## 2 Margarita   Garcia   25  MUJER     0
+## 3     Ruben   Sancho   49 HOMBRE     3
+## 4    Daniel   Alfara   52 HOMBRE     4
+```
+
+Para ver el encabezado del data.frame, usamos `head()`
+
+```r
+head(censo)
+```
+
+```
+##      nombre apellido edad   sexo hijos
+## 1      Juan  Sanchez   32 HOMBRE     1
+## 2 Margarita   Garcia   25  MUJER     0
+## 3     Ruben   Sancho   49 HOMBRE     3
+## 4    Daniel   Alfara   52 HOMBRE     4
+```
+
+Revisamos la estrucutra del data.frame 
+
+
+```r
+str(censo)
+```
+
+```
+## 'data.frame':	4 obs. of  5 variables:
+##  $ nombre  : chr  "Juan" "Margarita" "Ruben" "Daniel"
+##  $ apellido: chr  "Sanchez" "Garcia" "Sancho" "Alfara"
+##  $ edad    : num  32 25 49 52
+##  $ sexo    : chr  "HOMBRE" "MUJER" "HOMBRE" "HOMBRE"
+##  $ hijos   : num  1 0 3 4
+```
+
+
+```r
+is.data.frame(censo)
+```
+
+```
+## [1] TRUE
+```
+
+
+Conocer el número de filas y columnas con `dim()`
+
+```r
+dim(censo)
+```
+
+```
+## [1] 4 5
+```
+
+
+Usamos `nrow()` para obtener el número de filas
+
+```r
+nrow(censo)
+```
+
+```
+## [1] 4
+```
+
+Usamos `ncol()` para obtener el número de columnas
+
+```r
+ncol(censo)
+```
+
+```
+## [1] 5
+```
+
+Conocer los nombres de las variables (del encabezado)
+
+```r
+names(censo)
+```
+
+```
+## [1] "nombre"   "apellido" "edad"     "sexo"     "hijos"
+```
+
+
+Cambiar el nombre de las columnas en la tabla usando `names()`.
+
+```r
+names(censo) <- c("Nombre", "Apellido", "Edad", "Sexo", "Hijos")
+names(censo)
+```
+
+```
+## [1] "Nombre"   "Apellido" "Edad"     "Sexo"     "Hijos"
+```
+
+Para asignar diferentes nombres a las columnas y filas de `censo` también podemos usar `colnames` y `rownames`.
+
+```r
+colnames(censo) <- c("Nombre", "Apellido", "Edad", "Sexo", "Número_Hijos")
+rownames(censo) <- c("ID1", "ID2", "ID3", "ID4")
+censo
+```
+
+```
+##        Nombre Apellido Edad   Sexo Número_Hijos
+## ID1      Juan  Sanchez   32 HOMBRE            1
+## ID2 Margarita   Garcia   25  MUJER            0
+## ID3     Ruben   Sancho   49 HOMBRE            3
+## ID4    Daniel   Alfara   52 HOMBRE            4
+```
+
+### Selección de Elementos
+El acceso a los elementos que se encuentran en un data.frame es muy similar al de los datos de una matriz. 
+
+Acceder a los datos de las filas 2 a la 4:
+
+```r
+censo[2:4, ]
+```
+
+```
+##        Nombre Apellido Edad   Sexo Número_Hijos
+## ID2 Margarita   Garcia   25  MUJER            0
+## ID3     Ruben   Sancho   49 HOMBRE            3
+## ID4    Daniel   Alfara   52 HOMBRE            4
+```
+
+Acceder a los datos de la columna 3.
+
+```r
+censo[, 3]
+```
+
+```
+## [1] 32 25 49 52
+```
+
+También podemos referirnos a la columna por su nombre:
+
+```r
+censo$Nombre
+```
+
+```
+## [1] "Juan"      "Margarita" "Ruben"     "Daniel"
+```

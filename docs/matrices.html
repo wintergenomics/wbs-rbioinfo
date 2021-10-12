@@ -160,16 +160,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.1</b> Manejo de vectores</a></li>
-<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.2</b> Operaciones con vectores</a></li>
-<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.3</b> Funciones en vectores</a></li>
+<li class="chapter" data-level="4.1" data-path="vectores.html"><a href="vectores.html#tipo-de-datos-de-los-vectores"><i class="fa fa-check"></i><b>4.1</b> Tipo de datos de los vectores</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores.html"><a href="vectores.html#construcción-de-vectores-secuenciales"><i class="fa fa-check"></i><b>4.2</b> Construcción de vectores secuenciales</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores.html"><a href="vectores.html#manejo-de-vectores"><i class="fa fa-check"></i><b>4.3</b> Manejo de vectores</a></li>
+<li class="chapter" data-level="4.4" data-path="vectores.html"><a href="vectores.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.4</b> Operaciones con vectores</a></li>
+<li class="chapter" data-level="4.5" data-path="vectores.html"><a href="vectores.html#combinación-de-vectores"><i class="fa fa-check"></i><b>4.5</b> Combinación de vectores</a></li>
+<li class="chapter" data-level="4.6" data-path="vectores.html"><a href="vectores.html#funciones-en-vectores"><i class="fa fa-check"></i><b>4.6</b> Funciones en vectores</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#estructura-de-una-matriz"><i class="fa fa-check"></i><b>5.1</b> Estructura de una matriz</a></li>
 <li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#creación-de-una-matriz"><i class="fa fa-check"></i><b>5.2</b> Creación de una matriz</a></li>
-<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matri"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matri</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#acceder-a-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.3</b> Acceder a los elementos de una matriz</a></li>
 <li class="chapter" data-level="5.4" data-path="matrices.html"><a href="matrices.html#modificar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>5.4</b> Modificar elementos de una matriz</a></li>
+<li class="chapter" data-level="5.5" data-path="matrices.html"><a href="matrices.html#ejercicio-1"><i class="fa fa-check"></i><b>5.5</b> Ejercicio</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data.frames</a>
 <ul>
@@ -182,6 +186,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#combinar-data.frames"><i class="fa fa-check"></i><b>6.4</b> Combinar data.frames</a></li>
 <li class="chapter" data-level="6.5" data-path="data.html"><a href="data.html#subset-de-datos"><i class="fa fa-check"></i><b>6.5</b> Subset de datos</a></li>
+<li class="chapter" data-level="6.6" data-path="data.html"><a href="data.html#ejercicio-2"><i class="fa fa-check"></i><b>6.6</b> Ejercicio</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="data.html"><a href="data.html#selección-de-elementos"><i class="fa fa-check"></i><b>6.6.1</b> Selección de Elementos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="importación-y-exportación-de-datos.html"><a href="importación-y-exportación-de-datos.html"><i class="fa fa-check"></i><b>7</b> Importación y exportación de datos</a>
 <ul>
@@ -249,10 +257,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="matrices" class="section level1" number="5">
 <h1><span class="header-section-number">Capítulo 5</span> Matrices</h1>
-<p>Una matriz es una estructura de datos, ordenados por filas y columnas (matriz de dos dimensiones). Está constituida por elementos del mismo tipo de datos (numéricos, caracteres, o lógicos), organizados por filas y columnas.</p>
+<p>Una matriz es una estructura de datos, ordenados por filas y columnas (matriz de dos dimensiones). Está constituida por elementos del mismo tipo de datos (numéricos, caracteres, o lógicos), organizados por filas y columnas. Para crear una matriz usamos la función <code>matrix()</code>.</p>
 <div id="estructura-de-una-matriz" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Estructura de una matriz</h2>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="matrices.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="matrices.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]   NA   NA   NA
 ## [2,]   NA   NA   NA</code></pre>
@@ -260,7 +268,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 - <strong>nrow</strong> es el número de filas
 - <strong>ncol</strong> es el número de columnas
 - <strong>NA</strong> significa <em>Not Available</em></p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="matrices.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="matrices.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    2    3
 ## [2,]    4    5    6
@@ -273,43 +281,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="creación-de-una-matriz" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Creación de una matriz</h2>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="matrices.html#cb55-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
-<span id="cb55-2"><a href="matrices.html#cb55-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="matrices.html#cb89-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb89-2"><a href="matrices.html#cb89-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    2    3
 ## [2,]    4    5    6
 ## [3,]    7    8    9
 ## [4,]   10   11   12</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="matrices.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(MatrixEjemplo)</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="matrices.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(MatrixEjemplo)</span></code></pre></div>
 <pre><code>## [1] 4 3</code></pre>
 <ul>
 <li><code>byrow=TRUE</code> llena los elementos por fila.</li>
 <li>Con el comando <code>dim()</code>se obtiene las dimensiones de la matriz</li>
 </ul>
 </div>
-<div id="acceder-a-los-elementos-de-una-matri" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Acceder a los elementos de una matri</h2>
-<p>Supongamos que queremos acceder al elemento que se encuentra en la fila 3 y la columna 2 de nuestra <code>MatrixEjemplo</code>. Para esto debemos de indicar entre corchetes la fila y la columna a la que queremos acceder. <strong>Es muy importante indicar primero la fila y después la columna.</strong></p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="matrices.html#cb59-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
+<div id="acceder-a-los-elementos-de-una-matriz" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Acceder a los elementos de una matriz</h2>
+<p>Para acceder al elemento que se encuentra en la fila 3 y la columna 2 de nuestra <code>MatrixEjemplo</code>, indicamos entre corchetes la fila y la columna a la que queremos acceder. <strong>Es muy importante indicar primero la fila y después la columna.</strong></p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="matrices.html#cb93-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>Ahora guardemos el resultado en la variable elemento:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="matrices.html#cb61-1" aria-hidden="true" tabindex="-1"></a>elemento<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span>
-<span id="cb61-2"><a href="matrices.html#cb61-2" aria-hidden="true" tabindex="-1"></a>elemento</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="matrices.html#cb95-1" aria-hidden="true" tabindex="-1"></a>elemento<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,<span class="dv">2</span>]</span>
+<span id="cb95-2"><a href="matrices.html#cb95-2" aria-hidden="true" tabindex="-1"></a>elemento</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>Si queremos acceder únicamente a los datos de la fila 3 de nuestra matriz usamos:</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="matrices.html#cb63-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="matrices.html#cb97-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">3</span>,]</span></code></pre></div>
 <pre><code>## [1] 7 8 9</code></pre>
 <p>La coma después del número 3 indica que queremos ver todos los valores de las columnas que pertenezcan a la fila 3.
 Si por el contrario, queremos acceder a los valores de la columna dos, usamos:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="matrices.html#cb65-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="matrices.html#cb99-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[,<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1]  2  5  8 11</code></pre>
 <p>En este caso, la coma está situada antes del número 2 indicando que queremos ver todos los valores de las filas que pertenezcan a la columna 2.
 Guardemos los resultados en diferentes variables:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="matrices.html#cb67-1" aria-hidden="true" tabindex="-1"></a>fila<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,]</span>
-<span id="cb67-2"><a href="matrices.html#cb67-2" aria-hidden="true" tabindex="-1"></a>fila</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="matrices.html#cb101-1" aria-hidden="true" tabindex="-1"></a>fila<span class="ot">&lt;-</span> MatrixEjemplo[<span class="dv">3</span>,]</span>
+<span id="cb101-2"><a href="matrices.html#cb101-2" aria-hidden="true" tabindex="-1"></a>fila</span></code></pre></div>
 <pre><code>## [1] 7 8 9</code></pre>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="matrices.html#cb69-1" aria-hidden="true" tabindex="-1"></a>columna<span class="ot">&lt;-</span> MatrixEjemplo[,<span class="dv">2</span>]</span>
-<span id="cb69-2"><a href="matrices.html#cb69-2" aria-hidden="true" tabindex="-1"></a>columna</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="matrices.html#cb103-1" aria-hidden="true" tabindex="-1"></a>columna<span class="ot">&lt;-</span> MatrixEjemplo[,<span class="dv">2</span>]</span>
+<span id="cb103-2"><a href="matrices.html#cb103-2" aria-hidden="true" tabindex="-1"></a>columna</span></code></pre></div>
 <pre><code>## [1]  2  5  8 11</code></pre>
 </div>
 <div id="modificar-elementos-de-una-matriz" class="section level2" number="5.4">
@@ -322,8 +330,8 @@ Vamos a modificar el elemento que se encuentra en la fila 2 de la columna 2.</p>
 ## [3,]    7    8    9
 ## [4,]   10   11   12</code></pre>
 <p>El elemento que queremos cambiar tiene el valor de <em>“5”</em>. Vamos a sustiurlo por el valor de 10. Para esto lo reasignamos a nuestra matriz:</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="matrices.html#cb72-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">2</span>,<span class="dv">2</span>]<span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb72-2"><a href="matrices.html#cb72-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="matrices.html#cb106-1" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo[<span class="dv">2</span>,<span class="dv">2</span>]<span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb106-2"><a href="matrices.html#cb106-2" aria-hidden="true" tabindex="-1"></a>MatrixEjemplo</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    2    3
 ## [2,]    4   10    6
@@ -331,27 +339,29 @@ Vamos a modificar el elemento que se encuentra en la fila 2 de la columna 2.</p>
 ## [4,]   10   11   12</code></pre>
 <ul>
 <li><strong>MatrixEjemplo[2,2]</strong> indica que queremos acceder al elemento que se encuentra en la fila 2 de la columna 2.</li>
-<li><strong>&lt;- 10</strong> estamos asignando el valor 10 a la matriz.
-## Ejercicio
-Construir una matriz con los años de secuenciación de organismos de referencia (G). El primer y el segundo elemento es el año de publicación de al menos dos organismos.</li>
+<li><strong>&lt;- 10</strong> estamos asignando el valor 10 a la matriz.</li>
 </ul>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="matrices.html#cb74-1" aria-hidden="true" tabindex="-1"></a>Gbacterias <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1997</span>, <span class="dv">1993</span>)</span>
-<span id="cb74-2"><a href="matrices.html#cb74-2" aria-hidden="true" tabindex="-1"></a>Ghongos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1999</span>, <span class="dv">2000</span>)</span>
-<span id="cb74-3"><a href="matrices.html#cb74-3" aria-hidden="true" tabindex="-1"></a>Ganimales <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2001</span>)</span>
-<span id="cb74-4"><a href="matrices.html#cb74-4" aria-hidden="true" tabindex="-1"></a>cronologia <span class="ot">&lt;-</span> <span class="fu">c</span>(Gbacterias, Ghongos, Ganimales)</span></code></pre></div>
+</div>
+<div id="ejercicio-1" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Ejercicio</h2>
+<p>Construir una matriz con los años de secuenciación de organismos de referencia (G). El primer y el segundo elemento es el año de publicación de al menos dos organismos.</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="matrices.html#cb108-1" aria-hidden="true" tabindex="-1"></a>Gbacterias <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1997</span>, <span class="dv">1993</span>)</span>
+<span id="cb108-2"><a href="matrices.html#cb108-2" aria-hidden="true" tabindex="-1"></a>Ghongos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1999</span>, <span class="dv">2000</span>)</span>
+<span id="cb108-3"><a href="matrices.html#cb108-3" aria-hidden="true" tabindex="-1"></a>Ganimales <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2001</span>)</span>
+<span id="cb108-4"><a href="matrices.html#cb108-4" aria-hidden="true" tabindex="-1"></a>cronologia <span class="ot">&lt;-</span> <span class="fu">c</span>(Gbacterias, Ghongos, Ganimales)</span></code></pre></div>
 <p>Construir matriz de 3 filas, 2 columnas con los valores de cronologia</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="matrices.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(cronologia, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="matrices.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(cronologia, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##      [,1] [,2]
 ## [1,] 1997 2000
 ## [2,] 1993 2000
 ## [3,] 1999 2001</code></pre>
 <p>Para agregar columnas o filas a matrices utilizamos <code>cbind()</code> y <code>rbind()</code> respectivamente.</p>
 <p><strong>NOTA:</strong> El número de elementos en las columnas o filas debe ser el mismo.</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="matrices.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="matrices.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
 <pre><code>##      Ganimales Gbacterias Ghongos
 ## [1,]      2000       1997    1999
 ## [2,]      2001       1993    2000</code></pre>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="matrices.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="matrices.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(Ganimales,Gbacterias,Ghongos)</span></code></pre></div>
 <pre><code>##            [,1] [,2]
 ## Ganimales  2000 2001
 ## Gbacterias 1997 1993

@@ -18,7 +18,6 @@ github-repo: "wintergenomics/wbs-rbioinfo"
 ---
 
 # Información del curso {-}
-**7 y 8 de octubre de 2021**
 
 <p align="justify">
 
